@@ -1,0 +1,969 @@
+{
+  "test_config": {
+    "working_dir": "./advanced_features_test_cache",
+    "novel_document": "test_data/Novel-44557.txt",
+    "query_dataset": "test_data/query.json",
+    "max_test_queries": 20,
+    "test_modes": [
+      "naive",
+      "local",
+      "global"
+    ],
+    "models_used": {
+      "llm": "qwen-turbo",
+      "embedding": "BAAI/bge-m3"
+    },
+    "features_enabled": {
+      "enhanced_features": true,
+      "hybrid_retrieval": true,
+      "complexity_analysis": true
+    }
+  },
+  "test_results": {
+    "document_insertion": {
+      "basic_rag": {
+        "status": "skipped_existing_data",
+        "insertion_time": 0,
+        "document_length": 238515,
+        "cache_files_found": 3
+      },
+      "enhanced_rag": {
+        "status": "skipped_existing_data",
+        "insertion_time": 0,
+        "document_length": 238515
+      }
+    },
+    "query_processing": [
+      {
+        "query_id": "Novel-73586ddc",
+        "query": "In the narrative of 'An Unsentimental Journey through Cornwall', which plant known scientifically as Erica vagans is also referred to by another common name, and what is that name?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Cornish heath",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name. This plant is called **Cornish heath**. The text specifically mentions that the Cornish heath is a rare plant species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with Goonhilly Down, where it grows abundantly and is described as a significant part of the local flora. The plant's presence in the narrative highlights the ecological richness of the region and its connection to the broader natural landscape of Cornwall.",
+            "query_time": 0.962738037109375,
+            "result_length": 750
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name. This plant is called **Cornish heath**. The text specifically mentions that the Cornish heath is a rare plant species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with Goonhilly Down, where it grows abundantly and is described as a significant part of the local flora. The plant's presence in the narrative highlights the ecological richness of the region and its connection to the broader natural landscape of Cornwall.",
+            "query_time": 0.4621849060058594,
+            "result_length": 750
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name. This plant is called **Cornish heath**. The text specifically mentions that the Cornish heath is a rare plant species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with Goonhilly Down, where it grows abundantly and is described as a significant part of the local flora. The plant's presence in the narrative highlights the ecological richness of the region and its connection to the broader natural landscape of Cornwall.",
+            "query_time": 0.3633406162261963,
+            "result_length": 750
+          }
+        }
+      },
+      {
+        "query_id": "Novel-74440a6a",
+        "query": "Within the account of the royal visit to St. Michael's Mount in Cornwall, who is identified as the person who married Princess Frederica of Hanover?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Baron Von Pawel-Rammingen",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The account of the royal visit to St. Michael's Mount in Cornwall identifies Baron Von Pawel-Rammingen as the person who married Princess Frederica of Hanover. He is described as having \"loved, wooed, and married\" her, indicating a deep emotional and familial bond. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The baron's role as a secretary and spouse suggests a close, intimate connection to the princess, which may have influenced the dynamics of the visit and the public's perception of the royal couple. His presence in the narrative adds depth to the personal and familial aspects of the community.",
+            "query_time": 0.3177666664123535,
+            "result_length": 676
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The account of the royal visit to St. Michael's Mount in Cornwall identifies Baron Von Pawel-Rammingen as the person who married Princess Frederica of Hanover. He is described as having \"loved, wooed, and married\" her, indicating a deep emotional and familial bond. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The baron's role as a secretary and spouse suggests a close, intimate connection to the princess, which may have influenced the dynamics of the visit and the public's perception of the royal couple. His presence in the narrative adds depth to the personal and familial aspects of the community.",
+            "query_time": 0.317582368850708,
+            "result_length": 676
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The account of the royal visit to St. Michael's Mount in Cornwall identifies Baron Von Pawel-Rammingen as the person who married Princess Frederica of Hanover. He is described as having \"loved, wooed, and married\" her, indicating a deep emotional and familial bond. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The baron's role as a secretary and spouse suggests a close, intimate connection to the princess, which may have influenced the dynamics of the visit and the public's perception of the royal couple. His presence in the narrative adds depth to the personal and familial aspects of the community.",
+            "query_time": 0.2996354103088379,
+            "result_length": 676
+          }
+        }
+      },
+      {
+        "query_id": "Novel-f80cbf85",
+        "query": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Normandy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.34711313247680664,
+            "result_length": 260
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.330751895904541,
+            "result_length": 260
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.34453439712524414,
+            "result_length": 260
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.4205451011657715,
+            "result_length": 260
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.5936992168426514,
+            "result_length": 260
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.32366061210632324,
+            "result_length": 260
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b3c430ef",
+        "query": "In the historical account relating to St. Michael's Mount, which individual is said to have caused himself to be bled to death there?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Henry de la Pomeroy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the narrative, he was taken prisoner and subsequently died after being bled to death in the castle. This event is mentioned as part of the long list of legends and historical figures associated with the Mount, highlighting its role as a site of both historical significance and folklore.",
+            "query_time": 0.31030893325805664,
+            "result_length": 456
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the narrative, he was taken prisoner and subsequently died after being bled to death in the castle. This event is mentioned as part of the long list of legends and historical figures associated with the Mount, highlighting its role as a site of both historical significance and folklore.",
+            "query_time": 0.3682100772857666,
+            "result_length": 456
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the narrative, he was taken prisoner and subsequently died after being bled to death in the castle. This event is mentioned as part of the long list of legends and historical figures associated with the Mount, highlighting its role as a site of both historical significance and folklore.",
+            "query_time": 0.33275556564331055,
+            "result_length": 456
+          }
+        }
+      },
+      {
+        "query_id": "Novel-304b0354",
+        "query": "Within the Cornish legends described in the narrative, who was the figure doomed to empty Dozmare Pool as a punishment?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Tregeagle",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'3'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'3'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'3'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Within the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere, and he was condemned to an eternal task: to empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural folklore that enriches the cultural and mythological landscape of Cornwall.\n\nTregeagle's story is deeply rooted in Cornish tradition and is often associated with eerie and ghostly tales. His presence adds a layer of mystery and supernatural elements to the region's folklore, reinforcing the idea that the environment is intertwined with local legends. The narrative also connects Tregeagle to other mythical and historical figures, such as King Arthur, highlighting the interplay between natural landscapes, cultural traditions, and local institutions in shaping the identity of the region.",
+            "query_time": 0.3575706481933594,
+            "result_length": 1021
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Within the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere, and he was condemned to an eternal task: to empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural folklore that enriches the cultural and mythological landscape of Cornwall.\n\nTregeagle's story is deeply rooted in Cornish tradition and is often associated with eerie and ghostly tales. His presence adds a layer of mystery and supernatural elements to the region's folklore, reinforcing the idea that the environment is intertwined with local legends. The narrative also connects Tregeagle to other mythical and historical figures, such as King Arthur, highlighting the interplay between natural landscapes, cultural traditions, and local institutions in shaping the identity of the region.",
+            "query_time": 0.4166290760040283,
+            "result_length": 1021
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Within the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere, and he was condemned to an eternal task: to empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural folklore that enriches the cultural and mythological landscape of Cornwall.\n\nTregeagle's story is deeply rooted in Cornish tradition and is often associated with eerie and ghostly tales. His presence adds a layer of mystery and supernatural elements to the region's folklore, reinforcing the idea that the environment is intertwined with local legends. The narrative also connects Tregeagle to other mythical and historical figures, such as King Arthur, highlighting the interplay between natural landscapes, cultural traditions, and local institutions in shaping the identity of the region.",
+            "query_time": 0.3301999568939209,
+            "result_length": 1021
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b1a95144",
+        "query": "In reference to the royal visit to St. Michael's Mount described in the narrative, to which princess did the Queen show motherly kindness during her stay?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Princess Frederica of Hanover",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica of Hanover. The Queen is mentioned as showing motherly kindness toward her. This relationship highlights the emotional and social dynamics surrounding the princess's visit, emphasizing the public's interest in her story and the significance of the royal family's involvement in the event.\n\nPrincess Frederica of Hanover is portrayed as a half-English, half-foreign princess whose story has captured the interest of the British public. The Queen's motherly kindness toward her suggests a level of affection or concern, which may have contributed to the public's fascination with the princess and her journey to St. Michael's Mount. This dynamic also underscores the broader cultural and historical context of the royal visit, where the presence of the Queen and other royal figures adds to the significance of the event.\n\nThe visit itself was an occasion of great anticipation, with the town of Marazion preparing for the arrival of the royal party. The St. Aubyns, who had long inhabited St. Michael's Mount, were the hosts of the visit, further reinforcing the connection between the royal family and the local aristocracy. The narrative also mentions that the princess was accompanied by Baron Von Pawel-Rammingen, her husband, who is described as having \"loved, wooed, and married\" her, adding a personal dimension to the royal visit.\n\nOverall, the Queen's motherly kindness toward Princess Frederica of Hanover reflects the emotional and social dimensions of the royal visit, highlighting the interplay between public interest, familial ties, and the historical significance of St. Michael's Mount.",
+            "query_time": 0.3919072151184082,
+            "result_length": 1692
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica of Hanover. The Queen is mentioned as showing motherly kindness toward her. This relationship highlights the emotional and social dynamics surrounding the princess's visit, emphasizing the public's interest in her story and the significance of the royal family's involvement in the event.\n\nPrincess Frederica of Hanover is portrayed as a half-English, half-foreign princess whose story has captured the interest of the British public. The Queen's motherly kindness toward her suggests a level of affection or concern, which may have contributed to the public's fascination with the princess and her journey to St. Michael's Mount. This dynamic also underscores the broader cultural and historical context of the royal visit, where the presence of the Queen and other royal figures adds to the significance of the event.\n\nThe visit itself was an occasion of great anticipation, with the town of Marazion preparing for the arrival of the royal party. The St. Aubyns, who had long inhabited St. Michael's Mount, were the hosts of the visit, further reinforcing the connection between the royal family and the local aristocracy. The narrative also mentions that the princess was accompanied by Baron Von Pawel-Rammingen, her husband, who is described as having \"loved, wooed, and married\" her, adding a personal dimension to the royal visit.\n\nOverall, the Queen's motherly kindness toward Princess Frederica of Hanover reflects the emotional and social dimensions of the royal visit, highlighting the interplay between public interest, familial ties, and the historical significance of St. Michael's Mount.",
+            "query_time": 0.3184831142425537,
+            "result_length": 1692
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica of Hanover. The Queen is mentioned as showing motherly kindness toward her. This relationship highlights the emotional and social dynamics surrounding the princess's visit, emphasizing the public's interest in her story and the significance of the royal family's involvement in the event.\n\nPrincess Frederica of Hanover is portrayed as a half-English, half-foreign princess whose story has captured the interest of the British public. The Queen's motherly kindness toward her suggests a level of affection or concern, which may have contributed to the public's fascination with the princess and her journey to St. Michael's Mount. This dynamic also underscores the broader cultural and historical context of the royal visit, where the presence of the Queen and other royal figures adds to the significance of the event.\n\nThe visit itself was an occasion of great anticipation, with the town of Marazion preparing for the arrival of the royal party. The St. Aubyns, who had long inhabited St. Michael's Mount, were the hosts of the visit, further reinforcing the connection between the royal family and the local aristocracy. The narrative also mentions that the princess was accompanied by Baron Von Pawel-Rammingen, her husband, who is described as having \"loved, wooed, and married\" her, adding a personal dimension to the royal visit.\n\nOverall, the Queen's motherly kindness toward Princess Frederica of Hanover reflects the emotional and social dimensions of the royal visit, highlighting the interplay between public interest, familial ties, and the historical significance of St. Michael's Mount.",
+            "query_time": 0.28760862350463867,
+            "result_length": 1692
+          }
+        }
+      },
+      {
+        "query_id": "Novel-e05d0922",
+        "query": "According to the description of Kynance Cove in Cornwall, which specific feature is included as a part of Kynance Cove?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Kynance Sands",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Kynance Cove, as described in the context of Cornwall, is a picturesque cove known for its natural beauty and unique geological features. Among these, the **Steeple Rock** and the **Lion Rocks** are specifically mentioned as significant elements of the location. These rock formations contribute to the dramatic and scenic landscape of Kynance Cove, enhancing its appeal as a destination for exploration and reflection.\n\nAdditionally, the **Bellows**, a natural feature within Kynance Cove, is noted for its striking phenomenon where water forces itself through a fissure in the rock with a great roar. This adds to the sensory experience of the location, making it a point of interest for visitors. The **Gull Rock** and **Asparagus Island** are also referenced as part of the surrounding landscape, further enriching the natural and geographical diversity of the area.\n\nThese specific features collectively highlight Kynance Cove's significance as a place of both aesthetic and natural importance within the broader narrative of the Cornish coastline.",
+            "query_time": 0.32682156562805176,
+            "result_length": 1053
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Kynance Cove, as described in the context of Cornwall, is a picturesque cove known for its natural beauty and unique geological features. Among these, the **Steeple Rock** and the **Lion Rocks** are specifically mentioned as significant elements of the location. These rock formations contribute to the dramatic and scenic landscape of Kynance Cove, enhancing its appeal as a destination for exploration and reflection.\n\nAdditionally, the **Bellows**, a natural feature within Kynance Cove, is noted for its striking phenomenon where water forces itself through a fissure in the rock with a great roar. This adds to the sensory experience of the location, making it a point of interest for visitors. The **Gull Rock** and **Asparagus Island** are also referenced as part of the surrounding landscape, further enriching the natural and geographical diversity of the area.\n\nThese specific features collectively highlight Kynance Cove's significance as a place of both aesthetic and natural importance within the broader narrative of the Cornish coastline.",
+            "query_time": 0.38088560104370117,
+            "result_length": 1053
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Kynance Cove, as described in the context of Cornwall, is a picturesque cove known for its natural beauty and unique geological features. Among these, the **Steeple Rock** and the **Lion Rocks** are specifically mentioned as significant elements of the location. These rock formations contribute to the dramatic and scenic landscape of Kynance Cove, enhancing its appeal as a destination for exploration and reflection.\n\nAdditionally, the **Bellows**, a natural feature within Kynance Cove, is noted for its striking phenomenon where water forces itself through a fissure in the rock with a great roar. This adds to the sensory experience of the location, making it a point of interest for visitors. The **Gull Rock** and **Asparagus Island** are also referenced as part of the surrounding landscape, further enriching the natural and geographical diversity of the area.\n\nThese specific features collectively highlight Kynance Cove's significance as a place of both aesthetic and natural importance within the broader narrative of the Cornish coastline.",
+            "query_time": 0.3156399726867676,
+            "result_length": 1053
+          }
+        }
+      },
+      {
+        "query_id": "Novel-dba48e64",
+        "query": "In the account of the travelers' visit to Kynance Cove, what natural landmarks are mentioned as being located near or within Kynance Cove, such as Asparagus Island, Gull Rock, and Bellows?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Asparagus Island, Gull Rock, and Bellows",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows.\n\nAsparagus Island is noted as a location that is not actually covered in asparagus, which adds a humorous observation to the narrative. It is part of the natural landscape of Kynance Cove and is visited by some of the characters. The island contributes to the vivid imagery of the setting and enhances the sense of place and the natural beauty of the region.\n\nGull Rock is described as a rocky formation near Kynance Cove, contributing to the dramatic scenery of the area. It is part of the natural environment that the characters observe during their visit. The presence of Gull Rock adds to the descriptive elements of the setting and the experiences of the characters.\n\nThe Bellows is a natural feature mentioned in the text, described as a curious sight where water forces itself through a fissure in the rock with a great roar. This feature is part of the landscape of Kynance Cove and is visited by the characters. The Bellows contributes to the vivid description of the location and the experiences of the characters, adding to the atmosphere and sense of wonder associated with the cove.\n\nThese natural landmarks, along with others such as the Steeple Rock and the Lion Rocks, contribute to the scenic value of Kynance Cove and play an important role in the narrative, shaping the characters' experiences and perceptions of the journey.",
+            "query_time": 0.354280948638916,
+            "result_length": 1542
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows.\n\nAsparagus Island is noted as a location that is not actually covered in asparagus, which adds a humorous observation to the narrative. It is part of the natural landscape of Kynance Cove and is visited by some of the characters. The island contributes to the vivid imagery of the setting and enhances the sense of place and the natural beauty of the region.\n\nGull Rock is described as a rocky formation near Kynance Cove, contributing to the dramatic scenery of the area. It is part of the natural environment that the characters observe during their visit. The presence of Gull Rock adds to the descriptive elements of the setting and the experiences of the characters.\n\nThe Bellows is a natural feature mentioned in the text, described as a curious sight where water forces itself through a fissure in the rock with a great roar. This feature is part of the landscape of Kynance Cove and is visited by the characters. The Bellows contributes to the vivid description of the location and the experiences of the characters, adding to the atmosphere and sense of wonder associated with the cove.\n\nThese natural landmarks, along with others such as the Steeple Rock and the Lion Rocks, contribute to the scenic value of Kynance Cove and play an important role in the narrative, shaping the characters' experiences and perceptions of the journey.",
+            "query_time": 0.38178277015686035,
+            "result_length": 1542
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows.\n\nAsparagus Island is noted as a location that is not actually covered in asparagus, which adds a humorous observation to the narrative. It is part of the natural landscape of Kynance Cove and is visited by some of the characters. The island contributes to the vivid imagery of the setting and enhances the sense of place and the natural beauty of the region.\n\nGull Rock is described as a rocky formation near Kynance Cove, contributing to the dramatic scenery of the area. It is part of the natural environment that the characters observe during their visit. The presence of Gull Rock adds to the descriptive elements of the setting and the experiences of the characters.\n\nThe Bellows is a natural feature mentioned in the text, described as a curious sight where water forces itself through a fissure in the rock with a great roar. This feature is part of the landscape of Kynance Cove and is visited by the characters. The Bellows contributes to the vivid description of the location and the experiences of the characters, adding to the atmosphere and sense of wonder associated with the cove.\n\nThese natural landmarks, along with others such as the Steeple Rock and the Lion Rocks, contribute to the scenic value of Kynance Cove and play an important role in the narrative, shaping the characters' experiences and perceptions of the journey.",
+            "query_time": 0.31830406188964844,
+            "result_length": 1542
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ea3d4859",
+        "query": "During the travelers' exploration of the Cornish coastline in the narrative, what notable geographical feature is located near Housel Cove?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Penolver is located near Housel Cove.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and they are dazzling white. This structure is situated on the coast and is part of the landscape that the travelers admire during their visit to the area.",
+            "query_time": 0.4351346492767334,
+            "result_length": 417
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and they are dazzling white. This structure is situated on the coast and is part of the landscape that the travelers admire during their visit to the area.",
+            "query_time": 0.38995862007141113,
+            "result_length": 417
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and they are dazzling white. This structure is situated on the coast and is part of the landscape that the travelers admire during their visit to the area.",
+            "query_time": 0.4060690402984619,
+            "result_length": 417
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter the Lizard Lights. The Lizard Lights are a notable geographical feature located near Housel Cove. These lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. The Lizard Lights are significant as they are part of the landscape and serve as a landmark in the area.",
+            "query_time": 0.4573965072631836,
+            "result_length": 503
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter the Lizard Lights. The Lizard Lights are a notable geographical feature located near Housel Cove. These lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. The Lizard Lights are significant as they are part of the landscape and serve as a landmark in the area.",
+            "query_time": 0.30033349990844727,
+            "result_length": 503
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter the Lizard Lights. The Lizard Lights are a notable geographical feature located near Housel Cove. These lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. The Lizard Lights are significant as they are part of the landscape and serve as a landmark in the area.",
+            "query_time": 0.30784010887145996,
+            "result_length": 503
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ba894e2c",
+        "query": "In the retelling of the Arthurian legend within the novel, who is the character credited with producing King Arthur?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Merlin produced King Arthur.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, King Arthur is credited with being produced by Uther Pendragon. According to the narrative, Uther Pendragon fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married Ygrayne. This union resulted in the birth of Arthur, who was later raised by Sir Ector. Uther's actions are foundational to the legend of King Arthur and his lineage, emphasizing themes of power, destiny, and moral responsibility.\n\nUther Pendragon's role in the origin of King Arthur is central to the Arthurian legends. His relationship with Ygrayne is described as a romantic one that led to violent actions against her husband. The data states that Uther besieged them in their castles, killed her husband, and married Ygrayne. Ygrayne gave birth to Arthur, who was later raised by Sir Ector. This relationship is central to the origin of Arthur's story and highlights themes of passion, betrayal, and the intertwining of personal desires with political and familial obligations.\n\nThe connection between Uther Pendragon and Ygrayne is part of the Arthurian mythos and highlights the tragic and romantic elements of the narrative. The connection between Ygrayne and Uther Pendragon underscores the complex dynamics of power and love in the Arthurian legends. Uther's actions set the stage for the origin of King Arthur, making him a pivotal figure in the legend.",
+            "query_time": 0.30422210693359375,
+            "result_length": 1459
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, King Arthur is credited with being produced by Uther Pendragon. According to the narrative, Uther Pendragon fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married Ygrayne. This union resulted in the birth of Arthur, who was later raised by Sir Ector. Uther's actions are foundational to the legend of King Arthur and his lineage, emphasizing themes of power, destiny, and moral responsibility.\n\nUther Pendragon's role in the origin of King Arthur is central to the Arthurian legends. His relationship with Ygrayne is described as a romantic one that led to violent actions against her husband. The data states that Uther besieged them in their castles, killed her husband, and married Ygrayne. Ygrayne gave birth to Arthur, who was later raised by Sir Ector. This relationship is central to the origin of Arthur's story and highlights themes of passion, betrayal, and the intertwining of personal desires with political and familial obligations.\n\nThe connection between Uther Pendragon and Ygrayne is part of the Arthurian mythos and highlights the tragic and romantic elements of the narrative. The connection between Ygrayne and Uther Pendragon underscores the complex dynamics of power and love in the Arthurian legends. Uther's actions set the stage for the origin of King Arthur, making him a pivotal figure in the legend.",
+            "query_time": 0.40851402282714844,
+            "result_length": 1459
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, King Arthur is credited with being produced by Uther Pendragon. According to the narrative, Uther Pendragon fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married Ygrayne. This union resulted in the birth of Arthur, who was later raised by Sir Ector. Uther's actions are foundational to the legend of King Arthur and his lineage, emphasizing themes of power, destiny, and moral responsibility.\n\nUther Pendragon's role in the origin of King Arthur is central to the Arthurian legends. His relationship with Ygrayne is described as a romantic one that led to violent actions against her husband. The data states that Uther besieged them in their castles, killed her husband, and married Ygrayne. Ygrayne gave birth to Arthur, who was later raised by Sir Ector. This relationship is central to the origin of Arthur's story and highlights themes of passion, betrayal, and the intertwining of personal desires with political and familial obligations.\n\nThe connection between Uther Pendragon and Ygrayne is part of the Arthurian mythos and highlights the tragic and romantic elements of the narrative. The connection between Ygrayne and Uther Pendragon underscores the complex dynamics of power and love in the Arthurian legends. Uther's actions set the stage for the origin of King Arthur, making him a pivotal figure in the legend.",
+            "query_time": 0.36374711990356445,
+            "result_length": 1459
+          }
+        }
+      },
+      {
+        "query_id": "Novel-42f1975a",
+        "query": "According to the narrative's summary of Arthurian history, who was proclaimed king after the death of Uther Pendragon?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "King Arthur was proclaimed king after Uther Pendragon.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The story describes how Uther fell in love with Ygrayne, the wife of the Duke of Cornwall, and besieged them in their castles, killing her husband and marrying her. This led to the birth of Arthur, who was later raised by Sir Ector. Upon Uther's death, Merlin, the enchanter, arranged for Arthur to be recognized as the rightful heir and proclaimed king. This transition marked the beginning of Arthur's reign and his journey to becoming a legendary figure in the Arthurian myths.",
+            "query_time": 0.30916690826416016,
+            "result_length": 602
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The story describes how Uther fell in love with Ygrayne, the wife of the Duke of Cornwall, and besieged them in their castles, killing her husband and marrying her. This led to the birth of Arthur, who was later raised by Sir Ector. Upon Uther's death, Merlin, the enchanter, arranged for Arthur to be recognized as the rightful heir and proclaimed king. This transition marked the beginning of Arthur's reign and his journey to becoming a legendary figure in the Arthurian myths.",
+            "query_time": 0.31450819969177246,
+            "result_length": 602
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The story describes how Uther fell in love with Ygrayne, the wife of the Duke of Cornwall, and besieged them in their castles, killing her husband and marrying her. This led to the birth of Arthur, who was later raised by Sir Ector. Upon Uther's death, Merlin, the enchanter, arranged for Arthur to be recognized as the rightful heir and proclaimed king. This transition marked the beginning of Arthur's reign and his journey to becoming a legendary figure in the Arthurian myths.",
+            "query_time": 0.31973767280578613,
+            "result_length": 602
+          }
+        }
+      },
+      {
+        "query_id": "Novel-419cadfe",
+        "query": "Within the summary of Arthurian legend provided in the narrative, with whom did King Arthur engage in battle?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "King Arthur fought with Mordred.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with **Mordred**. According to the data, Mordred was Arthur's nephew who raised a rebellion against him and ultimately defeated him at Camelford. This confrontation marked the end of Arthur's reign and the beginning of his mysterious disappearance. The relationship between Arthur and Mordred is described as hostile, culminating in Mordred's betrayal and the defeat of Arthur at the Battle of Camelford. This event is central to the legend, symbolizing the fall of a great king and the loss of his dream of a perfect kingdom. The battle is directly tied to the events that led to Arthur's death wound and his eventual disappearance, which is further reinforced by the legend of Excalibur being thrown into the lake by Sir Bedevere at Arthur's request.",
+            "query_time": 0.3613758087158203,
+            "result_length": 813
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with **Mordred**. According to the data, Mordred was Arthur's nephew who raised a rebellion against him and ultimately defeated him at Camelford. This confrontation marked the end of Arthur's reign and the beginning of his mysterious disappearance. The relationship between Arthur and Mordred is described as hostile, culminating in Mordred's betrayal and the defeat of Arthur at the Battle of Camelford. This event is central to the legend, symbolizing the fall of a great king and the loss of his dream of a perfect kingdom. The battle is directly tied to the events that led to Arthur's death wound and his eventual disappearance, which is further reinforced by the legend of Excalibur being thrown into the lake by Sir Bedevere at Arthur's request.",
+            "query_time": 0.32157421112060547,
+            "result_length": 813
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with **Mordred**. According to the data, Mordred was Arthur's nephew who raised a rebellion against him and ultimately defeated him at Camelford. This confrontation marked the end of Arthur's reign and the beginning of his mysterious disappearance. The relationship between Arthur and Mordred is described as hostile, culminating in Mordred's betrayal and the defeat of Arthur at the Battle of Camelford. This event is central to the legend, symbolizing the fall of a great king and the loss of his dream of a perfect kingdom. The battle is directly tied to the events that led to Arthur's death wound and his eventual disappearance, which is further reinforced by the legend of Excalibur being thrown into the lake by Sir Bedevere at Arthur's request.",
+            "query_time": 0.3470907211303711,
+            "result_length": 813
+          }
+        }
+      },
+      {
+        "query_id": "Novel-9e7500a0",
+        "query": "In the context of the Arthurian story as recounted in the narrative, which character fell in love with Ygrayne, leading to significant events in the legend?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Uther Pendragon fell in love with Ygrayne.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the Arthurian legends, as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. Uther Pendragon was the King of Britain who became enamored with Ygrayne, the wife of the Duke of Cornwall. His desire for her resulted in a series of dramatic and tragic actions. Uther besieged Ygrayne and her husband in their castles, killed her husband, and then married Ygrayne. This union ultimately led to the birth of Arthur, who was later raised by Sir Ector. Uther's actions set the stage for the origin of King Arthur and his lineage, highlighting themes of power, destiny, and moral responsibility within the Arthurian mythos.\n\nThe story of Uther Pendragon and Ygrayne is deeply intertwined with the broader narrative of the Arthurian legends, particularly through the symbolic and historical significance of Tintagel Castle. Tintagel is directly linked to the legend of Arthur and Ygrayne, serving as a place where their connection is rooted in the mythos. The castle is described as a physical and symbolic representation of the Arthurian legends, reinforcing its cultural and historical significance. Uther's actions not only shaped the early life of Arthur but also contributed to the complex web of relationships and events that define the Arthurian lore.",
+            "query_time": 0.36532163619995117,
+            "result_length": 1322
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the Arthurian legends, as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. Uther Pendragon was the King of Britain who became enamored with Ygrayne, the wife of the Duke of Cornwall. His desire for her resulted in a series of dramatic and tragic actions. Uther besieged Ygrayne and her husband in their castles, killed her husband, and then married Ygrayne. This union ultimately led to the birth of Arthur, who was later raised by Sir Ector. Uther's actions set the stage for the origin of King Arthur and his lineage, highlighting themes of power, destiny, and moral responsibility within the Arthurian mythos.\n\nThe story of Uther Pendragon and Ygrayne is deeply intertwined with the broader narrative of the Arthurian legends, particularly through the symbolic and historical significance of Tintagel Castle. Tintagel is directly linked to the legend of Arthur and Ygrayne, serving as a place where their connection is rooted in the mythos. The castle is described as a physical and symbolic representation of the Arthurian legends, reinforcing its cultural and historical significance. Uther's actions not only shaped the early life of Arthur but also contributed to the complex web of relationships and events that define the Arthurian lore.",
+            "query_time": 0.3300011157989502,
+            "result_length": 1322
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the Arthurian legends, as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. Uther Pendragon was the King of Britain who became enamored with Ygrayne, the wife of the Duke of Cornwall. His desire for her resulted in a series of dramatic and tragic actions. Uther besieged Ygrayne and her husband in their castles, killed her husband, and then married Ygrayne. This union ultimately led to the birth of Arthur, who was later raised by Sir Ector. Uther's actions set the stage for the origin of King Arthur and his lineage, highlighting themes of power, destiny, and moral responsibility within the Arthurian mythos.\n\nThe story of Uther Pendragon and Ygrayne is deeply intertwined with the broader narrative of the Arthurian legends, particularly through the symbolic and historical significance of Tintagel Castle. Tintagel is directly linked to the legend of Arthur and Ygrayne, serving as a place where their connection is rooted in the mythos. The castle is described as a physical and symbolic representation of the Arthurian legends, reinforcing its cultural and historical significance. Uther's actions not only shaped the early life of Arthur but also contributed to the complex web of relationships and events that define the Arthurian lore.",
+            "query_time": 0.3278176784515381,
+            "result_length": 1322
+          }
+        }
+      },
+      {
+        "query_id": "Novel-bffd01c2",
+        "query": "In the novel's retelling of the end of King Arthur's story, who was the knight entrusted to throw the sword Excalibur into the mere?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Sir Bedevere threw Excalibur.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted with the task of throwing the sword Excalibur into the mere was Sir Bedevere. This act was carried out at Arthur's request, marking the final moments of his life and the beginning of his mysterious disappearance. Sir Bedevere's loyalty to Arthur is a defining trait in the legend, and his actions are pivotal in the narrative of Arthur's death. The event is described as a symbolic gesture that signifies the end of Arthur's reign and the conclusion of his legendary journey.",
+            "query_time": 0.34270310401916504,
+            "result_length": 556
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted with the task of throwing the sword Excalibur into the mere was Sir Bedevere. This act was carried out at Arthur's request, marking the final moments of his life and the beginning of his mysterious disappearance. Sir Bedevere's loyalty to Arthur is a defining trait in the legend, and his actions are pivotal in the narrative of Arthur's death. The event is described as a symbolic gesture that signifies the end of Arthur's reign and the conclusion of his legendary journey.",
+            "query_time": 0.31418848037719727,
+            "result_length": 556
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted with the task of throwing the sword Excalibur into the mere was Sir Bedevere. This act was carried out at Arthur's request, marking the final moments of his life and the beginning of his mysterious disappearance. Sir Bedevere's loyalty to Arthur is a defining trait in the legend, and his actions are pivotal in the narrative of Arthur's death. The event is described as a symbolic gesture that signifies the end of Arthur's reign and the conclusion of his legendary journey.",
+            "query_time": 0.3148312568664551,
+            "result_length": 556
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ef451592",
+        "query": "Aside from Penolver, what other prominent feature is described as being near Housel Cove in the narrative?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Lizard Lights is near Housel Cove.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative, Housel Cove is described as a beautiful and serene location, noted for its soft sand and peaceful environment. Alongside this, another prominent feature near Housel Cove is **Penolver**, which is mentioned as a headland visible from the Lizard. However, aside from Penolver, the text also highlights **Belidden**, described as a green slope that is thought to be the remains of a Druidical temple. This feature contributes to the scenic beauty of the area and adds an archaeological dimension to the landscape around Housel Cove.\n\nAdditionally, the narrative mentions the **Lizard Lights**, which are referenced as something the characters intend to examine during their stay. These lights are part of the natural and geographical features of the region, contributing to the overall atmosphere of the journey. While not directly adjacent to Housel Cove, they are part of the broader landscape that the travelers explore in the vicinity of the cove. \n\nThe **Devil's Throat** and **the Bellows**, though more closely associated with Kynance Cove, are also part of the Cornish coastal environment and contribute to the vivid descriptions of natural formations that accompany the journey. However, these specific features are not directly linked to Housel Cove in the text provided.",
+            "query_time": 0.2978231906890869,
+            "result_length": 1296
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative, Housel Cove is described as a beautiful and serene location, noted for its soft sand and peaceful environment. Alongside this, another prominent feature near Housel Cove is **Penolver**, which is mentioned as a headland visible from the Lizard. However, aside from Penolver, the text also highlights **Belidden**, described as a green slope that is thought to be the remains of a Druidical temple. This feature contributes to the scenic beauty of the area and adds an archaeological dimension to the landscape around Housel Cove.\n\nAdditionally, the narrative mentions the **Lizard Lights**, which are referenced as something the characters intend to examine during their stay. These lights are part of the natural and geographical features of the region, contributing to the overall atmosphere of the journey. While not directly adjacent to Housel Cove, they are part of the broader landscape that the travelers explore in the vicinity of the cove. \n\nThe **Devil's Throat** and **the Bellows**, though more closely associated with Kynance Cove, are also part of the Cornish coastal environment and contribute to the vivid descriptions of natural formations that accompany the journey. However, these specific features are not directly linked to Housel Cove in the text provided.",
+            "query_time": 0.33757877349853516,
+            "result_length": 1296
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative, Housel Cove is described as a beautiful and serene location, noted for its soft sand and peaceful environment. Alongside this, another prominent feature near Housel Cove is **Penolver**, which is mentioned as a headland visible from the Lizard. However, aside from Penolver, the text also highlights **Belidden**, described as a green slope that is thought to be the remains of a Druidical temple. This feature contributes to the scenic beauty of the area and adds an archaeological dimension to the landscape around Housel Cove.\n\nAdditionally, the narrative mentions the **Lizard Lights**, which are referenced as something the characters intend to examine during their stay. These lights are part of the natural and geographical features of the region, contributing to the overall atmosphere of the journey. While not directly adjacent to Housel Cove, they are part of the broader landscape that the travelers explore in the vicinity of the cove. \n\nThe **Devil's Throat** and **the Bellows**, though more closely associated with Kynance Cove, are also part of the Cornish coastal environment and contribute to the vivid descriptions of natural formations that accompany the journey. However, these specific features are not directly linked to Housel Cove in the text provided.",
+            "query_time": 0.29361939430236816,
+            "result_length": 1296
+          }
+        }
+      },
+      {
+        "query_id": "Novel-eab59fae",
+        "query": "According to the journey described in the narrative, in which county of England is the town of Marazion located?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Marazion is located in Cornwall.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.44173765182495117,
+            "result_length": 67
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.34444427490234375,
+            "result_length": 67
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.4420483112335205,
+            "result_length": 67
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.31815385818481445,
+            "result_length": 67
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.31509995460510254,
+            "result_length": 67
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.3321859836578369,
+            "result_length": 67
+          }
+        }
+      },
+      {
+        "query_id": "Novel-61cf41ee",
+        "query": "During the journey through Cornwall, who is identified as the driver responsible for transporting the main party by carriage?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Charles is the driver of the carriage.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horses and ensures the party's safe travel. Charles is noted for his punctuality and practical approach to their travels, and he often engages in conversation with the travelers, providing them with information and assistance throughout their journey.",
+            "query_time": 0.3522803783416748,
+            "result_length": 452
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horses and ensures the party's safe travel. Charles is noted for his punctuality and practical approach to their travels, and he often engages in conversation with the travelers, providing them with information and assistance throughout their journey.",
+            "query_time": 0.32857275009155273,
+            "result_length": 452
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horses and ensures the party's safe travel. Charles is noted for his punctuality and practical approach to their travels, and he often engages in conversation with the travelers, providing them with information and assistance throughout their journey.",
+            "query_time": 0.3287200927734375,
+            "result_length": 452
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horse and ensures the smooth transportation of the group. Charles is mentioned as being punctual and attentive to the needs of the travelers, providing them with a comfortable and practical means of travel throughout their journey. His role is crucial in facilitating their exploration of Cornwall, and he is consistently referred to with a sense of trust and appreciation by the main characters.",
+            "query_time": 0.39214229583740234,
+            "result_length": 597
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horse and ensures the smooth transportation of the group. Charles is mentioned as being punctual and attentive to the needs of the travelers, providing them with a comfortable and practical means of travel throughout their journey. His role is crucial in facilitating their exploration of Cornwall, and he is consistently referred to with a sense of trust and appreciation by the main characters.",
+            "query_time": 0.33962035179138184,
+            "result_length": 597
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horse and ensures the smooth transportation of the group. Charles is mentioned as being punctual and attentive to the needs of the travelers, providing them with a comfortable and practical means of travel throughout their journey. His role is crucial in facilitating their exploration of Cornwall, and he is consistently referred to with a sense of trust and appreciation by the main characters.",
+            "query_time": 0.3302750587463379,
+            "result_length": 597
+          }
+        }
+      },
+      {
+        "query_id": "Novel-09d21113",
+        "query": "In the account of the road journey after passing through Penzance, to which location did Charles travel with the carriage?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Charles went to Whitesand Bay after passing through Penzance.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the account of the road journey after passing through Penzance, Charles traveled with the carriage to several locations. He first took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey to St. Ives, where they met a kind local who showed them around the town. After St. Ives, Charles took them to Marazion, where they stayed at a hotel. The journey also included a visit to the Lizard, where they stayed at an inn, and later to Tintagel, where they explored the area and visited the castle. Finally, they traveled to Bodmin Road, continuing their journey along the coast.",
+            "query_time": 0.29560112953186035,
+            "result_length": 642
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the account of the road journey after passing through Penzance, Charles traveled with the carriage to several locations. He first took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey to St. Ives, where they met a kind local who showed them around the town. After St. Ives, Charles took them to Marazion, where they stayed at a hotel. The journey also included a visit to the Lizard, where they stayed at an inn, and later to Tintagel, where they explored the area and visited the castle. Finally, they traveled to Bodmin Road, continuing their journey along the coast.",
+            "query_time": 0.304934024810791,
+            "result_length": 642
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the account of the road journey after passing through Penzance, Charles traveled with the carriage to several locations. He first took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey to St. Ives, where they met a kind local who showed them around the town. After St. Ives, Charles took them to Marazion, where they stayed at a hotel. The journey also included a visit to the Lizard, where they stayed at an inn, and later to Tintagel, where they explored the area and visited the castle. Finally, they traveled to Bodmin Road, continuing their journey along the coast.",
+            "query_time": 0.4437241554260254,
+            "result_length": 642
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to several locations. He took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey, and Charles helped them navigate the area around the Land's End. The account also mentions that they visited places like Treryn, Pardeneck Point, and Tol Pedn Penwith, though it was impractical to see all of them. The journey continued towards St. Ives, where they encountered a friendly local who showed them around the town. The narrative also includes a visit to Poltesco, where they saw the serpentine works, and a trip to the coast near Cadgwith. Throughout the journey, Charles was instrumental in guiding the travelers and ensuring they saw as much as possible.",
+            "query_time": 0.335613489151001,
+            "result_length": 785
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to several locations. He took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey, and Charles helped them navigate the area around the Land's End. The account also mentions that they visited places like Treryn, Pardeneck Point, and Tol Pedn Penwith, though it was impractical to see all of them. The journey continued towards St. Ives, where they encountered a friendly local who showed them around the town. The narrative also includes a visit to Poltesco, where they saw the serpentine works, and a trip to the coast near Cadgwith. Throughout the journey, Charles was instrumental in guiding the travelers and ensuring they saw as much as possible.",
+            "query_time": 0.31639599800109863,
+            "result_length": 785
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to several locations. He took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey, and Charles helped them navigate the area around the Land's End. The account also mentions that they visited places like Treryn, Pardeneck Point, and Tol Pedn Penwith, though it was impractical to see all of them. The journey continued towards St. Ives, where they encountered a friendly local who showed them around the town. The narrative also includes a visit to Poltesco, where they saw the serpentine works, and a trip to the coast near Cadgwith. Throughout the journey, Charles was instrumental in guiding the travelers and ensuring they saw as much as possible.",
+            "query_time": 0.3252720832824707,
+            "result_length": 785
+          }
+        }
+      },
+      {
+        "query_id": "Novel-1b7a0e02",
+        "query": "During the first evening at The Lizard, what did Charles call out excitedly upon seeing the lights, as described in the narrative?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Charles called out 'The Lizard Lights'.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'7'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'7'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'7'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"There's the Lizard Lights!\" This moment highlights his enthusiasm and familiarity with the location, as he was a local guide who had driven visitors to the area multiple times. His excitement reflects the significance of the Lizard Lights as a notable landmark and navigational aid in the region.",
+            "query_time": 0.34154653549194336,
+            "result_length": 435
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"There's the Lizard Lights!\" This moment highlights his enthusiasm and familiarity with the location, as he was a local guide who had driven visitors to the area multiple times. His excitement reflects the significance of the Lizard Lights as a notable landmark and navigational aid in the region.",
+            "query_time": 0.31996655464172363,
+            "result_length": 435
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"There's the Lizard Lights!\" This moment highlights his enthusiasm and familiarity with the location, as he was a local guide who had driven visitors to the area multiple times. His excitement reflects the significance of the Lizard Lights as a notable landmark and navigational aid in the region.",
+            "query_time": 0.32886528968811035,
+            "result_length": 435
+          }
+        }
+      },
+      {
+        "query_id": "Novel-752ca0c2",
+        "query": "In the context of the story's visit to Mullion, which individual did Mary Mundy express her admiration for?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Mary Mundy admired the Professor.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'8'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'8'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'8'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. The narrative highlights that the Professor is referred to as \"the brightest thing on Cornish land\" by Mary Mundy, indicating a deep level of respect and admiration for him. This admiration is further emphasized by the fact that Mary Mundy mentions the Professor in a poetic line that underscores his significance in the area. Additionally, she expresses hope that he will be well and even mentions having his poem in her visitors' book and his portrait in her album, which further illustrates her connection to and admiration for him.",
+            "query_time": 0.3144657611846924,
+            "result_length": 638
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. The narrative highlights that the Professor is referred to as \"the brightest thing on Cornish land\" by Mary Mundy, indicating a deep level of respect and admiration for him. This admiration is further emphasized by the fact that Mary Mundy mentions the Professor in a poetic line that underscores his significance in the area. Additionally, she expresses hope that he will be well and even mentions having his poem in her visitors' book and his portrait in her album, which further illustrates her connection to and admiration for him.",
+            "query_time": 0.30959415435791016,
+            "result_length": 638
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. The narrative highlights that the Professor is referred to as \"the brightest thing on Cornish land\" by Mary Mundy, indicating a deep level of respect and admiration for him. This admiration is further emphasized by the fact that Mary Mundy mentions the Professor in a poetic line that underscores his significance in the area. Additionally, she expresses hope that he will be well and even mentions having his poem in her visitors' book and his portrait in her album, which further illustrates her connection to and admiration for him.",
+            "query_time": 0.29935622215270996,
+            "result_length": 638
+          }
+        }
+      }
+    ],
+    "complexity_analysis": {
+      "status": "success",
+      "classification_results": [
+        {
+          "query": "What is the scientific name of Cornish heath?",
+          "complexity": "one_hop",
+          "confidence": 0.599609375,
+          "probabilities": {
+            "LABEL_0": 0.33837890625,
+            "LABEL_1": 0.599609375,
+            "LABEL_2": 0.06201171875
+          }
+        },
+        {
+          "query": "Who married Princess Frederica of Hanover according to the royal visit account?",
+          "complexity": "multi_hop",
+          "confidence": 0.69384765625,
+          "probabilities": {
+            "LABEL_0": 0.0094451904296875,
+            "LABEL_1": 0.296875,
+            "LABEL_2": 0.69384765625
+          }
+        },
+        {
+          "query": "Compare the relationship between the plant Erica vagans and its common names across different regions mentioned in the narrative.",
+          "complexity": "multi_hop",
+          "confidence": 0.51171875,
+          "probabilities": {
+            "LABEL_0": 0.05712890625,
+            "LABEL_1": 0.43115234375,
+            "LABEL_2": 0.51171875
+          }
+        }
+      ],
+      "calibration_tested": true,
+      "calibrated_results": [
+        0.6654285034987552,
+        0.6467876886324588,
+        0.6745630742514217,
+        0.6561682249558661
+      ]
+    },
+    "performance": {
+      "basic_rag": {
+        "avg_time": 0.3188275496164958,
+        "min_time": 0.3086740970611572,
+        "max_time": 0.33472371101379395,
+        "std_time": 0.01138360298566883,
+        "times": [
+          0.3086740970611572,
+          0.31308484077453613,
+          0.33472371101379395
+        ]
+      },
+      "enhanced_rag": {
+        "avg_time": 0.33553608258565265,
+        "min_time": 0.3175466060638428,
+        "max_time": 0.3508419990539551,
+        "std_time": 0.013724598828674755,
+        "times": [
+          0.33821964263916016,
+          0.3508419990539551,
+          0.3175466060638428
+        ]
+      }
+    }
+  },
+  "timestamp": "2025-08-05 18:06:42",
+  "summary": {
+    "total_tests": 123,
+    "successful_tests": 76,
+    "failed_tests": 47,
+    "modules_tested": [
+      "document_insertion_basic_rag",
+      "document_insertion_enhanced_rag",
+      "query_processing",
+      "complexity_analysis"
+    ],
+    "performance_summary": {
+      "basic_rag": {
+        "avg_time": 0.3188275496164958,
+        "min_time": 0.3086740970611572,
+        "max_time": 0.33472371101379395
+      },
+      "enhanced_rag": {
+        "avg_time": 0.33553608258565265,
+        "min_time": 0.3175466060638428,
+        "max_time": 0.3508419990539551
+      }
+    },
+    "data_statistics": {
+      "total_queries_tested": 20,
+      "successful_query_responses": 75
+    },
+    "success_rate": 0.6178861788617886
+  }
+}

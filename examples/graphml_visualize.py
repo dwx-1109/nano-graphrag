@@ -277,6 +277,6 @@ def visualize_graphml(graphml_file, html_path, port=8000):
 
 # usage
 if __name__ == "__main__":
-    graphml_file = r"nano_graphrag_cache_azure_openai_TEST\graph_chunk_entity_relation.graphml"  # replace with your GraphML file path
+    graphml_file = r"comprehensive_test_enhanced_cache_enhanced/graph_chunk_entity_relation.graphml"  # replace with your GraphML file path
     html_path = "graph_visualization.html"
     visualize_graphml(graphml_file, html_path, 11236)

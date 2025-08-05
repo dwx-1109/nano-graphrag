@@ -9,10 +9,137 @@ from nano_graphrag.base import (
     BaseVectorStorage,
     TextChunkSchema,
 )
-from nano_graphrag.prompt import PROMPTS
+from nano_graphrag.answer_generation.prompts import PROMPTS
 from nano_graphrag._utils import logger, compute_mdhash_id
 from nano_graphrag.entity_extraction.module import TypedEntityRelationshipExtractor
-from nano_graphrag._op import _merge_edges_then_upsert, _merge_nodes_then_upsert
+# 这些函数需要重新实现或从其他模块导入
+# from nano_graphrag._op import _merge_edges_then_upsert, _merge_nodes_then_upsert
+
+# # 临时实现这些函数
+# async def _merge_nodes_then_upsert(
+#     nodes: list,
+#     knwoledge_graph_inst: BaseGraphStorage,
+#     global_config: dict = {},
+# ) -> None:
+#     """临时实现：合并节点并更新到图存储"""
+#     if not nodes:
+#         return
+    
+#     # 批量添加节点
+#     await knwoledge_graph_inst.add_nodes_batch(nodes)
+
+# async def _merge_edges_then_upsert(
+#     source: str,
+#     target: str,
+#     edges: list,
+#     knwoledge_graph_inst: BaseGraphStorage,
+#     global_config: dict = {},
+# ) -> None:
+#     """临时实现：合并边并更新到图存储"""
+#     if not edges:
+#         return
+    
+#     # 批量添加边
+#     await knwoledge_graph_inst.add_edges_batch(edges)
+
+async def _merge_nodes_then_upsert(
+    entity_name: str,
+    nodes_data: list[dict],
+    knwoledge_graph_inst: BaseGraphStorage,
+    global_config: dict,
+):
+    """合并节点数据并更新到图数据库"""
+    from collections import Counter
+    from nano_graphrag._utils import split_string_by_multi_markers
+    from nano_graphrag.answer_generation.prompts import GRAPH_FIELD_SEP
+    
+    already_entitiy_types = []
+    already_source_ids = []
+    already_description = []
+
+    already_node = await knwoledge_graph_inst.get_node(entity_name)
+    if already_node is not None:
+        already_entitiy_types.append(already_node["entity_type"])
+        already_source_ids.extend(
+            split_string_by_multi_markers(already_node["source_id"], [GRAPH_FIELD_SEP])
+        )
+        already_description.append(already_node["description"])
+
+    entity_type = sorted(
+        Counter(
+            [dp["entity_type"] for dp in nodes_data] + already_entitiy_types
+        ).items(),
+        key=lambda x: x[1],
+        reverse=True,
+    )[0][0]
+    description = GRAPH_FIELD_SEP.join(
+        sorted(set([dp["description"] for dp in nodes_data] + already_description))
+    )
+    source_id = GRAPH_FIELD_SEP.join(
+        set([dp["source_id"] for dp in nodes_data] + already_source_ids)
+    )
+    
+    node_data = dict(
+        entity_name=entity_name,
+        entity_type=entity_type,
+        description=description,
+        source_id=source_id,
+    )
+    await knwoledge_graph_inst.upsert_node(entity_name, node_data)
+    return node_data
+
+
+async def _merge_edges_then_upsert(
+    src_id: str,
+    tgt_id: str,
+    edges_data: list[dict],
+    knwoledge_graph_inst: BaseGraphStorage,
+    global_config: dict,
+):
+    """合并边数据并更新到图数据库"""
+    from nano_graphrag._utils import split_string_by_multi_markers
+    from nano_graphrag.answer_generation.prompts import GRAPH_FIELD_SEP
+    
+    already_weights = []
+    already_source_ids = []
+    already_description = []
+    already_order = []
+    if await knwoledge_graph_inst.has_edge(src_id, tgt_id):
+        already_edge = await knwoledge_graph_inst.get_edge(src_id, tgt_id)
+        already_weights.append(already_edge["weight"])
+        already_source_ids.extend(
+            split_string_by_multi_markers(already_edge["source_id"], [GRAPH_FIELD_SEP])
+        )
+        already_description.append(already_edge["description"])
+        already_order.append(already_edge.get("order", 1))
+
+    # [numberchiffre]: `Relationship.order` is only returned from DSPy's predictions
+    order = min([dp.get("order", 1) for dp in edges_data] + already_order)
+    weight = sum([dp["weight"] for dp in edges_data] + already_weights)
+    description = GRAPH_FIELD_SEP.join(
+        sorted(set([dp["description"] for dp in edges_data] + already_description))
+    )
+    source_id = GRAPH_FIELD_SEP.join(
+        set([dp["source_id"] for dp in edges_data] + already_source_ids)
+    )
+    for need_insert_id in [src_id, tgt_id]:
+        if not (await knwoledge_graph_inst.has_node(need_insert_id)):
+            await knwoledge_graph_inst.upsert_node(
+                need_insert_id,
+                node_data={
+                    "source_id": source_id,
+                    "description": description,
+                    "entity_type": '"UNKNOWN"',
+                },
+            )
+    
+    await knwoledge_graph_inst.upsert_edge(
+        src_id,
+        tgt_id,
+        edge_data=dict(
+            weight=weight, description=description, source_id=source_id, order=order
+        ),
+    )
 
 
 async def generate_dataset(
@@ -83,8 +210,10 @@ async def extract_entities_dspy(
     knwoledge_graph_inst: BaseGraphStorage,
     entity_vdb: BaseVectorStorage,
     global_config: dict,
+    using_amazon_bedrock: bool = False,  # 添加此参数以保持兼容性
 ) -> Union[BaseGraphStorage, None]:
-    entity_extractor = TypedEntityRelationshipExtractor(num_refine_turns=1, self_refine=True)
+    # 临时禁用self_refine以避免字段不匹配问题
+    entity_extractor = TypedEntityRelationshipExtractor(num_refine_turns=1, self_refine=False)
 
     if global_config.get("use_compiled_dspy_entity_relationship", False):
         entity_extractor.load(global_config["entity_relationship_module_path"])
@@ -102,8 +231,13 @@ async def extract_entities_dspy(
         try:
             prediction = await asyncio.to_thread(entity_extractor, input_text=content)
             entities, relationships = prediction.entities, prediction.relationships
+            logger.debug(f"成功提取 {len(entities)} 个实体和 {len(relationships)} 个关系")
         except BadRequestError as e:
             logger.error(f"Error in TypedEntityRelationshipExtractor: {e}")
+            entities, relationships = [], []
+        except Exception as e:
+            logger.error(f"意外错误在实体提取中: {e}")
+            logger.error(f"错误详情: {type(e).__name__}: {str(e)}")
             entities, relationships = [], []
 
         maybe_nodes = defaultdict(list)
@@ -169,3 +303,7 @@ async def extract_entities_dspy(
         await entity_vdb.upsert(data_for_vdb)
 
     return knwoledge_graph_inst
+
+
+# 创建别名以保持向后兼容
+extract_entities = extract_entities_dspy

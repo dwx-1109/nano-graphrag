@@ -1,8 +1,8 @@
 import unittest
 from typing import List
 import tiktoken
-from nano_graphrag._splitter import SeparatorSplitter
-from nano_graphrag._op import chunking_by_seperators
+from nano_graphrag.chunking.splitter import SeparatorSplitter
+from nano_graphrag.chunking import chunking_by_seperators
 
 # Assuming the SeparatorSplitter class is already imported
 

@@ -1,0 +1,650 @@
+{
+  "test_config": {
+    "working_dir": "./comprehensive_test_enhanced_cache",
+    "test_modes": [
+      "naive",
+      "local",
+      "global",
+      "hybrid"
+    ],
+    "max_test_queries": 10,
+    "advanced_features_enabled": {
+      "graph_transformer": true,
+      "enhanced_fusion": true,
+      "modern_evaluator": true,
+      "complexity_router": true,
+      "hybrid_retrieval": true
+    }
+  },
+  "test_results": {
+    "dspy_entity_extraction": {
+      "status": "success",
+      "entities_count": 5,
+      "relationships_count": 3,
+      "entities": [
+        "{'entity_name': 'ALICE', 'entity_type': 'PERSON', 'description': \"Alice is a person who is employed by Microsoft. She plays a role in the company's operations and contributes to its technological advancements. Her key attributes include her profession as an employee and her association with Microsoft. There is no direct relationship mentioned between Alice and other entities beyond her employment at Microsoft. Alice's actions are tied to her work at Microsoft, which is a significant part of her professional identity.\", 'importance_score': 0.8}",
+        "{'entity_name': 'MICROSOFT', 'entity_type': 'ORGANIZATION', 'description': 'Microsoft is a large technology organization known for its software and hardware products. It plays a major role in the global technology sector and is a key player in innovation and development. Its key attributes include its status as a multinational corporation, its focus on software solutions, and its extensive product portfolio. Microsoft has a direct relationship with Alice, as she works there. It also has a competitive relationship with Google, another major technology company.', 'importance_score': 0.9}",
+        "{'entity_name': 'BOB', 'entity_type': 'PERSON', 'description': 'Bob is a person who holds the title of CEO at Google. He is a leader within the organization and is responsible for guiding its strategic direction. His key attributes include his leadership role and his association with Google. There is no direct relationship mentioned between Bob and other entities beyond his position at Google. His role as CEO influences the operations and direction of Google.', 'importance_score': 0.7}",
+        "{'entity_name': 'GOOGLE', 'entity_type': 'ORGANIZATION', 'description': 'Google is a large technology organization known for its search engine, online advertising, and various software and hardware products. It plays a major role in the global technology sector and is a key player in innovation and development. Its key attributes include its status as a multinational corporation, its focus on internet services, and its extensive product portfolio. Google has a direct relationship with Bob, as he is its CEO. It also has a competitive relationship with Microsoft, another major technology company.', 'importance_score': 0.9}",
+        "{'entity_name': 'CEO', 'entity_type': 'TITLE', 'description': \"CEO is a title that represents the chief executive officer of an organization. It signifies the highest-ranking executive in a company and is responsible for making major decisions and managing the overall operations. Its key attributes include its role as a leadership position and its significance in corporate governance. The title 'CEO' is directly associated with Bob, indicating his leadership role at Google.\", 'importance_score': 0.6}"
+      ],
+      "relationships": [
+        "{'src_id': 'ALICE', 'tgt_id': 'MICROSOFT', 'description': \"Alice has a direct professional relationship with Microsoft, as she works there. This relationship is significant because it defines her role and responsibilities within the organization. The impact of this relationship is that Alice contributes to Microsoft's operations and success. This relationship is based on her employment and is central to her professional identity.\", 'weight': 0.9, 'order': 1}",
+        "{'src_id': 'BOB', 'tgt_id': 'GOOGLE', 'description': 'Bob has a direct leadership relationship with Google, as he serves as its CEO. This relationship is significant because it defines his role and responsibilities within the organization. The impact of this relationship is that Bob guides the strategic direction of Google. This relationship is based on his position and is central to his professional identity.', 'weight': 0.8, 'order': 1}",
+        "{'src_id': 'MICROSOFT', 'tgt_id': 'GOOGLE', 'description': 'Microsoft and Google have a direct competitive relationship in the technology sector. This relationship is significant because they are both major players in the industry and often compete for market share and innovation. The impact of this relationship is that it drives their respective strategies and developments. This relationship is based on their roles as competitors in the same sector.', 'weight': 0.7, 'order': 1}"
+      ]
+    },
+    "document_insertion": {
+      "basic_rag": {
+        "status": "failed",
+        "error": "{code: Neo.ClientError.Procedure.ProcedureNotFound} {message: There is no procedure with the name `gds.graph.project` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.}"
+      },
+      "enhanced_rag": {
+        "status": "success",
+        "insertion_time": 0.14737486839294434,
+        "document_length": 238515
+      }
+    },
+    "query_processing": [
+      {
+        "query_id": "Novel-73586ddc",
+        "query": "In the narrative of 'An Unsentimental Journey through Cornwall', which plant known scientifically as Erica vagans is also referred to by another common name, and what is that name?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its distinctive botanical characteristics, such as the position of its anthers, and it is often associated with the Cornish coast. The Cornish heath is highlighted as a significant part of the local ecosystem and contributes to the natural beauty of the region.",
+            "query_time": 0.2811398506164551,
+            "result_length": 592
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its distinctive botanical characteristics, such as the position of its anthers, and it is often associated with the Cornish coast. The Cornish heath is highlighted as a significant part of the local ecosystem and contributes to the natural beauty of the region.",
+            "query_time": 0.2554159164428711,
+            "result_length": 592
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its distinctive botanical characteristics, such as the position of its anthers, and it is often associated with the Cornish coast. The Cornish heath is highlighted as a significant part of the local ecosystem and contributes to the natural beauty of the region.",
+            "query_time": 0.27323436737060547,
+            "result_length": 592
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its distinctive botanical characteristics, such as the position of its anthers, and it is often associated with the Cornish coast. The Cornish heath is highlighted as a significant part of the local ecosystem and contributes to the natural beauty of the region.",
+            "query_time": 0.302623987197876,
+            "result_length": 592
+          }
+        }
+      },
+      {
+        "query_id": "Novel-74440a6a",
+        "query": "Within the account of the royal visit to St. Michael's Mount in Cornwall, who is identified as the person who married Princess Frederica of Hanover?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a \"stout mediaeval knight\" who \"loved, wooed, and married\" the princess. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them influences the actions of the local community and the expectations surrounding their arrival. Baron Von Pawel-Rammingen serves as the secretary to Princess Frederica's father and accompanies her during her visit to the Mount, further emphasizing his significant role in the story.",
+            "query_time": 0.296769380569458,
+            "result_length": 686
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a \"stout mediaeval knight\" who \"loved, wooed, and married\" the princess. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them influences the actions of the local community and the expectations surrounding their arrival. Baron Von Pawel-Rammingen serves as the secretary to Princess Frederica's father and accompanies her during her visit to the Mount, further emphasizing his significant role in the story.",
+            "query_time": 0.26076650619506836,
+            "result_length": 686
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a \"stout mediaeval knight\" who \"loved, wooed, and married\" the princess. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them influences the actions of the local community and the expectations surrounding their arrival. Baron Von Pawel-Rammingen serves as the secretary to Princess Frederica's father and accompanies her during her visit to the Mount, further emphasizing his significant role in the story.",
+            "query_time": 0.28190064430236816,
+            "result_length": 686
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a \"stout mediaeval knight\" who \"loved, wooed, and married\" the princess. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them influences the actions of the local community and the expectations surrounding their arrival. Baron Von Pawel-Rammingen serves as the secretary to Princess Frederica's father and accompanies her during her visit to the Mount, further emphasizing his significant role in the story.",
+            "query_time": 0.2691037654876709,
+            "result_length": 686
+          }
+        }
+      },
+      {
+        "query_id": "Novel-f80cbf85",
+        "query": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.33957648277282715,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.31950926780700684,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3072223663330078,
+            "result_length": 58
+          },
+          "basic_rag_hybrid": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3470456600189209,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.2838153839111328,
+            "result_length": 257
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.28206825256347656,
+            "result_length": 257
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.332042932510376,
+            "result_length": 257
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.3056473731994629,
+            "result_length": 257
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b3c430ef",
+        "query": "In the historical account relating to St. Michael's Mount, which individual is said to have caused himself to be bled to death there?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This event contributes to the Mount's rich tapestry of historical and legendary narratives, highlighting its significance as a place of both political and personal tragedy.",
+            "query_time": 0.2969067096710205,
+            "result_length": 576
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This event contributes to the Mount's rich tapestry of historical and legendary narratives, highlighting its significance as a place of both political and personal tragedy.",
+            "query_time": 0.28371286392211914,
+            "result_length": 576
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This event contributes to the Mount's rich tapestry of historical and legendary narratives, highlighting its significance as a place of both political and personal tragedy.",
+            "query_time": 0.34397220611572266,
+            "result_length": 576
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This event contributes to the Mount's rich tapestry of historical and legendary narratives, highlighting its significance as a place of both political and personal tragedy.",
+            "query_time": 0.29771900177001953,
+            "result_length": 576
+          }
+        }
+      },
+      {
+        "query_id": "Novel-304b0354",
+        "query": "Within the Cornish legends described in the narrative, who was the figure doomed to empty Dozmare Pool as a punishment?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He was said to have sold his soul to the devil, which led to his home being sunk to the bottom of the mere (Dozmare Pool). As part of his punishment, he was condemned to endlessly empty the pool using a limpet-shell, and during stormy nights, he would wail around it with other ghost-demons. This tale reflects the deep-rooted supernatural elements of Cornish folklore, where mythical figures and their punishments are intertwined with the natural landscape. The legend of Tregeagle adds a layer of mystery and folklore to the region, particularly around locations like Dozmare Pool, which is also associated with the legend of King Arthur's disappearance.",
+            "query_time": 0.2777218818664551,
+            "result_length": 870
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He was said to have sold his soul to the devil, which led to his home being sunk to the bottom of the mere (Dozmare Pool). As part of his punishment, he was condemned to endlessly empty the pool using a limpet-shell, and during stormy nights, he would wail around it with other ghost-demons. This tale reflects the deep-rooted supernatural elements of Cornish folklore, where mythical figures and their punishments are intertwined with the natural landscape. The legend of Tregeagle adds a layer of mystery and folklore to the region, particularly around locations like Dozmare Pool, which is also associated with the legend of King Arthur's disappearance.",
+            "query_time": 0.27467846870422363,
+            "result_length": 870
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He was said to have sold his soul to the devil, which led to his home being sunk to the bottom of the mere (Dozmare Pool). As part of his punishment, he was condemned to endlessly empty the pool using a limpet-shell, and during stormy nights, he would wail around it with other ghost-demons. This tale reflects the deep-rooted supernatural elements of Cornish folklore, where mythical figures and their punishments are intertwined with the natural landscape. The legend of Tregeagle adds a layer of mystery and folklore to the region, particularly around locations like Dozmare Pool, which is also associated with the legend of King Arthur's disappearance.",
+            "query_time": 0.3802502155303955,
+            "result_length": 870
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He was said to have sold his soul to the devil, which led to his home being sunk to the bottom of the mere (Dozmare Pool). As part of his punishment, he was condemned to endlessly empty the pool using a limpet-shell, and during stormy nights, he would wail around it with other ghost-demons. This tale reflects the deep-rooted supernatural elements of Cornish folklore, where mythical figures and their punishments are intertwined with the natural landscape. The legend of Tregeagle adds a layer of mystery and folklore to the region, particularly around locations like Dozmare Pool, which is also associated with the legend of King Arthur's disappearance.",
+            "query_time": 0.3125336170196533,
+            "result_length": 870
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b1a95144",
+        "query": "In reference to the royal visit to St. Michael's Mount described in the narrative, to which princess did the Queen show motherly kindness during her stay?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public had taken an interest in her story, particularly showing sympathy for the \"motherly kindness of our good Queen\" during the events surrounding her wedding at Windsor and the subsequent \"sad little infant funeral\" that occurred a year later. While the narrative does not explicitly name the princess, it is clear that the Queen's motherly kindness was directed toward Princess Frederica during her stay.\n\nThe connection between the Queen and Princess Frederica is further reinforced by the mention of the princess's father's secretary, Baron Von Pawel-Rammingen, who accompanied her on the visit to St. Michael's Mount. This relationship suggests that the royal family, including the Queen, was involved in supporting and welcoming Princess Frederica during her time in Cornwall. However, the specific identity of the princess beyond her title and background is not provided in the narrative.",
+            "query_time": 0.2680044174194336,
+            "result_length": 1086
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public had taken an interest in her story, particularly showing sympathy for the \"motherly kindness of our good Queen\" during the events surrounding her wedding at Windsor and the subsequent \"sad little infant funeral\" that occurred a year later. While the narrative does not explicitly name the princess, it is clear that the Queen's motherly kindness was directed toward Princess Frederica during her stay.\n\nThe connection between the Queen and Princess Frederica is further reinforced by the mention of the princess's father's secretary, Baron Von Pawel-Rammingen, who accompanied her on the visit to St. Michael's Mount. This relationship suggests that the royal family, including the Queen, was involved in supporting and welcoming Princess Frederica during her time in Cornwall. However, the specific identity of the princess beyond her title and background is not provided in the narrative.",
+            "query_time": 0.2775285243988037,
+            "result_length": 1086
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public had taken an interest in her story, particularly showing sympathy for the \"motherly kindness of our good Queen\" during the events surrounding her wedding at Windsor and the subsequent \"sad little infant funeral\" that occurred a year later. While the narrative does not explicitly name the princess, it is clear that the Queen's motherly kindness was directed toward Princess Frederica during her stay.\n\nThe connection between the Queen and Princess Frederica is further reinforced by the mention of the princess's father's secretary, Baron Von Pawel-Rammingen, who accompanied her on the visit to St. Michael's Mount. This relationship suggests that the royal family, including the Queen, was involved in supporting and welcoming Princess Frederica during her time in Cornwall. However, the specific identity of the princess beyond her title and background is not provided in the narrative.",
+            "query_time": 0.2830851078033447,
+            "result_length": 1086
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public had taken an interest in her story, particularly showing sympathy for the \"motherly kindness of our good Queen\" during the events surrounding her wedding at Windsor and the subsequent \"sad little infant funeral\" that occurred a year later. While the narrative does not explicitly name the princess, it is clear that the Queen's motherly kindness was directed toward Princess Frederica during her stay.\n\nThe connection between the Queen and Princess Frederica is further reinforced by the mention of the princess's father's secretary, Baron Von Pawel-Rammingen, who accompanied her on the visit to St. Michael's Mount. This relationship suggests that the royal family, including the Queen, was involved in supporting and welcoming Princess Frederica during her time in Cornwall. However, the specific identity of the princess beyond her title and background is not provided in the narrative.",
+            "query_time": 0.26935601234436035,
+            "result_length": 1086
+          }
+        }
+      },
+      {
+        "query_id": "Novel-e05d0922",
+        "query": "According to the description of Kynance Cove in Cornwall, which specific feature is included as a part of Kynance Cove?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, several specific features are included as part of the location. These include natural elements such as **Gull Rock**, **Asparagus Island**, and **the Bellows**. Gull Rock is described as a rocky formation near Kynance Cove, noted for its distinct appearance compared to surrounding rocks. Asparagus Island is another geographical feature near Kynance Cove, known for its unique shape and presence in the coastal landscape. The Bellows refers to a natural phenomenon or feature that the group observes, likely related to the movement of water through rock fissures, creating a spout of water.\n\nAdditionally, Kynance Cove is associated with **sea-caves**, which are mentioned as part of the area's natural beauty and challenge. These caves are described as mysterious, dangerous, and beautiful, and their exploration represents a pivotal moment in the journey. The caves are linked to the legend of King Arthur and serve as a symbol of adventure and discovery. \n\nKynance Cove is also connected to **Mount's Bay** and the **Land's End**, forming part of the broader coastal scenery that the group observes and reflects upon. These locations contribute to the overall atmosphere of the narrative, highlighting the interplay between geography and natural phenomena.",
+            "query_time": 0.28206634521484375,
+            "result_length": 1318
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, several specific features are included as part of the location. These include natural elements such as **Gull Rock**, **Asparagus Island**, and **the Bellows**. Gull Rock is described as a rocky formation near Kynance Cove, noted for its distinct appearance compared to surrounding rocks. Asparagus Island is another geographical feature near Kynance Cove, known for its unique shape and presence in the coastal landscape. The Bellows refers to a natural phenomenon or feature that the group observes, likely related to the movement of water through rock fissures, creating a spout of water.\n\nAdditionally, Kynance Cove is associated with **sea-caves**, which are mentioned as part of the area's natural beauty and challenge. These caves are described as mysterious, dangerous, and beautiful, and their exploration represents a pivotal moment in the journey. The caves are linked to the legend of King Arthur and serve as a symbol of adventure and discovery. \n\nKynance Cove is also connected to **Mount's Bay** and the **Land's End**, forming part of the broader coastal scenery that the group observes and reflects upon. These locations contribute to the overall atmosphere of the narrative, highlighting the interplay between geography and natural phenomena.",
+            "query_time": 0.3869442939758301,
+            "result_length": 1318
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, several specific features are included as part of the location. These include natural elements such as **Gull Rock**, **Asparagus Island**, and **the Bellows**. Gull Rock is described as a rocky formation near Kynance Cove, noted for its distinct appearance compared to surrounding rocks. Asparagus Island is another geographical feature near Kynance Cove, known for its unique shape and presence in the coastal landscape. The Bellows refers to a natural phenomenon or feature that the group observes, likely related to the movement of water through rock fissures, creating a spout of water.\n\nAdditionally, Kynance Cove is associated with **sea-caves**, which are mentioned as part of the area's natural beauty and challenge. These caves are described as mysterious, dangerous, and beautiful, and their exploration represents a pivotal moment in the journey. The caves are linked to the legend of King Arthur and serve as a symbol of adventure and discovery. \n\nKynance Cove is also connected to **Mount's Bay** and the **Land's End**, forming part of the broader coastal scenery that the group observes and reflects upon. These locations contribute to the overall atmosphere of the narrative, highlighting the interplay between geography and natural phenomena.",
+            "query_time": 0.28057098388671875,
+            "result_length": 1318
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, several specific features are included as part of the location. These include natural elements such as **Gull Rock**, **Asparagus Island**, and **the Bellows**. Gull Rock is described as a rocky formation near Kynance Cove, noted for its distinct appearance compared to surrounding rocks. Asparagus Island is another geographical feature near Kynance Cove, known for its unique shape and presence in the coastal landscape. The Bellows refers to a natural phenomenon or feature that the group observes, likely related to the movement of water through rock fissures, creating a spout of water.\n\nAdditionally, Kynance Cove is associated with **sea-caves**, which are mentioned as part of the area's natural beauty and challenge. These caves are described as mysterious, dangerous, and beautiful, and their exploration represents a pivotal moment in the journey. The caves are linked to the legend of King Arthur and serve as a symbol of adventure and discovery. \n\nKynance Cove is also connected to **Mount's Bay** and the **Land's End**, forming part of the broader coastal scenery that the group observes and reflects upon. These locations contribute to the overall atmosphere of the narrative, highlighting the interplay between geography and natural phenomena.",
+            "query_time": 0.2743849754333496,
+            "result_length": 1318
+          }
+        }
+      },
+      {
+        "query_id": "Novel-dba48e64",
+        "query": "In the account of the travelers' visit to Kynance Cove, what natural landmarks are mentioned as being located near or within Kynance Cove, such as Asparagus Island, Gull Rock, and Bellows?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows. \n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is described as a place where the characters attempt to climb, and it is considered dangerous. Despite its name, there is no actual asparagus present on the island. The island is significant as it highlights the adventurous spirit of the characters and the risks they take.\n\nGull Rock is another geographical feature near Kynance Cove, described as blacker than the surrounding rocks. It is part of the scenery that the group observes during their journey. This rocky formation contributes to the natural beauty and ruggedness of the area.\n\nThe Bellows is a natural feature mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location is significant as it represents a natural phenomenon and serves as a point of interest for the group.\n\nThese landmarks contribute to the rich tapestry of natural features that define Kynance Cove, offering both scenic beauty and opportunities for exploration and adventure.",
+            "query_time": 0.32027125358581543,
+            "result_length": 1299
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows. \n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is described as a place where the characters attempt to climb, and it is considered dangerous. Despite its name, there is no actual asparagus present on the island. The island is significant as it highlights the adventurous spirit of the characters and the risks they take.\n\nGull Rock is another geographical feature near Kynance Cove, described as blacker than the surrounding rocks. It is part of the scenery that the group observes during their journey. This rocky formation contributes to the natural beauty and ruggedness of the area.\n\nThe Bellows is a natural feature mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location is significant as it represents a natural phenomenon and serves as a point of interest for the group.\n\nThese landmarks contribute to the rich tapestry of natural features that define Kynance Cove, offering both scenic beauty and opportunities for exploration and adventure.",
+            "query_time": 0.34203577041625977,
+            "result_length": 1299
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows. \n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is described as a place where the characters attempt to climb, and it is considered dangerous. Despite its name, there is no actual asparagus present on the island. The island is significant as it highlights the adventurous spirit of the characters and the risks they take.\n\nGull Rock is another geographical feature near Kynance Cove, described as blacker than the surrounding rocks. It is part of the scenery that the group observes during their journey. This rocky formation contributes to the natural beauty and ruggedness of the area.\n\nThe Bellows is a natural feature mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location is significant as it represents a natural phenomenon and serves as a point of interest for the group.\n\nThese landmarks contribute to the rich tapestry of natural features that define Kynance Cove, offering both scenic beauty and opportunities for exploration and adventure.",
+            "query_time": 0.309511661529541,
+            "result_length": 1299
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows. \n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is described as a place where the characters attempt to climb, and it is considered dangerous. Despite its name, there is no actual asparagus present on the island. The island is significant as it highlights the adventurous spirit of the characters and the risks they take.\n\nGull Rock is another geographical feature near Kynance Cove, described as blacker than the surrounding rocks. It is part of the scenery that the group observes during their journey. This rocky formation contributes to the natural beauty and ruggedness of the area.\n\nThe Bellows is a natural feature mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location is significant as it represents a natural phenomenon and serves as a point of interest for the group.\n\nThese landmarks contribute to the rich tapestry of natural features that define Kynance Cove, offering both scenic beauty and opportunities for exploration and adventure.",
+            "query_time": 0.29024481773376465,
+            "result_length": 1299
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ea3d4859",
+        "query": "During the travelers' exploration of the Cornish coastline in the narrative, what notable geographical feature is located near Housel Cove?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3287200927734375,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3290379047393799,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.4152073860168457,
+            "result_length": 58
+          },
+          "basic_rag_hybrid": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.30457234382629395,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. This structure is situated on the coast and is part of the landscape that the travelers observed during their visit to the area.",
+            "query_time": 0.3367502689361572,
+            "result_length": 441
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. This structure is situated on the coast and is part of the landscape that the travelers observed during their visit to the area.",
+            "query_time": 0.32550740242004395,
+            "result_length": 441
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. This structure is situated on the coast and is part of the landscape that the travelers observed during their visit to the area.",
+            "query_time": 0.970782995223999,
+            "result_length": 441
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. This structure is situated on the coast and is part of the landscape that the travelers observed during their visit to the area.",
+            "query_time": 1.82875394821167,
+            "result_length": 441
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ba894e2c",
+        "query": "In the retelling of the Arthurian legend within the novel, who is the character credited with producing King Arthur?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_hybrid": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is Merlin. According to the narrative, Merlin played a crucial role in ensuring that Arthur was raised in secret before being revealed as the rightful heir to the throne. His guidance and magical interventions were instrumental in shaping Arthur's destiny. Merlin's influence over Arthur's life and the events leading to his coronation makes him a critical figure in the Arthurian legend. This relationship is foundational to the Arthurian legend, highlighting Merlin's importance as both a mentor and a mystical figure in the community.",
+            "query_time": 0.33760714530944824,
+            "result_length": 646
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is Merlin. According to the narrative, Merlin played a crucial role in ensuring that Arthur was raised in secret before being revealed as the rightful heir to the throne. His guidance and magical interventions were instrumental in shaping Arthur's destiny. Merlin's influence over Arthur's life and the events leading to his coronation makes him a critical figure in the Arthurian legend. This relationship is foundational to the Arthurian legend, highlighting Merlin's importance as both a mentor and a mystical figure in the community.",
+            "query_time": 0.3235795497894287,
+            "result_length": 646
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is Merlin. According to the narrative, Merlin played a crucial role in ensuring that Arthur was raised in secret before being revealed as the rightful heir to the throne. His guidance and magical interventions were instrumental in shaping Arthur's destiny. Merlin's influence over Arthur's life and the events leading to his coronation makes him a critical figure in the Arthurian legend. This relationship is foundational to the Arthurian legend, highlighting Merlin's importance as both a mentor and a mystical figure in the community.",
+            "query_time": 0.31757521629333496,
+            "result_length": 646
+          },
+          "enhanced_rag_hybrid": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is Merlin. According to the narrative, Merlin played a crucial role in ensuring that Arthur was raised in secret before being revealed as the rightful heir to the throne. His guidance and magical interventions were instrumental in shaping Arthur's destiny. Merlin's influence over Arthur's life and the events leading to his coronation makes him a critical figure in the Arthurian legend. This relationship is foundational to the Arthurian legend, highlighting Merlin's importance as both a mentor and a mystical figure in the community.",
+            "query_time": 0.3173816204071045,
+            "result_length": 646
+          }
+        }
+      }
+    ],
+    "advanced_features": {
+      "complexity_classification": {
+        "status": "success",
+        "results": [
+          {
+            "query": "什么是人工智能？",
+            "complexity": "one_hop",
+            "confidence": 0.58349609375,
+            "probabilities": {
+              "LABEL_0": 0.39697265625,
+              "LABEL_1": 0.58349609375,
+              "LABEL_2": 0.01934814453125
+            }
+          },
+          {
+            "query": "机器学习有哪些应用？",
+            "complexity": "one_hop",
+            "confidence": 0.771484375,
+            "probabilities": {
+              "LABEL_0": 0.18359375,
+              "LABEL_1": 0.771484375,
+              "LABEL_2": 0.045074462890625
+            }
+          },
+          {
+            "query": "深度学习和机器学习的关系以及它们在不同领域的应用对比？",
+            "complexity": "one_hop",
+            "confidence": 0.93603515625,
+            "probabilities": {
+              "LABEL_0": 0.01218414306640625,
+              "LABEL_1": 0.93603515625,
+              "LABEL_2": 0.051605224609375
+            }
+          }
+        ]
+      },
+      "enhanced_fusion": {
+        "status": "success",
+        "message": "融合策略组件加载成功"
+      },
+      "modern_evaluator": {
+        "status": "success",
+        "evaluation_result": {
+          "faithfulness": 1.0,
+          "answer_relevancy": "0.87292534",
+          "context_precision": 1.0,
+          "information_density": 0.525,
+          "faithfulness_weighted": 1.0,
+          "answer_relevancy_weighted": 1.0,
+          "context_precision_weighted": 1.0,
+          "information_density_weighted": 0.525,
+          "overall_score": 0.9576417803764343,
+          "question": "什么是人工智能？",
+          "answer": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的系统。",
+          "complexity_type": "one_hop",
+          "num_contexts": 2,
+          "answer_length": 1,
+          "contexts_total_length": 2
+        }
+      }
+    },
+    "performance": {
+      "basic_rag": {
+        "avg_time": 0.26024317741394043,
+        "min_time": 0.2511866092681885,
+        "max_time": 0.2666747570037842,
+        "std_time": 0.006589820622692566,
+        "times": [
+          0.2511866092681885,
+          0.2666747570037842,
+          0.26286816596984863
+        ]
+      },
+      "enhanced_rag": {
+        "avg_time": 0.3457815647125244,
+        "min_time": 0.26571226119995117,
+        "max_time": 0.4968893527984619,
+        "std_time": 0.10691292917711634,
+        "times": [
+          0.27474308013916016,
+          0.26571226119995117,
+          0.4968893527984619
+        ]
+      }
+    }
+  },
+  "timestamp": "2025-08-04 16:21:35",
+  "summary": {
+    "total_tests": 86,
+    "successful_tests": 53,
+    "failed_tests": 33,
+    "modules_tested": [
+      "dspy_entity_extraction",
+      "document_insertion_basic_rag",
+      "document_insertion_enhanced_rag",
+      "query_processing",
+      "advanced_complexity_classification",
+      "advanced_enhanced_fusion",
+      "advanced_modern_evaluator"
+    ],
+    "performance_summary": {
+      "basic_rag": {
+        "avg_time": 0.26024317741394043,
+        "min_time": 0.2511866092681885,
+        "max_time": 0.2666747570037842
+      },
+      "enhanced_rag": {
+        "avg_time": 0.3457815647125244,
+        "min_time": 0.26571226119995117,
+        "max_time": 0.4968893527984619
+      }
+    },
+    "success_rate": 0.6162790697674418
+  }
+}

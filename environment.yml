@@ -1,0 +1,82 @@
+name: nano_graphrag
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python版本
+  - python>=3.9,<3.12
+  
+  # 核心深度学习框架
+  - pytorch>=2.0.0
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8  # 或者 pytorch-cuda=12.1 for newer GPUs
+  
+  # 科学计算基础
+  - numpy>=1.24.0
+  - scipy>=1.10.0
+  - pandas>=2.0.0
+  - scikit-learn>=1.3.0
+  
+  # 图处理
+  - networkx>=3.0
+  
+  # 开发工具
+  - jupyter
+  - ipykernel
+  - notebook
+  
+  # 系统工具
+  - git
+  - curl
+  - unzip
+  
+  # pip安装的包
+  - pip
+  - pip:
+    # 图神经网络
+    - torch-geometric>=2.3.0
+    
+    # NLP和嵌入
+    - transformers>=4.30.0
+    - sentence-transformers>=2.2.0
+    - tokenizers>=0.13.0
+    - tiktoken>=0.4.0
+    
+    # API客户端
+    - openai>=1.0.0
+    - anthropic>=0.3.0
+    
+    # 检索和搜索
+    - faiss-cpu>=1.7.4
+    - hnswlib>=0.7.0
+    
+    # 异步和存储
+    - aiofiles>=23.0.0
+    - ujson>=5.7.0
+    - aiohttp>=3.8.0
+    
+    # 配置和日志
+    - pydantic>=2.0.0
+    - pyyaml>=6.0
+    - loguru>=0.7.0
+    
+    # 可视化
+    - matplotlib>=3.7.0
+    - seaborn>=0.12.0
+    - plotly>=5.14.0
+    
+    # 进度条和界面
+    - tqdm>=4.65.0
+    - rich>=13.0.0
+    
+    # 测试工具
+    - pytest>=7.4.0
+    - pytest-asyncio>=0.21.0
+    
+    # 代码质量
+    - black>=23.0.0
+    - isort>=5.12.0
+    - flake8>=6.0.0 

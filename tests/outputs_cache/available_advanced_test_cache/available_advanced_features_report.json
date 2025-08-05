@@ -1,0 +1,278 @@
+{
+  "test_config": {
+    "working_dir": "./available_advanced_test_cache",
+    "novel_document": "test_data/Novel-44557.txt",
+    "query_dataset": "test_data/query.json",
+    "max_test_queries": 10,
+    "test_modes": [
+      "naive",
+      "local",
+      "global"
+    ],
+    "models_used": {
+      "llm": "qwen-turbo",
+      "embedding": "BAAI/bge-m3"
+    },
+    "features_enabled": {
+      "enhanced_features": true,
+      "hybrid_retrieval": true,
+      "complexity_analysis": true
+    }
+  },
+  "test_results": {
+    "document_insertion": {
+      "basic_rag": {
+        "status": "skipped_existing_data",
+        "insertion_time": 0,
+        "document_length": 238515,
+        "cache_files_found": 3
+      }
+    },
+    "query_processing": [
+      {
+        "query_id": "Novel-73586ddc",
+        "query": "In the narrative of 'An Unsentimental Journey through Cornwall', which plant known scientifically as Erica vagans is also referred to by another common name, and what is that name?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Cornish heath",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a rare species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with the geological line of magnesian earth, which defines the area where it grows, emphasizing its dependence on specific environmental conditions. Additionally, the plant is mentioned in relation to Goonhilly Down, highlighting its role in the broader ecological context of the region.",
+            "query_time": 2.241032123565674,
+            "result_length": 723
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a rare species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with the geological line of magnesian earth, which defines the area where it grows, emphasizing its dependence on specific environmental conditions. Additionally, the plant is mentioned in relation to Goonhilly Down, highlighting its role in the broader ecological context of the region.",
+            "query_time": 0.26512646675109863,
+            "result_length": 723
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a rare species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with the geological line of magnesian earth, which defines the area where it grows, emphasizing its dependence on specific environmental conditions. Additionally, the plant is mentioned in relation to Goonhilly Down, highlighting its role in the broader ecological context of the region.",
+            "query_time": 0.31282615661621094,
+            "result_length": 723
+          }
+        }
+      },
+      {
+        "query_id": "Novel-74440a6a",
+        "query": "Within the account of the royal visit to St. Michael's Mount in Cornwall, who is identified as the person who married Princess Frederica of Hanover?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Baron Von Pawel-Rammingen",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who had loved, wooed, and married her. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The narrative highlights that Baron Von Pawel-Rammingen is not only the husband of the princess but also her father's secretary, adding personal and emotional dimensions to her story. His role in the royal visit underscores the complex social dynamics and expectations of the time, as he accompanies the princess during her visit to the St. Aubyns at St. Michael's Mount.",
+            "query_time": 0.3155488967895508,
+            "result_length": 749
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who had loved, wooed, and married her. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The narrative highlights that Baron Von Pawel-Rammingen is not only the husband of the princess but also her father's secretary, adding personal and emotional dimensions to her story. His role in the royal visit underscores the complex social dynamics and expectations of the time, as he accompanies the princess during her visit to the St. Aubyns at St. Michael's Mount.",
+            "query_time": 0.2917361259460449,
+            "result_length": 749
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who had loved, wooed, and married her. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The narrative highlights that Baron Von Pawel-Rammingen is not only the husband of the princess but also her father's secretary, adding personal and emotional dimensions to her story. His role in the royal visit underscores the complex social dynamics and expectations of the time, as he accompanies the princess during her visit to the St. Aubyns at St. Michael's Mount.",
+            "query_time": 0.3019440174102783,
+            "result_length": 749
+          }
+        }
+      },
+      {
+        "query_id": "Novel-f80cbf85",
+        "query": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Normandy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.29314470291137695,
+            "result_length": 298
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.31562232971191406,
+            "result_length": 298
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.27388548851013184,
+            "result_length": 298
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b3c430ef",
+        "query": "In the historical account relating to St. Michael's Mount, which individual is said to have caused himself to be bled to death there?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Henry de la Pomeroy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the provided information, Henry de la Pomeroy was taken prisoner and died after being bled to death in the castle at St. Michael's Mount. This event is part of the rich tapestry of legends and historical narratives associated with the location, which also includes stories of other figures such as Cormoran, Sir John Arundel, and Perkin Warbeck's wife. These tales contribute to the Mount's reputation as a site steeped in both history and folklore.",
+            "query_time": 0.2740936279296875,
+            "result_length": 618
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the provided information, Henry de la Pomeroy was taken prisoner and died after being bled to death in the castle at St. Michael's Mount. This event is part of the rich tapestry of legends and historical narratives associated with the location, which also includes stories of other figures such as Cormoran, Sir John Arundel, and Perkin Warbeck's wife. These tales contribute to the Mount's reputation as a site steeped in both history and folklore.",
+            "query_time": 0.27434372901916504,
+            "result_length": 618
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the provided information, Henry de la Pomeroy was taken prisoner and died after being bled to death in the castle at St. Michael's Mount. This event is part of the rich tapestry of legends and historical narratives associated with the location, which also includes stories of other figures such as Cormoran, Sir John Arundel, and Perkin Warbeck's wife. These tales contribute to the Mount's reputation as a site steeped in both history and folklore.",
+            "query_time": 0.281505823135376,
+            "result_length": 618
+          }
+        }
+      },
+      {
+        "query_id": "Novel-304b0354",
+        "query": "Within the Cornish legends described in the narrative, who was the figure doomed to empty Dozmare Pool as a punishment?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Tregeagle",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was Tregeagle. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere (Dozmare Pool), and he was condemned to spend his nights wailing around it, endlessly emptying the pool with a limpet-shell. This supernatural punishment reflects the eerie and mystical elements of Cornish folklore, where treachery and moral transgressions are met with eternal consequences. The legend of Tregeagle is closely tied to the mythological and supernatural narratives of the region, adding a layer of mystery and cautionary tale to the cultural heritage of Cornwall.",
+            "query_time": 0.3121633529663086,
+            "result_length": 770
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was Tregeagle. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere (Dozmare Pool), and he was condemned to spend his nights wailing around it, endlessly emptying the pool with a limpet-shell. This supernatural punishment reflects the eerie and mystical elements of Cornish folklore, where treachery and moral transgressions are met with eternal consequences. The legend of Tregeagle is closely tied to the mythological and supernatural narratives of the region, adding a layer of mystery and cautionary tale to the cultural heritage of Cornwall.",
+            "query_time": 0.31739091873168945,
+            "result_length": 770
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was Tregeagle. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere (Dozmare Pool), and he was condemned to spend his nights wailing around it, endlessly emptying the pool with a limpet-shell. This supernatural punishment reflects the eerie and mystical elements of Cornish folklore, where treachery and moral transgressions are met with eternal consequences. The legend of Tregeagle is closely tied to the mythological and supernatural narratives of the region, adding a layer of mystery and cautionary tale to the cultural heritage of Cornwall.",
+            "query_time": 0.2631218433380127,
+            "result_length": 770
+          }
+        }
+      }
+    ]
+  },
+  "timestamp": "2025-08-05 15:27:07",
+  "summary": {
+    "total_tests": 16,
+    "successful_tests": 15,
+    "failed_tests": 1,
+    "modules_tested": [
+      "document_insertion_basic_rag",
+      "query_processing"
+    ],
+    "performance_summary": {},
+    "data_statistics": {
+      "total_queries_tested": 5,
+      "successful_query_responses": 15
+    },
+    "success_rate": 0.9375
+  },
+  "advanced_features_results": {
+    "reranking": {
+      "status": "success",
+      "rerank_time": 0.0,
+      "original_count": 5,
+      "reranked_count": 5,
+      "reranked_results": [
+        {
+          "content": "Erica vagans is the scientific name for Cornish heath.",
+          "fusion_score": 0.8
+        },
+        {
+          "content": "The plant is found in Cornwall and has unique properties.",
+          "fusion_score": 0.7000000000000001
+        },
+        {
+          "content": "Princess Frederica visited the botanical gardens.",
+          "fusion_score": 0.6000000000000001
+        }
+      ]
+    },
+    "evaluation": {
+      "status": "success",
+      "evaluation_time": 0.013281583786010742,
+      "baseline_results": {
+        "naive_rag": "ComparisonResult(baseline_name='naive_rag', our_method_name='Our Method', metrics={'context_precision': {'ours': 0.75, 'baseline': 0.600069987222001, 'absolute_improvement': 0.149930012777999, 'relative_improvement': 24.98542102931922}, 'answer_relevancy': {'ours': 0.8, 'baseline': 0.7000816517590013, 'absolute_improvement': 0.09991834824099877, 'relative_improvement': 14.272384941091849}, 'faithfulness': {'ours': 0.85, 'baseline': 0.6500758194905012, 'absolute_improvement': 0.19992418050949878, 'relative_improvement': 30.753978922980078}}, statistical_significance={'context_precision': True, 'answer_relevancy': True, 'faithfulness': True}, summary='与 naive_rag 对比: 显著改善: context_precision: +25.0%, answer_relevancy: +14.3%, faithfulness: +30.8%')",
+        "self_rag": "ComparisonResult(baseline_name='self_rag', our_method_name='Our Method', metrics={'context_precision': {'ours': 0.75, 'baseline': 0.6800793188516012, 'absolute_improvement': 0.06992068114839878, 'relative_improvement': 10.281253849399299}, 'answer_relevancy': {'ours': 0.8, 'baseline': 0.7500874840275014, 'absolute_improvement': 0.04991251597249868, 'relative_improvement': 6.654225945019059}, 'faithfulness': {'ours': 0.85, 'baseline': 0.7200839846664012, 'absolute_improvement': 0.12991601533359876, 'relative_improvement': 18.041786527690366}}, statistical_significance={'context_precision': True, 'answer_relevancy': True, 'faithfulness': True}, summary='与 self_rag 对比: 显著改善: context_precision: +10.3%, answer_relevancy: +6.7%, faithfulness: +18.0%')"
+      },
+      "evaluation_metrics": {
+        "evaluation_attempted": true,
+        "error": "ModernEvaluator.evaluate_batch() missing 1 required positional argument: 'contexts_list'"
+      },
+      "queries_evaluated": 3
+    },
+    "optimizer": {
+      "status": "success",
+      "optimization_time": 0.010457277297973633,
+      "optimization_results": {
+        "naive": 0.25,
+        "bm25": 0.25,
+        "local": 0.25,
+        "global": 0.25
+      },
+      "learning_patterns": 3
+    },
+    "fusion": {
+      "status": "success",
+      "fusion_time": 0.0,
+      "sources_count": 3,
+      "fusion_result": {
+        "forward_failed": true,
+        "error": "not enough values to unpack (expected 3, got 2)"
+      },
+      "forward_success": false,
+      "config_creation_success": true,
+      "fusion_error": "not enough values to unpack (expected 3, got 2)"
+    },
+    "stress_test": {
+      "status": "success",
+      "total_stress_time": 4.833943843841553,
+      "queries_per_second": 4.137408428002326,
+      "stress_results": {
+        "sample_result": "Erica vagans is a species of flowering plant in the heath family, Ericaceae. It is native to South A...",
+        "successful_queries": 20,
+        "failed_queries": 0,
+        "large_query_handled": true,
+        "large_result_length": 1845
+      }
+    },
+    "edge_cases": {
+      "status": "success",
+      "edge_results": {
+        "empty_query": {
+          "handled": true,
+          "result": "您好！您似乎还没有提出具体的问题。如果您有任何疑问或需要帮助，请随时告诉我，我会尽力为您提供专业、准确和公正的回答。"
+        },
+        "irrelevant_query": {
+          "handled": true,
+          "result_length": 81
+        },
+        "chinese_query": {
+          "handled": true,
+          "result_length": 310
+        },
+        "special_chars": {
+          "handled": true,
+          "result_length": 161
+        }
+      },
+      "total_edge_cases": 4
+    }
+  },
+  "module_availability": {
+    "reranking": true,
+    "evaluation": true,
+    "optimizer": true,
+    "fusion": true
+  }
+}

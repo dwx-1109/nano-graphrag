@@ -1,0 +1,28 @@
+
+============================================================
+完整系统测试报告
+============================================================
+测试时间: 2025-08-05 13:07:49
+总耗时: 35.81秒
+
+测试统计:
+- 总测试数: 10
+- 通过测试: 8
+- 失败测试: 1
+- 跳过测试: 1
+- 成功率: 80.0%
+
+详细结果:
+  ✅ graphrag_creation: SUCCESS (29.31s)
+  ⏭️ document_insertion: SKIPPED (0.00s)
+  ✅ query_mode_naive: SUCCESS (2.17s)
+  ✅ query_mode_local: SUCCESS (0.77s)
+  ✅ query_mode_global: SUCCESS (0.77s)
+  ✅ query_mode_hybrid: SUCCESS (0.74s)
+  ✅ complexity_routing: SUCCESS (0.55s)
+  ❌ storage_systems: FAILED (0.00s)
+    错误: JsonKVStorage.__init__() got an unexpected keyword argument 'working_dir'
+  ✅ fusion_strategies: SUCCESS (0.73s)
+  ✅ performance_metrics: SUCCESS (0.76s)
+
+============================================================

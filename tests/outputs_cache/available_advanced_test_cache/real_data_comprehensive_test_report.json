@@ -1,0 +1,180 @@
+{
+  "test_config": {
+    "working_dir": "./available_advanced_test_cache",
+    "novel_document": "test_data/Novel-44557.txt",
+    "query_dataset": "test_data/query.json",
+    "max_test_queries": 10,
+    "test_modes": [
+      "naive",
+      "local",
+      "global"
+    ],
+    "models_used": {
+      "llm": "qwen-turbo",
+      "embedding": "BAAI/bge-m3"
+    },
+    "features_enabled": {
+      "enhanced_features": true,
+      "hybrid_retrieval": true,
+      "complexity_analysis": true
+    }
+  },
+  "test_results": {
+    "document_insertion": {
+      "basic_rag": {
+        "status": "skipped_existing_data",
+        "insertion_time": 0,
+        "document_length": 238515,
+        "cache_files_found": 3
+      }
+    },
+    "query_processing": [
+      {
+        "query_id": "Novel-73586ddc",
+        "query": "In the narrative of 'An Unsentimental Journey through Cornwall', which plant known scientifically as Erica vagans is also referred to by another common name, and what is that name?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Cornish heath",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a rare species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with the geological line of magnesian earth, which defines the area where it grows, emphasizing its dependence on specific environmental conditions. Additionally, the plant is mentioned in relation to Goonhilly Down, highlighting its role in the broader ecological context of the region.",
+            "query_time": 2.241032123565674,
+            "result_length": 723
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a rare species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with the geological line of magnesian earth, which defines the area where it grows, emphasizing its dependence on specific environmental conditions. Additionally, the plant is mentioned in relation to Goonhilly Down, highlighting its role in the broader ecological context of the region.",
+            "query_time": 0.26512646675109863,
+            "result_length": 723
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a rare species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with the geological line of magnesian earth, which defines the area where it grows, emphasizing its dependence on specific environmental conditions. Additionally, the plant is mentioned in relation to Goonhilly Down, highlighting its role in the broader ecological context of the region.",
+            "query_time": 0.31282615661621094,
+            "result_length": 723
+          }
+        }
+      },
+      {
+        "query_id": "Novel-74440a6a",
+        "query": "Within the account of the royal visit to St. Michael's Mount in Cornwall, who is identified as the person who married Princess Frederica of Hanover?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Baron Von Pawel-Rammingen",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who had loved, wooed, and married her. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The narrative highlights that Baron Von Pawel-Rammingen is not only the husband of the princess but also her father's secretary, adding personal and emotional dimensions to her story. His role in the royal visit underscores the complex social dynamics and expectations of the time, as he accompanies the princess during her visit to the St. Aubyns at St. Michael's Mount.",
+            "query_time": 0.3155488967895508,
+            "result_length": 749
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who had loved, wooed, and married her. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The narrative highlights that Baron Von Pawel-Rammingen is not only the husband of the princess but also her father's secretary, adding personal and emotional dimensions to her story. His role in the royal visit underscores the complex social dynamics and expectations of the time, as he accompanies the princess during her visit to the St. Aubyns at St. Michael's Mount.",
+            "query_time": 0.2917361259460449,
+            "result_length": 749
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Within the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as the one who married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who had loved, wooed, and married her. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The narrative highlights that Baron Von Pawel-Rammingen is not only the husband of the princess but also her father's secretary, adding personal and emotional dimensions to her story. His role in the royal visit underscores the complex social dynamics and expectations of the time, as he accompanies the princess during her visit to the St. Aubyns at St. Michael's Mount.",
+            "query_time": 0.3019440174102783,
+            "result_length": 749
+          }
+        }
+      },
+      {
+        "query_id": "Novel-f80cbf85",
+        "query": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Normandy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.29314470291137695,
+            "result_length": 298
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.31562232971191406,
+            "result_length": 298
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.27388548851013184,
+            "result_length": 298
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b3c430ef",
+        "query": "In the historical account relating to St. Michael's Mount, which individual is said to have caused himself to be bled to death there?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Henry de la Pomeroy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the provided information, Henry de la Pomeroy was taken prisoner and died after being bled to death in the castle at St. Michael's Mount. This event is part of the rich tapestry of legends and historical narratives associated with the location, which also includes stories of other figures such as Cormoran, Sir John Arundel, and Perkin Warbeck's wife. These tales contribute to the Mount's reputation as a site steeped in both history and folklore.",
+            "query_time": 0.2740936279296875,
+            "result_length": 618
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the provided information, Henry de la Pomeroy was taken prisoner and died after being bled to death in the castle at St. Michael's Mount. This event is part of the rich tapestry of legends and historical narratives associated with the location, which also includes stories of other figures such as Cormoran, Sir John Arundel, and Perkin Warbeck's wife. These tales contribute to the Mount's reputation as a site steeped in both history and folklore.",
+            "query_time": 0.27434372901916504,
+            "result_length": 618
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the provided information, Henry de la Pomeroy was taken prisoner and died after being bled to death in the castle at St. Michael's Mount. This event is part of the rich tapestry of legends and historical narratives associated with the location, which also includes stories of other figures such as Cormoran, Sir John Arundel, and Perkin Warbeck's wife. These tales contribute to the Mount's reputation as a site steeped in both history and folklore.",
+            "query_time": 0.281505823135376,
+            "result_length": 618
+          }
+        }
+      },
+      {
+        "query_id": "Novel-304b0354",
+        "query": "Within the Cornish legends described in the narrative, who was the figure doomed to empty Dozmare Pool as a punishment?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Tregeagle",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was Tregeagle. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere (Dozmare Pool), and he was condemned to spend his nights wailing around it, endlessly emptying the pool with a limpet-shell. This supernatural punishment reflects the eerie and mystical elements of Cornish folklore, where treachery and moral transgressions are met with eternal consequences. The legend of Tregeagle is closely tied to the mythological and supernatural narratives of the region, adding a layer of mystery and cautionary tale to the cultural heritage of Cornwall.",
+            "query_time": 0.3121633529663086,
+            "result_length": 770
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was Tregeagle. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere (Dozmare Pool), and he was condemned to spend his nights wailing around it, endlessly emptying the pool with a limpet-shell. This supernatural punishment reflects the eerie and mystical elements of Cornish folklore, where treachery and moral transgressions are met with eternal consequences. The legend of Tregeagle is closely tied to the mythological and supernatural narratives of the region, adding a layer of mystery and cautionary tale to the cultural heritage of Cornwall.",
+            "query_time": 0.31739091873168945,
+            "result_length": 770
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was Tregeagle. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere (Dozmare Pool), and he was condemned to spend his nights wailing around it, endlessly emptying the pool with a limpet-shell. This supernatural punishment reflects the eerie and mystical elements of Cornish folklore, where treachery and moral transgressions are met with eternal consequences. The legend of Tregeagle is closely tied to the mythological and supernatural narratives of the region, adding a layer of mystery and cautionary tale to the cultural heritage of Cornwall.",
+            "query_time": 0.2631218433380127,
+            "result_length": 770
+          }
+        }
+      }
+    ]
+  },
+  "timestamp": "2025-08-05 15:27:07",
+  "summary": {
+    "total_tests": 16,
+    "successful_tests": 15,
+    "failed_tests": 1,
+    "modules_tested": [
+      "document_insertion_basic_rag",
+      "query_processing"
+    ],
+    "performance_summary": {},
+    "data_statistics": {
+      "total_queries_tested": 5,
+      "successful_query_responses": 15
+    },
+    "success_rate": 0.9375
+  }
+}

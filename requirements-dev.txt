@@ -1,6 +1,36 @@
-flake8
-pytest
-future
-pytest-asyncio
-pytest-cov
-python-dotenv
+# Nano GraphRAG - 开发依赖
+# 安装命令: pip install -r requirements.txt -r requirements-dev.txt
+
+# 可视化和绘图
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Jupyter支持
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# 代码质量保证
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+
+# 性能分析
+memory-profiler>=0.60.0
+line-profiler>=4.0.0
+
+# 文档生成
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.2.0
+
+# 云服务支持（按需安装）
+boto3>=1.26.0  # AWS
+azure-identity>=1.13.0  # Azure
+google-cloud-aiplatform>=1.25.0  # Google Cloud
+
+# GUI开发（按需安装）
+PyQt5>=5.15.0
+PySide2>=5.15.0
+
+# 数据科学工具
+datasets>=2.12.0 

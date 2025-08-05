@@ -1,0 +1,24 @@
+{
+  "experiment_name": "Stage1 精简创新方案",
+  "timestamp": "2025-08-05 19:16:05",
+  "tests": {
+    "complexity_classification": {
+      "status": "error",
+      "error": "ComplexityClassifierConfig.__init__() got an unexpected keyword argument 'model_name'. Did you mean 'model_path'?"
+    },
+    "confidence_calibration": {
+      "status": "success",
+      "message": "校准器接口测试通过",
+      "before_calibration": [
+        0.6456562876701355,
+        0.5498340129852295,
+        0.6899744272232056,
+        0.5249791741371155
+      ]
+    },
+    "confidence_aware_fusion": {
+      "status": "error",
+      "error": "ConfidenceAwareFusionConfig.__init__() got an unexpected keyword argument 'fusion_method'"
+    }
+  }
+}

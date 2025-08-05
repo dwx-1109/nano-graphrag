@@ -1,0 +1,954 @@
+{
+  "test_config": {
+    "working_dir": "./comprehensive_project_test_cache",
+    "test_document": "test_data/Novel-44557.txt",
+    "test_queries": "test_data/query.json",
+    "max_test_queries": 20,
+    "test_modes": [
+      "naive",
+      "local",
+      "global"
+    ],
+    "neo4j_config": {
+      "uri": "neo4j+s://47aa7a59.databases.neo4j.io",
+      "database": "neo4j"
+    },
+    "models": {
+      "llm": "qwen-turbo",
+      "embedding": "BAAI/bge-m3"
+    }
+  },
+  "test_results": {
+    "document_insertion": {
+      "basic_rag": {
+        "status": "failed",
+        "error": "{code: Neo.ClientError.Procedure.ProcedureNotFound} {message: There is no procedure with the name `gds.graph.project` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.}"
+      },
+      "enhanced_rag": {
+        "status": "success",
+        "insertion_time": 217.59766721725464,
+        "document_length": 238515
+      }
+    },
+    "complexity_routing": {
+      "status": "success",
+      "results": [
+        {
+          "query": "什么是人工智能？",
+          "complexity": "one_hop",
+          "confidence": 0.58349609375,
+          "candidate_modes": [
+            "naive",
+            "bm25"
+          ],
+          "method": "modernbert"
+        },
+        {
+          "query": "机器学习有哪些应用？",
+          "complexity": "one_hop",
+          "confidence": 0.771484375,
+          "candidate_modes": [
+            "naive",
+            "bm25"
+          ],
+          "method": "modernbert"
+        },
+        {
+          "query": "深度学习和机器学习的关系以及它们在不同领域的应用对比？",
+          "complexity": "one_hop",
+          "confidence": 0.93603515625,
+          "candidate_modes": [
+            "naive",
+            "bm25"
+          ],
+          "method": "modernbert"
+        }
+      ]
+    },
+    "query_processing": [
+      {
+        "query_id": "Novel-73586ddc",
+        "query": "In the narrative of 'An Unsentimental Journey through Cornwall', which plant known scientifically as Erica vagans is also referred to by another common name, and what is that name?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its lilac, flesh-colored, and white flowers, which are particularly striking in their natural habitat. The Cornish heath is also associated with the geological line of magnesian earth, which defines the region where it thrives. Its presence adds to the distinct botanical character of the Cornish landscape, and it is mentioned as one of the many natural wonders that the travelers encountered during their journey.",
+            "query_time": 4.341538429260254,
+            "result_length": 746
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its lilac, flesh-colored, and white flowers, which are particularly striking in their natural habitat. The Cornish heath is also associated with the geological line of magnesian earth, which defines the region where it thrives. Its presence adds to the distinct botanical character of the Cornish landscape, and it is mentioned as one of the many natural wonders that the travelers encountered during their journey.",
+            "query_time": 0.49093127250671387,
+            "result_length": 746
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name: **Cornish heath**. This plant is described as a unique and beautiful species that grows exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its lilac, flesh-colored, and white flowers, which are particularly striking in their natural habitat. The Cornish heath is also associated with the geological line of magnesian earth, which defines the region where it thrives. Its presence adds to the distinct botanical character of the Cornish landscape, and it is mentioned as one of the many natural wonders that the travelers encountered during their journey.",
+            "query_time": 0.2585160732269287,
+            "result_length": 746
+          }
+        }
+      },
+      {
+        "query_id": "Novel-74440a6a",
+        "query": "Within the account of the royal visit to St. Michael's Mount in Cornwall, who is identified as the person who married Princess Frederica of Hanover?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as having married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who loved, wooed, and married the princess. His role in the narrative is to accompany the princess during her visit to St. Michael's Mount. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them is significant as it influences the actions of the local community and the expectations surrounding their arrival.",
+            "query_time": 3.4680557250976562,
+            "result_length": 603
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as having married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who loved, wooed, and married the princess. His role in the narrative is to accompany the princess during her visit to St. Michael's Mount. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them is significant as it influences the actions of the local community and the expectations surrounding their arrival.",
+            "query_time": 0.27414631843566895,
+            "result_length": 603
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the account of the royal visit to St. Michael's Mount in Cornwall, the person identified as having married Princess Frederica of Hanover is Baron Von Pawel-Rammingen. He is described as a stout mediaeval knight who loved, wooed, and married the princess. His role in the narrative is to accompany the princess during her visit to St. Michael's Mount. This relationship is central to the narrative, as it explains the reason for their visit to St. Michael's Mount. The bond between them is significant as it influences the actions of the local community and the expectations surrounding their arrival.",
+            "query_time": 0.2579648494720459,
+            "result_length": 603
+          }
+        }
+      },
+      {
+        "query_id": "Novel-f80cbf85",
+        "query": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2576169967651367,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2945442199707031,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.25074315071105957,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 2.545422315597534,
+            "result_length": 298
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.48489880561828613,
+            "result_length": 298
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount \"the picture in little of Mont St. Michel, in Normandy,\" appears in the middle of Mount's Bay. This indicates that Mont St. Michel is situated in the region of Normandy in France.",
+            "query_time": 0.26895618438720703,
+            "result_length": 298
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b3c430ef",
+        "query": "In the historical account relating to St. Michael's Mount, which individual is said to have caused himself to be bled to death there?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends and historical narratives associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This account adds to the Mount's rich tapestry of historical and legendary figures, highlighting its role as a place of both political and personal tragedy.",
+            "query_time": 2.7591564655303955,
+            "result_length": 586
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends and historical narratives associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This account adds to the Mount's rich tapestry of historical and legendary figures, highlighting its role as a place of both political and personal tragedy.",
+            "query_time": 0.4349541664123535,
+            "result_length": 586
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is Henry de la Pomeroy. According to the legends and historical narratives associated with the site, Henry de la Pomeroy was taken prisoner and died in the Castle at St. Michael's Mount. His story is part of the Mount's long history and is mentioned in the context of the legends surrounding the site. This account adds to the Mount's rich tapestry of historical and legendary figures, highlighting its role as a place of both political and personal tragedy.",
+            "query_time": 0.2754838466644287,
+            "result_length": 586
+          }
+        }
+      },
+      {
+        "query_id": "Novel-304b0354",
+        "query": "Within the Cornish legends described in the narrative, who was the figure doomed to empty Dozmare Pool as a punishment?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He is said to have sold his soul to the devil and, as a result, is condemned to endlessly empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural lore surrounding the area, adding to the mysterious and eerie atmosphere of the location. The legend of Tregeagle is closely tied to Dozmare Pool, which is also associated with the myth of King Arthur's disappearance.",
+            "query_time": 4.213388442993164,
+            "result_length": 606
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He is said to have sold his soul to the devil and, as a result, is condemned to endlessly empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural lore surrounding the area, adding to the mysterious and eerie atmosphere of the location. The legend of Tregeagle is closely tied to Dozmare Pool, which is also associated with the myth of King Arthur's disappearance.",
+            "query_time": 0.46411871910095215,
+            "result_length": 606
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was a ghostly figure cursed to perform menial tasks. He is said to have sold his soul to the devil and, as a result, is condemned to endlessly empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural lore surrounding the area, adding to the mysterious and eerie atmosphere of the location. The legend of Tregeagle is closely tied to Dozmare Pool, which is also associated with the myth of King Arthur's disappearance.",
+            "query_time": 0.3296952247619629,
+            "result_length": 606
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b1a95144",
+        "query": "In reference to the royal visit to St. Michael's Mount described in the narrative, to which princess did the Queen show motherly kindness during her stay?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public took an interest in her story, particularly sympathizing with the \"motherly kindness of our good Queen.\" While the specific name of the queen is not provided, it is clear that the Queen showed motherly kindness to Princess Frederica during her stay.\n\nPrincess Frederica's visit to St. Michael's Mount was significant, as it brought together various elements of the local community, including the St. Aubyn family, the Norwegian boatman, and the town of Marazion. Her arrival generated excitement among the townspeople, highlighting the Mount's role as a destination for both historical and social engagement. The Queen's involvement in the narrative suggests a supportive and caring relationship with the princess, adding a layer of emotional depth to the royal visit.",
+            "query_time": 4.30548095703125,
+            "result_length": 964
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public took an interest in her story, particularly sympathizing with the \"motherly kindness of our good Queen.\" While the specific name of the queen is not provided, it is clear that the Queen showed motherly kindness to Princess Frederica during her stay.\n\nPrincess Frederica's visit to St. Michael's Mount was significant, as it brought together various elements of the local community, including the St. Aubyn family, the Norwegian boatman, and the town of Marazion. Her arrival generated excitement among the townspeople, highlighting the Mount's role as a destination for both historical and social engagement. The Queen's involvement in the narrative suggests a supportive and caring relationship with the princess, adding a layer of emotional depth to the royal visit.",
+            "query_time": 0.32240986824035645,
+            "result_length": 964
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica, who is referred to as a \"half-English, half-foreign princess.\" The text mentions that the British public took an interest in her story, particularly sympathizing with the \"motherly kindness of our good Queen.\" While the specific name of the queen is not provided, it is clear that the Queen showed motherly kindness to Princess Frederica during her stay.\n\nPrincess Frederica's visit to St. Michael's Mount was significant, as it brought together various elements of the local community, including the St. Aubyn family, the Norwegian boatman, and the town of Marazion. Her arrival generated excitement among the townspeople, highlighting the Mount's role as a destination for both historical and social engagement. The Queen's involvement in the narrative suggests a supportive and caring relationship with the princess, adding a layer of emotional depth to the royal visit.",
+            "query_time": 0.27119970321655273,
+            "result_length": 964
+          }
+        }
+      },
+      {
+        "query_id": "Novel-e05d0922",
+        "query": "According to the description of Kynance Cove in Cornwall, which specific feature is included as a part of Kynance Cove?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, specific features included as part of Kynance Cove are the Bellows and Asparagus Island. The Bellows is described as a curious sight where water forces itself through a tiny fissure in the rock with a great roar. Asparagus Island, although not containing actual asparagus, is noted as a place where adventurous individuals climb, and it is considered dangerous. Additionally, Kynance Cove is associated with Gull Rock and is part of the broader geography that includes Mount's Bay and the Land's End. These features contribute to the natural beauty and challenging terrain of the area.",
+            "query_time": 3.3303134441375732,
+            "result_length": 643
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, specific features included as part of Kynance Cove are the Bellows and Asparagus Island. The Bellows is described as a curious sight where water forces itself through a tiny fissure in the rock with a great roar. Asparagus Island, although not containing actual asparagus, is noted as a place where adventurous individuals climb, and it is considered dangerous. Additionally, Kynance Cove is associated with Gull Rock and is part of the broader geography that includes Mount's Bay and the Land's End. These features contribute to the natural beauty and challenging terrain of the area.",
+            "query_time": 0.32892298698425293,
+            "result_length": 643
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the description of Kynance Cove in Cornwall, specific features included as part of Kynance Cove are the Bellows and Asparagus Island. The Bellows is described as a curious sight where water forces itself through a tiny fissure in the rock with a great roar. Asparagus Island, although not containing actual asparagus, is noted as a place where adventurous individuals climb, and it is considered dangerous. Additionally, Kynance Cove is associated with Gull Rock and is part of the broader geography that includes Mount's Bay and the Land's End. These features contribute to the natural beauty and challenging terrain of the area.",
+            "query_time": 0.31057310104370117,
+            "result_length": 643
+          }
+        }
+      },
+      {
+        "query_id": "Novel-dba48e64",
+        "query": "In the account of the travelers' visit to Kynance Cove, what natural landmarks are mentioned as being located near or within Kynance Cove, such as Asparagus Island, Gull Rock, and Bellows?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the area. These include Asparagus Island, Gull Rock, and the Bellows, each contributing to the unique landscape and experiences of the travelers.\n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is part of the scenery that the group discusses while considering their route. Although there is no actual asparagus present, the island is a place where the characters attempt to climb, and it is considered dangerous. This location highlights the adventurous spirit of the characters and the risks they take during their exploration.\n\nGull Rock is another significant natural feature near Kynance Cove. It is described as a rocky formation that is blacker than the surrounding rocks and is part of the scenery observed during the journey. The presence of Gull Rock adds to the dramatic and rugged beauty of the coastal area, offering a striking visual contrast against the surrounding landscape.\n\nThe Bellows is a natural phenomenon mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location represents a natural wonder that captivates the travelers, providing them with an opportunity to witness the power and unpredictability of nature.\n\nThese natural landmarks—Asparagus Island, Gull Rock, and the Bellows—play an essential role in shaping the travelers' experiences at Kynance Cove. They not only contribute to the scenic beauty of the area but also serve as points of interest and adventure, enhancing the overall journey and the connection between the travelers and the natural environment.",
+            "query_time": 6.374380826950073,
+            "result_length": 1765
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the area. These include Asparagus Island, Gull Rock, and the Bellows, each contributing to the unique landscape and experiences of the travelers.\n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is part of the scenery that the group discusses while considering their route. Although there is no actual asparagus present, the island is a place where the characters attempt to climb, and it is considered dangerous. This location highlights the adventurous spirit of the characters and the risks they take during their exploration.\n\nGull Rock is another significant natural feature near Kynance Cove. It is described as a rocky formation that is blacker than the surrounding rocks and is part of the scenery observed during the journey. The presence of Gull Rock adds to the dramatic and rugged beauty of the coastal area, offering a striking visual contrast against the surrounding landscape.\n\nThe Bellows is a natural phenomenon mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location represents a natural wonder that captivates the travelers, providing them with an opportunity to witness the power and unpredictability of nature.\n\nThese natural landmarks—Asparagus Island, Gull Rock, and the Bellows—play an essential role in shaping the travelers' experiences at Kynance Cove. They not only contribute to the scenic beauty of the area but also serve as points of interest and adventure, enhancing the overall journey and the connection between the travelers and the natural environment.",
+            "query_time": 0.7138750553131104,
+            "result_length": 1765
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the area. These include Asparagus Island, Gull Rock, and the Bellows, each contributing to the unique landscape and experiences of the travelers.\n\nAsparagus Island is noted for its distinct shape and presence in the coastal landscape. It is part of the scenery that the group discusses while considering their route. Although there is no actual asparagus present, the island is a place where the characters attempt to climb, and it is considered dangerous. This location highlights the adventurous spirit of the characters and the risks they take during their exploration.\n\nGull Rock is another significant natural feature near Kynance Cove. It is described as a rocky formation that is blacker than the surrounding rocks and is part of the scenery observed during the journey. The presence of Gull Rock adds to the dramatic and rugged beauty of the coastal area, offering a striking visual contrast against the surrounding landscape.\n\nThe Bellows is a natural phenomenon mentioned in the narrative, where water spouts through a fissure in the rock. It is described as a curious sight and is visited by the characters. This location represents a natural wonder that captivates the travelers, providing them with an opportunity to witness the power and unpredictability of nature.\n\nThese natural landmarks—Asparagus Island, Gull Rock, and the Bellows—play an essential role in shaping the travelers' experiences at Kynance Cove. They not only contribute to the scenic beauty of the area but also serve as points of interest and adventure, enhancing the overall journey and the connection between the travelers and the natural environment.",
+            "query_time": 0.3484172821044922,
+            "result_length": 1765
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ea3d4859",
+        "query": "During the travelers' exploration of the Cornish coastline in the narrative, what notable geographical feature is located near Housel Cove?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2842376232147217,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3049652576446533,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.30074572563171387,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter a notable geographical feature. The text mentions that after breakfast, the travelers went \"Brushing with hasty steps the dew away,\" along the fields leading down to Housel or Househole Cove. As they walked, they saw the fine headland of Penolver and the green slopes of the amphitheatre of Belidden, which is supposed to be the remains of a Druidical temple. This area is described as part of the landscape near Housel Cove, indicating that the headland of Penolver and the amphitheatre of Belidden are the notable geographical features located near Housel Cove.",
+            "query_time": 4.656878709793091,
+            "result_length": 694
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter a notable geographical feature. The text mentions that after breakfast, the travelers went \"Brushing with hasty steps the dew away,\" along the fields leading down to Housel or Househole Cove. As they walked, they saw the fine headland of Penolver and the green slopes of the amphitheatre of Belidden, which is supposed to be the remains of a Druidical temple. This area is described as part of the landscape near Housel Cove, indicating that the headland of Penolver and the amphitheatre of Belidden are the notable geographical features located near Housel Cove.",
+            "query_time": 0.7218837738037109,
+            "result_length": 694
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter a notable geographical feature. The text mentions that after breakfast, the travelers went \"Brushing with hasty steps the dew away,\" along the fields leading down to Housel or Househole Cove. As they walked, they saw the fine headland of Penolver and the green slopes of the amphitheatre of Belidden, which is supposed to be the remains of a Druidical temple. This area is described as part of the landscape near Housel Cove, indicating that the headland of Penolver and the amphitheatre of Belidden are the notable geographical features located near Housel Cove.",
+            "query_time": 0.35476112365722656,
+            "result_length": 694
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ba894e2c",
+        "query": "In the retelling of the Arthurian legend within the novel, who is the character credited with producing King Arthur?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is **Merlin**. According to the narrative, Merlin played a crucial role in ensuring Arthur's secret upbringing and guiding him to the throne. His magical interventions and advice shaped Arthur's path and the events leading to his coronation. The relationship between Arthur and Merlin is described as essential to the legend, emphasizing the mystical elements that underpin Arthur's story and the broader Arthurian tradition.\n\nMerlin's involvement in Arthur's life begins with the secret upbringing of the young Arthur, who was carried away from the sea-shore beneath Tintagel and entrusted to Sir Ector to be raised as his own son. This act by Merlin ensures that Arthur grows up in obscurity before being revealed as the rightful heir to the throne. Merlin's guidance and support are instrumental in Arthur's rise to power, making him a foundational figure in the Arthurian legend.",
+            "query_time": 4.051354646682739,
+            "result_length": 992
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is **Merlin**. According to the narrative, Merlin played a crucial role in ensuring Arthur's secret upbringing and guiding him to the throne. His magical interventions and advice shaped Arthur's path and the events leading to his coronation. The relationship between Arthur and Merlin is described as essential to the legend, emphasizing the mystical elements that underpin Arthur's story and the broader Arthurian tradition.\n\nMerlin's involvement in Arthur's life begins with the secret upbringing of the young Arthur, who was carried away from the sea-shore beneath Tintagel and entrusted to Sir Ector to be raised as his own son. This act by Merlin ensures that Arthur grows up in obscurity before being revealed as the rightful heir to the throne. Merlin's guidance and support are instrumental in Arthur's rise to power, making him a foundational figure in the Arthurian legend.",
+            "query_time": 0.3223245143890381,
+            "result_length": 992
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, the character credited with producing King Arthur is **Merlin**. According to the narrative, Merlin played a crucial role in ensuring Arthur's secret upbringing and guiding him to the throne. His magical interventions and advice shaped Arthur's path and the events leading to his coronation. The relationship between Arthur and Merlin is described as essential to the legend, emphasizing the mystical elements that underpin Arthur's story and the broader Arthurian tradition.\n\nMerlin's involvement in Arthur's life begins with the secret upbringing of the young Arthur, who was carried away from the sea-shore beneath Tintagel and entrusted to Sir Ector to be raised as his own son. This act by Merlin ensures that Arthur grows up in obscurity before being revealed as the rightful heir to the throne. Merlin's guidance and support are instrumental in Arthur's rise to power, making him a foundational figure in the Arthurian legend.",
+            "query_time": 0.3238708972930908,
+            "result_length": 992
+          }
+        }
+      },
+      {
+        "query_id": "Novel-42f1975a",
+        "query": "According to the narrative's summary of Arthurian history, who was proclaimed king after the death of Uther Pendragon?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The text describes how Uther Pendragon, King of Britain, fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married her. A boy was born to them, and by the advice of the enchanter Merlin, the child was carried away from the sea-shore beneath Tintagel and confided to a good knight, Sir Ector, to be brought up as his own son and christened Arthur. On the death of Uther Pendragon, Merlin produced the youth, who was recognized by his mother Ygrayne, and proclaimed king in the stead of Uther Pendragon. This event marks the beginning of Arthur's reign as the legendary King of Britain.",
+            "query_time": 3.9322056770324707,
+            "result_length": 776
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The text describes how Uther Pendragon, King of Britain, fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married her. A boy was born to them, and by the advice of the enchanter Merlin, the child was carried away from the sea-shore beneath Tintagel and confided to a good knight, Sir Ector, to be brought up as his own son and christened Arthur. On the death of Uther Pendragon, Merlin produced the youth, who was recognized by his mother Ygrayne, and proclaimed king in the stead of Uther Pendragon. This event marks the beginning of Arthur's reign as the legendary King of Britain.",
+            "query_time": 0.3536717891693115,
+            "result_length": 776
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The text describes how Uther Pendragon, King of Britain, fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married her. A boy was born to them, and by the advice of the enchanter Merlin, the child was carried away from the sea-shore beneath Tintagel and confided to a good knight, Sir Ector, to be brought up as his own son and christened Arthur. On the death of Uther Pendragon, Merlin produced the youth, who was recognized by his mother Ygrayne, and proclaimed king in the stead of Uther Pendragon. This event marks the beginning of Arthur's reign as the legendary King of Britain.",
+            "query_time": 0.3357992172241211,
+            "result_length": 776
+          }
+        }
+      },
+      {
+        "query_id": "Novel-419cadfe",
+        "query": "Within the summary of Arthurian legend provided in the narrative, with whom did King Arthur engage in battle?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with his nephew, Mordred. This relationship is described as one of conflict and betrayal, where Mordred's rebellion against Arthur led to the final battle at Camelford, where Arthur was mortally wounded. This direct relationship between Arthur and Mordred marks a turning point in the Arthurian legend, leading to the end of Arthur's reign and the loss of his kingdom.\n\nAdditionally, while not explicitly detailed in the text, the broader Arthurian legend often includes battles against various adversaries such as the Saxons, which are part of the traditional narratives surrounding King Arthur. However, based on the specific information provided in the data tables, the most directly mentioned opponent in battle is Mordred.",
+            "query_time": 3.595115900039673,
+            "result_length": 788
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with his nephew, Mordred. This relationship is described as one of conflict and betrayal, where Mordred's rebellion against Arthur led to the final battle at Camelford, where Arthur was mortally wounded. This direct relationship between Arthur and Mordred marks a turning point in the Arthurian legend, leading to the end of Arthur's reign and the loss of his kingdom.\n\nAdditionally, while not explicitly detailed in the text, the broader Arthurian legend often includes battles against various adversaries such as the Saxons, which are part of the traditional narratives surrounding King Arthur. However, based on the specific information provided in the data tables, the most directly mentioned opponent in battle is Mordred.",
+            "query_time": 0.4214649200439453,
+            "result_length": 788
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with his nephew, Mordred. This relationship is described as one of conflict and betrayal, where Mordred's rebellion against Arthur led to the final battle at Camelford, where Arthur was mortally wounded. This direct relationship between Arthur and Mordred marks a turning point in the Arthurian legend, leading to the end of Arthur's reign and the loss of his kingdom.\n\nAdditionally, while not explicitly detailed in the text, the broader Arthurian legend often includes battles against various adversaries such as the Saxons, which are part of the traditional narratives surrounding King Arthur. However, based on the specific information provided in the data tables, the most directly mentioned opponent in battle is Mordred.",
+            "query_time": 0.36347150802612305,
+            "result_length": 788
+          }
+        }
+      },
+      {
+        "query_id": "Novel-9e7500a0",
+        "query": "In the context of the Arthurian story as recounted in the narrative, which character fell in love with Ygrayne, leading to significant events in the legend?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the context of the Arthurian story as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. According to the information provided, Uther Pendragon was the King of Britain who fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married her. This act set the stage for the birth of Arthur, making Uther Pendragon a central figure in the Arthurian legend. His actions directly influenced the events that led to the birth of Arthur, who would later become the legendary King of Britain.\n\nThe relationship between Uther Pendragon and Ygrayne is described as central to the Arthurian legend, as it leads to the birth of Arthur. Their union is a key event in the narrative, setting the stage for Arthur's rise to power and the subsequent events in the legend. The story highlights how the actions of powerful figures have lasting consequences on the lives of others, shaping the course of the Arthurian legend.",
+            "query_time": 4.830420732498169,
+            "result_length": 1042
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the context of the Arthurian story as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. According to the information provided, Uther Pendragon was the King of Britain who fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married her. This act set the stage for the birth of Arthur, making Uther Pendragon a central figure in the Arthurian legend. His actions directly influenced the events that led to the birth of Arthur, who would later become the legendary King of Britain.\n\nThe relationship between Uther Pendragon and Ygrayne is described as central to the Arthurian legend, as it leads to the birth of Arthur. Their union is a key event in the narrative, setting the stage for Arthur's rise to power and the subsequent events in the legend. The story highlights how the actions of powerful figures have lasting consequences on the lives of others, shaping the course of the Arthurian legend.",
+            "query_time": 0.9300189018249512,
+            "result_length": 1042
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the context of the Arthurian story as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. According to the information provided, Uther Pendragon was the King of Britain who fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married her. This act set the stage for the birth of Arthur, making Uther Pendragon a central figure in the Arthurian legend. His actions directly influenced the events that led to the birth of Arthur, who would later become the legendary King of Britain.\n\nThe relationship between Uther Pendragon and Ygrayne is described as central to the Arthurian legend, as it leads to the birth of Arthur. Their union is a key event in the narrative, setting the stage for Arthur's rise to power and the subsequent events in the legend. The story highlights how the actions of powerful figures have lasting consequences on the lives of others, shaping the course of the Arthurian legend.",
+            "query_time": 2.9498980045318604,
+            "result_length": 1042
+          }
+        }
+      },
+      {
+        "query_id": "Novel-bffd01c2",
+        "query": "In the novel's retelling of the end of King Arthur's story, who was the knight entrusted to throw the sword Excalibur into the mere?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted to throw the sword Excalibur into the mere was Sir Bedevere. This act is described as a pivotal moment in Arthur's final days, where he commands Sir Bedevere to take his sword and cast it into the lake, symbolizing the end of his reign and the transition of power. The legend suggests that after this act, a boat with three queens appears, who then take Arthur away across the mere to be healed of his grievous wound. This event is part of the broader mythos surrounding Arthur's disappearance, which is believed to have occurred at Dozmare Pool, a location associated with the Arthurian legend. The story of Arthur's death and the subsequent myths about his return are deeply embedded in the cultural and historical fabric of Cornwall, reflecting the enduring legacy of the Arthurian tales.",
+            "query_time": 4.2686967849731445,
+            "result_length": 872
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted to throw the sword Excalibur into the mere was Sir Bedevere. This act is described as a pivotal moment in Arthur's final days, where he commands Sir Bedevere to take his sword and cast it into the lake, symbolizing the end of his reign and the transition of power. The legend suggests that after this act, a boat with three queens appears, who then take Arthur away across the mere to be healed of his grievous wound. This event is part of the broader mythos surrounding Arthur's disappearance, which is believed to have occurred at Dozmare Pool, a location associated with the Arthurian legend. The story of Arthur's death and the subsequent myths about his return are deeply embedded in the cultural and historical fabric of Cornwall, reflecting the enduring legacy of the Arthurian tales.",
+            "query_time": 0.4314415454864502,
+            "result_length": 872
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted to throw the sword Excalibur into the mere was Sir Bedevere. This act is described as a pivotal moment in Arthur's final days, where he commands Sir Bedevere to take his sword and cast it into the lake, symbolizing the end of his reign and the transition of power. The legend suggests that after this act, a boat with three queens appears, who then take Arthur away across the mere to be healed of his grievous wound. This event is part of the broader mythos surrounding Arthur's disappearance, which is believed to have occurred at Dozmare Pool, a location associated with the Arthurian legend. The story of Arthur's death and the subsequent myths about his return are deeply embedded in the cultural and historical fabric of Cornwall, reflecting the enduring legacy of the Arthurian tales.",
+            "query_time": 0.33638453483581543,
+            "result_length": 872
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ef451592",
+        "query": "Aside from Penolver, what other prominent feature is described as being near Housel Cove in the narrative?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative, another prominent feature described as being near Housel Cove is **Penolver**. The text mentions that \"directly after breakfast... we went 'Brushing with hasty steps the dew away,' along the fields, which led down to Housel or Househole Cove. Before us, clear in the sunshine, rose the fine headland of Penolver.\" This indicates that Penolver is a notable geographical feature close to Housel Cove, contributing to the scenic and natural beauty of the area. \n\nAdditionally, the narrative references other nearby locations such as **Kynance Cove**, **Asparagus Island**, and **the Lizard**, but these are not specifically described as being near Housel Cove. The primary feature directly associated with Housel Cove in the narrative is Penolver.",
+            "query_time": 3.511085271835327,
+            "result_length": 762
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative, another prominent feature described as being near Housel Cove is **Penolver**. The text mentions that \"directly after breakfast... we went 'Brushing with hasty steps the dew away,' along the fields, which led down to Housel or Househole Cove. Before us, clear in the sunshine, rose the fine headland of Penolver.\" This indicates that Penolver is a notable geographical feature close to Housel Cove, contributing to the scenic and natural beauty of the area. \n\nAdditionally, the narrative references other nearby locations such as **Kynance Cove**, **Asparagus Island**, and **the Lizard**, but these are not specifically described as being near Housel Cove. The primary feature directly associated with Housel Cove in the narrative is Penolver.",
+            "query_time": 0.43516039848327637,
+            "result_length": 762
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative, another prominent feature described as being near Housel Cove is **Penolver**. The text mentions that \"directly after breakfast... we went 'Brushing with hasty steps the dew away,' along the fields, which led down to Housel or Househole Cove. Before us, clear in the sunshine, rose the fine headland of Penolver.\" This indicates that Penolver is a notable geographical feature close to Housel Cove, contributing to the scenic and natural beauty of the area. \n\nAdditionally, the narrative references other nearby locations such as **Kynance Cove**, **Asparagus Island**, and **the Lizard**, but these are not specifically described as being near Housel Cove. The primary feature directly associated with Housel Cove in the narrative is Penolver.",
+            "query_time": 0.3342556953430176,
+            "result_length": 762
+          }
+        }
+      },
+      {
+        "query_id": "Novel-eab59fae",
+        "query": "According to the journey described in the narrative, in which county of England is the town of Marazion located?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3061490058898926,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.30837321281433105,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.3046081066131592,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 1.7025492191314697,
+            "result_length": 67
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.3479604721069336,
+            "result_length": 67
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.29635095596313477,
+            "result_length": 67
+          }
+        }
+      },
+      {
+        "query_id": "Novel-61cf41ee",
+        "query": "During the journey through Cornwall, who is identified as the driver responsible for transporting the main party by carriage?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.25888586044311523,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2281036376953125,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2715909481048584,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who accompanies the group throughout their travels, ensuring they reach their destinations. Charles is noted for his punctuality, helpfulness, and familiarity with the areas they visit. He often interacts with the travelers, providing them with information and assistance, and is an essential part of their journey. His role includes driving the carriage, taking care of the horse, and making arrangements for their stays at various locations.",
+            "query_time": 3.125255823135376,
+            "result_length": 622
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who accompanies the group throughout their travels, ensuring they reach their destinations. Charles is noted for his punctuality, helpfulness, and familiarity with the areas they visit. He often interacts with the travelers, providing them with information and assistance, and is an essential part of their journey. His role includes driving the carriage, taking care of the horse, and making arrangements for their stays at various locations.",
+            "query_time": 0.47099876403808594,
+            "result_length": 622
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who accompanies the group throughout their travels, ensuring they reach their destinations. Charles is noted for his punctuality, helpfulness, and familiarity with the areas they visit. He often interacts with the travelers, providing them with information and assistance, and is an essential part of their journey. His role includes driving the carriage, taking care of the horse, and making arrangements for their stays at various locations.",
+            "query_time": 0.2634446620941162,
+            "result_length": 622
+          }
+        }
+      },
+      {
+        "query_id": "Novel-09d21113",
+        "query": "In the account of the road journey after passing through Penzance, to which location did Charles travel with the carriage?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.24047231674194336,
+            "result_length": 58
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2516019344329834,
+            "result_length": 58
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "Sorry, I'm not able to provide an answer to that question.",
+            "query_time": 0.2922368049621582,
+            "result_length": 58
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to Marazion. The account describes that the group decided to take Marazion as their next resting place, attracted by its history and the promise of a comfortable stay at its hotel. Charles was entrusted with the task of taking them there, and he carefully planned the route, including a stop at Helstone to visit a friend. The journey to Marazion was part of a broader exploration of Cornwall, with Charles guiding the group through various scenic and historically significant locations.",
+            "query_time": 3.0753324031829834,
+            "result_length": 554
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to Marazion. The account describes that the group decided to take Marazion as their next resting place, attracted by its history and the promise of a comfortable stay at its hotel. Charles was entrusted with the task of taking them there, and he carefully planned the route, including a stop at Helstone to visit a friend. The journey to Marazion was part of a broader exploration of Cornwall, with Charles guiding the group through various scenic and historically significant locations.",
+            "query_time": 0.2671937942504883,
+            "result_length": 554
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to Marazion. The account describes that the group decided to take Marazion as their next resting place, attracted by its history and the promise of a comfortable stay at its hotel. Charles was entrusted with the task of taking them there, and he carefully planned the route, including a stop at Helstone to visit a friend. The journey to Marazion was part of a broader exploration of Cornwall, with Charles guiding the group through various scenic and historically significant locations.",
+            "query_time": 0.28490209579467773,
+            "result_length": 554
+          }
+        }
+      },
+      {
+        "query_id": "Novel-1b7a0e02",
+        "query": "During the first evening at The Lizard, what did Charles call out excitedly upon seeing the lights, as described in the narrative?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"Look! There they are.\" This moment occurred as the sun's last spark was quenched in the sea, and the Lizard Lights burst forth, creating a striking visual contrast against the darkening ocean. The lights were described as \"two substitute suns,\" emphasizing their brilliance and significance in guiding ships through the dark. Charles's excitement reflected the awe and admiration that the Lizard Lights inspired in those who witnessed them.",
+            "query_time": 3.5874669551849365,
+            "result_length": 579
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"Look! There they are.\" This moment occurred as the sun's last spark was quenched in the sea, and the Lizard Lights burst forth, creating a striking visual contrast against the darkening ocean. The lights were described as \"two substitute suns,\" emphasizing their brilliance and significance in guiding ships through the dark. Charles's excitement reflected the awe and admiration that the Lizard Lights inspired in those who witnessed them.",
+            "query_time": 0.33576154708862305,
+            "result_length": 579
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"Look! There they are.\" This moment occurred as the sun's last spark was quenched in the sea, and the Lizard Lights burst forth, creating a striking visual contrast against the darkening ocean. The lights were described as \"two substitute suns,\" emphasizing their brilliance and significance in guiding ships through the dark. Charles's excitement reflected the awe and admiration that the Lizard Lights inspired in those who witnessed them.",
+            "query_time": 0.35656309127807617,
+            "result_length": 579
+          }
+        }
+      },
+      {
+        "query_id": "Novel-752ca0c2",
+        "query": "In the context of the story's visit to Mullion, which individual did Mary Mundy express her admiration for?",
+        "query_type": "Fact Retrieval",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'NoneType' object is not subscriptable"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. This is evident from the narrative where she mentions the Professor and shows a connection to him, indicating that she is familiar with his work or reputation. Her admiration for the Professor is further highlighted by the fact that she keeps a poem about him in her visitors' book, which suggests a level of respect and appreciation for his contributions. The Professor's presence in the story, although not directly present, is significant as it ties into Mary Mundy's role as a host and her social connections within the community.",
+            "query_time": 3.0021510124206543,
+            "result_length": 637
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. This is evident from the narrative where she mentions the Professor and shows a connection to him, indicating that she is familiar with his work or reputation. Her admiration for the Professor is further highlighted by the fact that she keeps a poem about him in her visitors' book, which suggests a level of respect and appreciation for his contributions. The Professor's presence in the story, although not directly present, is significant as it ties into Mary Mundy's role as a host and her social connections within the community.",
+            "query_time": 0.41101527214050293,
+            "result_length": 637
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. This is evident from the narrative where she mentions the Professor and shows a connection to him, indicating that she is familiar with his work or reputation. Her admiration for the Professor is further highlighted by the fact that she keeps a poem about him in her visitors' book, which suggests a level of respect and appreciation for his contributions. The Professor's presence in the story, although not directly present, is significant as it ties into Mary Mundy's role as a host and her social connections within the community.",
+            "query_time": 0.366588830947876,
+            "result_length": 637
+          }
+        }
+      }
+    ],
+    "fusion_strategies": {
+      "enhanced_fusion": {
+        "status": "success",
+        "message": "增强融合策略组件加载成功",
+        "mock_results": {
+          "naive": [
+            {
+              "content": "AI是人工智能",
+              "score": 0.9
+            }
+          ],
+          "bm25": [
+            {
+              "content": "人工智能技术",
+              "score": 0.8
+            }
+          ],
+          "vector": [
+            {
+              "content": "机器学习是AI的分支",
+              "score": 0.85
+            }
+          ]
+        }
+      }
+    },
+    "evaluation_system": {
+      "status": "success",
+      "results": [
+        {
+          "query_id": "Novel-73586ddc",
+          "error": "'NoneType' object is not subscriptable"
+        },
+        {
+          "query_id": "Novel-74440a6a",
+          "error": "'NoneType' object is not subscriptable"
+        },
+        {
+          "query_id": "Novel-f80cbf85",
+          "question": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+          "answer": "Sorry, I'm not able to provide an answer to that question.",
+          "expected_answer": "Normandy",
+          "evaluation": {
+            "faithfulness": 1.0,
+            "answer_relevancy": "0.062750734",
+            "context_precision": 0.0,
+            "information_density": 0.7295454545454545,
+            "faithfulness_weighted": 1.0,
+            "answer_relevancy_weighted": 0.07530088126659393,
+            "context_precision_weighted": 0.0,
+            "information_density_weighted": 0.7295454545454545,
+            "overall_score": 0.3542502447962761,
+            "question": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+            "answer": "Sorry, I'm not able to provide an answer to that question.",
+            "complexity_type": "one_hop",
+            "num_contexts": 1,
+            "answer_length": 11,
+            "contexts_total_length": 11
+          }
+        }
+      ]
+    },
+    "performance": {
+      "basic_rag": {
+        "avg_time": 0.3221227327982585,
+        "min_time": 0.22965669631958008,
+        "max_time": 0.47801995277404785,
+        "std_time": 0.11087143626456143,
+        "times": [
+          0.47801995277404785,
+          0.25869154930114746,
+          0.22965669631958008
+        ]
+      },
+      "enhanced_rag": {
+        "avg_time": 2.3899070421854653,
+        "min_time": 0.2557382583618164,
+        "max_time": 6.4933741092681885,
+        "std_time": 2.902369956715083,
+        "times": [
+          6.4933741092681885,
+          0.4206087589263916,
+          0.2557382583618164
+        ]
+      }
+    }
+  },
+  "timestamp": "2025-08-04 18:57:31",
+  "summary": {
+    "total_tests": 125,
+    "successful_tests": 77,
+    "failed_tests": 45,
+    "modules_tested": [
+      "document_insertion",
+      "complexity_routing",
+      "query_processing",
+      "fusion_strategies",
+      "evaluation_system",
+      "performance"
+    ],
+    "performance_summary": {
+      "basic_rag": {
+        "avg_time": 0.3221227327982585,
+        "min_time": 0.22965669631958008,
+        "max_time": 0.47801995277404785
+      },
+      "enhanced_rag": {
+        "avg_time": 2.3899070421854653,
+        "min_time": 0.2557382583618164,
+        "max_time": 6.4933741092681885
+      }
+    },
+    "success_rate": 0.616
+  }
+}

@@ -1,0 +1,1458 @@
+{
+  "test_config": {
+    "working_dir": "./advanced_features_test_cache",
+    "novel_document": "test_data/Novel-44557.txt",
+    "query_dataset": "test_data/query.json",
+    "max_test_queries": 20,
+    "test_modes": [
+      "naive",
+      "local",
+      "global"
+    ],
+    "models_used": {
+      "llm": "qwen-turbo",
+      "embedding": "BAAI/bge-m3"
+    },
+    "features_enabled": {
+      "enhanced_features": true,
+      "hybrid_retrieval": true,
+      "complexity_analysis": true
+    }
+  },
+  "test_results": {
+    "document_insertion": {
+      "basic_rag": {
+        "status": "skipped_existing_data",
+        "insertion_time": 0,
+        "document_length": 238515,
+        "cache_files_found": 3
+      },
+      "enhanced_rag": {
+        "status": "skipped_existing_data",
+        "insertion_time": 0,
+        "document_length": 238515
+      }
+    },
+    "query_processing": [
+      {
+        "query_id": "Novel-73586ddc",
+        "query": "In the narrative of 'An Unsentimental Journey through Cornwall', which plant known scientifically as Erica vagans is also referred to by another common name, and what is that name?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Cornish heath",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name. This plant is called **Cornish heath**. The text specifically mentions that the Cornish heath is a rare plant species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with Goonhilly Down, where it grows abundantly and is described as a significant part of the local flora. The plant's presence in the narrative highlights the ecological richness of the region and its connection to the broader natural landscape of Cornwall.",
+            "query_time": 0.962738037109375,
+            "result_length": 750
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name. This plant is called **Cornish heath**. The text specifically mentions that the Cornish heath is a rare plant species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with Goonhilly Down, where it grows abundantly and is described as a significant part of the local flora. The plant's presence in the narrative highlights the ecological richness of the region and its connection to the broader natural landscape of Cornwall.",
+            "query_time": 0.4621849060058594,
+            "result_length": 750
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative of *An Unsentimental Journey Through Cornwall*, the plant known scientifically as *Erica vagans* is also referred to by another common name. This plant is called **Cornish heath**. The text specifically mentions that the Cornish heath is a rare plant species found exclusively in certain areas of Cornwall and a district of Portugal. It is noted for its beauty and unique botanical characteristics, such as the position of its anthers. The Cornish heath is closely associated with Goonhilly Down, where it grows abundantly and is described as a significant part of the local flora. The plant's presence in the narrative highlights the ecological richness of the region and its connection to the broader natural landscape of Cornwall.",
+            "query_time": 0.3633406162261963,
+            "result_length": 750
+          }
+        }
+      },
+      {
+        "query_id": "Novel-74440a6a",
+        "query": "Within the account of the royal visit to St. Michael's Mount in Cornwall, who is identified as the person who married Princess Frederica of Hanover?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Baron Von Pawel-Rammingen",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The account of the royal visit to St. Michael's Mount in Cornwall identifies Baron Von Pawel-Rammingen as the person who married Princess Frederica of Hanover. He is described as having \"loved, wooed, and married\" her, indicating a deep emotional and familial bond. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The baron's role as a secretary and spouse suggests a close, intimate connection to the princess, which may have influenced the dynamics of the visit and the public's perception of the royal couple. His presence in the narrative adds depth to the personal and familial aspects of the community.",
+            "query_time": 0.3177666664123535,
+            "result_length": 676
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The account of the royal visit to St. Michael's Mount in Cornwall identifies Baron Von Pawel-Rammingen as the person who married Princess Frederica of Hanover. He is described as having \"loved, wooed, and married\" her, indicating a deep emotional and familial bond. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The baron's role as a secretary and spouse suggests a close, intimate connection to the princess, which may have influenced the dynamics of the visit and the public's perception of the royal couple. His presence in the narrative adds depth to the personal and familial aspects of the community.",
+            "query_time": 0.317582368850708,
+            "result_length": 676
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The account of the royal visit to St. Michael's Mount in Cornwall identifies Baron Von Pawel-Rammingen as the person who married Princess Frederica of Hanover. He is described as having \"loved, wooed, and married\" her, indicating a deep emotional and familial bond. This relationship is significant as it forms the basis of the royal visit and the public's interest in their story. The baron's role as a secretary and spouse suggests a close, intimate connection to the princess, which may have influenced the dynamics of the visit and the public's perception of the royal couple. His presence in the narrative adds depth to the personal and familial aspects of the community.",
+            "query_time": 0.2996354103088379,
+            "result_length": 676
+          }
+        }
+      },
+      {
+        "query_id": "Novel-f80cbf85",
+        "query": "According to the narrative's discussion of historic sites, in which region of France is Mont St. Michel located?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Normandy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.34711313247680664,
+            "result_length": 260
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.330751895904541,
+            "result_length": 260
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.34453439712524414,
+            "result_length": 260
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.4205451011657715,
+            "result_length": 260
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.5936992168426514,
+            "result_length": 260
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative, Mont St. Michel is located in Normandy, France. The text mentions that St. Michael's Mount is \"the picture in little of Mont St. Michel, in Normandy.\" This indicates that Mont St. Michel is situated in the Normandy region of France.",
+            "query_time": 0.32366061210632324,
+            "result_length": 260
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b3c430ef",
+        "query": "In the historical account relating to St. Michael's Mount, which individual is said to have caused himself to be bled to death there?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Henry de la Pomeroy",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the narrative, he was taken prisoner and subsequently died after being bled to death in the castle. This event is mentioned as part of the long list of legends and historical figures associated with the Mount, highlighting its role as a site of both historical significance and folklore.",
+            "query_time": 0.31030893325805664,
+            "result_length": 456
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the narrative, he was taken prisoner and subsequently died after being bled to death in the castle. This event is mentioned as part of the long list of legends and historical figures associated with the Mount, highlighting its role as a site of both historical significance and folklore.",
+            "query_time": 0.3682100772857666,
+            "result_length": 456
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the historical account relating to St. Michael's Mount, the individual said to have caused himself to be bled to death there is **Henry de la Pomeroy**. According to the narrative, he was taken prisoner and subsequently died after being bled to death in the castle. This event is mentioned as part of the long list of legends and historical figures associated with the Mount, highlighting its role as a site of both historical significance and folklore.",
+            "query_time": 0.33275556564331055,
+            "result_length": 456
+          }
+        }
+      },
+      {
+        "query_id": "Novel-304b0354",
+        "query": "Within the Cornish legends described in the narrative, who was the figure doomed to empty Dozmare Pool as a punishment?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Tregeagle",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'3'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'3'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'3'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Within the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere, and he was condemned to an eternal task: to empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural folklore that enriches the cultural and mythological landscape of Cornwall.\n\nTregeagle's story is deeply rooted in Cornish tradition and is often associated with eerie and ghostly tales. His presence adds a layer of mystery and supernatural elements to the region's folklore, reinforcing the idea that the environment is intertwined with local legends. The narrative also connects Tregeagle to other mythical and historical figures, such as King Arthur, highlighting the interplay between natural landscapes, cultural traditions, and local institutions in shaping the identity of the region.",
+            "query_time": 0.3575706481933594,
+            "result_length": 1021
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Within the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere, and he was condemned to an eternal task: to empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural folklore that enriches the cultural and mythological landscape of Cornwall.\n\nTregeagle's story is deeply rooted in Cornish tradition and is often associated with eerie and ghostly tales. His presence adds a layer of mystery and supernatural elements to the region's folklore, reinforcing the idea that the environment is intertwined with local legends. The narrative also connects Tregeagle to other mythical and historical figures, such as King Arthur, highlighting the interplay between natural landscapes, cultural traditions, and local institutions in shaping the identity of the region.",
+            "query_time": 0.4166290760040283,
+            "result_length": 1021
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Within the Cornish legends described in the narrative, the figure doomed to empty Dozmare Pool as a punishment was **Tregeagle**. According to the legend, Tregeagle was once a dishonest steward who sold his soul to the devil. As a result of this betrayal, his home was sunk to the bottom of the mere, and he was condemned to an eternal task: to empty Dozmare Pool using a limpet-shell. This punishment is part of the supernatural folklore that enriches the cultural and mythological landscape of Cornwall.\n\nTregeagle's story is deeply rooted in Cornish tradition and is often associated with eerie and ghostly tales. His presence adds a layer of mystery and supernatural elements to the region's folklore, reinforcing the idea that the environment is intertwined with local legends. The narrative also connects Tregeagle to other mythical and historical figures, such as King Arthur, highlighting the interplay between natural landscapes, cultural traditions, and local institutions in shaping the identity of the region.",
+            "query_time": 0.3301999568939209,
+            "result_length": 1021
+          }
+        }
+      },
+      {
+        "query_id": "Novel-b1a95144",
+        "query": "In reference to the royal visit to St. Michael's Mount described in the narrative, to which princess did the Queen show motherly kindness during her stay?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Princess Frederica of Hanover",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'1'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica of Hanover. The Queen is mentioned as showing motherly kindness toward her. This relationship highlights the emotional and social dynamics surrounding the princess's visit, emphasizing the public's interest in her story and the significance of the royal family's involvement in the event.\n\nPrincess Frederica of Hanover is portrayed as a half-English, half-foreign princess whose story has captured the interest of the British public. The Queen's motherly kindness toward her suggests a level of affection or concern, which may have contributed to the public's fascination with the princess and her journey to St. Michael's Mount. This dynamic also underscores the broader cultural and historical context of the royal visit, where the presence of the Queen and other royal figures adds to the significance of the event.\n\nThe visit itself was an occasion of great anticipation, with the town of Marazion preparing for the arrival of the royal party. The St. Aubyns, who had long inhabited St. Michael's Mount, were the hosts of the visit, further reinforcing the connection between the royal family and the local aristocracy. The narrative also mentions that the princess was accompanied by Baron Von Pawel-Rammingen, her husband, who is described as having \"loved, wooed, and married\" her, adding a personal dimension to the royal visit.\n\nOverall, the Queen's motherly kindness toward Princess Frederica of Hanover reflects the emotional and social dimensions of the royal visit, highlighting the interplay between public interest, familial ties, and the historical significance of St. Michael's Mount.",
+            "query_time": 0.3919072151184082,
+            "result_length": 1692
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica of Hanover. The Queen is mentioned as showing motherly kindness toward her. This relationship highlights the emotional and social dynamics surrounding the princess's visit, emphasizing the public's interest in her story and the significance of the royal family's involvement in the event.\n\nPrincess Frederica of Hanover is portrayed as a half-English, half-foreign princess whose story has captured the interest of the British public. The Queen's motherly kindness toward her suggests a level of affection or concern, which may have contributed to the public's fascination with the princess and her journey to St. Michael's Mount. This dynamic also underscores the broader cultural and historical context of the royal visit, where the presence of the Queen and other royal figures adds to the significance of the event.\n\nThe visit itself was an occasion of great anticipation, with the town of Marazion preparing for the arrival of the royal party. The St. Aubyns, who had long inhabited St. Michael's Mount, were the hosts of the visit, further reinforcing the connection between the royal family and the local aristocracy. The narrative also mentions that the princess was accompanied by Baron Von Pawel-Rammingen, her husband, who is described as having \"loved, wooed, and married\" her, adding a personal dimension to the royal visit.\n\nOverall, the Queen's motherly kindness toward Princess Frederica of Hanover reflects the emotional and social dimensions of the royal visit, highlighting the interplay between public interest, familial ties, and the historical significance of St. Michael's Mount.",
+            "query_time": 0.3184831142425537,
+            "result_length": 1692
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes a royal visit to St. Michael's Mount involving Princess Frederica of Hanover. The Queen is mentioned as showing motherly kindness toward her. This relationship highlights the emotional and social dynamics surrounding the princess's visit, emphasizing the public's interest in her story and the significance of the royal family's involvement in the event.\n\nPrincess Frederica of Hanover is portrayed as a half-English, half-foreign princess whose story has captured the interest of the British public. The Queen's motherly kindness toward her suggests a level of affection or concern, which may have contributed to the public's fascination with the princess and her journey to St. Michael's Mount. This dynamic also underscores the broader cultural and historical context of the royal visit, where the presence of the Queen and other royal figures adds to the significance of the event.\n\nThe visit itself was an occasion of great anticipation, with the town of Marazion preparing for the arrival of the royal party. The St. Aubyns, who had long inhabited St. Michael's Mount, were the hosts of the visit, further reinforcing the connection between the royal family and the local aristocracy. The narrative also mentions that the princess was accompanied by Baron Von Pawel-Rammingen, her husband, who is described as having \"loved, wooed, and married\" her, adding a personal dimension to the royal visit.\n\nOverall, the Queen's motherly kindness toward Princess Frederica of Hanover reflects the emotional and social dimensions of the royal visit, highlighting the interplay between public interest, familial ties, and the historical significance of St. Michael's Mount.",
+            "query_time": 0.28760862350463867,
+            "result_length": 1692
+          }
+        }
+      },
+      {
+        "query_id": "Novel-e05d0922",
+        "query": "According to the description of Kynance Cove in Cornwall, which specific feature is included as a part of Kynance Cove?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Kynance Sands",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Kynance Cove, as described in the context of Cornwall, is a picturesque cove known for its natural beauty and unique geological features. Among these, the **Steeple Rock** and the **Lion Rocks** are specifically mentioned as significant elements of the location. These rock formations contribute to the dramatic and scenic landscape of Kynance Cove, enhancing its appeal as a destination for exploration and reflection.\n\nAdditionally, the **Bellows**, a natural feature within Kynance Cove, is noted for its striking phenomenon where water forces itself through a fissure in the rock with a great roar. This adds to the sensory experience of the location, making it a point of interest for visitors. The **Gull Rock** and **Asparagus Island** are also referenced as part of the surrounding landscape, further enriching the natural and geographical diversity of the area.\n\nThese specific features collectively highlight Kynance Cove's significance as a place of both aesthetic and natural importance within the broader narrative of the Cornish coastline.",
+            "query_time": 0.32682156562805176,
+            "result_length": 1053
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Kynance Cove, as described in the context of Cornwall, is a picturesque cove known for its natural beauty and unique geological features. Among these, the **Steeple Rock** and the **Lion Rocks** are specifically mentioned as significant elements of the location. These rock formations contribute to the dramatic and scenic landscape of Kynance Cove, enhancing its appeal as a destination for exploration and reflection.\n\nAdditionally, the **Bellows**, a natural feature within Kynance Cove, is noted for its striking phenomenon where water forces itself through a fissure in the rock with a great roar. This adds to the sensory experience of the location, making it a point of interest for visitors. The **Gull Rock** and **Asparagus Island** are also referenced as part of the surrounding landscape, further enriching the natural and geographical diversity of the area.\n\nThese specific features collectively highlight Kynance Cove's significance as a place of both aesthetic and natural importance within the broader narrative of the Cornish coastline.",
+            "query_time": 0.38088560104370117,
+            "result_length": 1053
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Kynance Cove, as described in the context of Cornwall, is a picturesque cove known for its natural beauty and unique geological features. Among these, the **Steeple Rock** and the **Lion Rocks** are specifically mentioned as significant elements of the location. These rock formations contribute to the dramatic and scenic landscape of Kynance Cove, enhancing its appeal as a destination for exploration and reflection.\n\nAdditionally, the **Bellows**, a natural feature within Kynance Cove, is noted for its striking phenomenon where water forces itself through a fissure in the rock with a great roar. This adds to the sensory experience of the location, making it a point of interest for visitors. The **Gull Rock** and **Asparagus Island** are also referenced as part of the surrounding landscape, further enriching the natural and geographical diversity of the area.\n\nThese specific features collectively highlight Kynance Cove's significance as a place of both aesthetic and natural importance within the broader narrative of the Cornish coastline.",
+            "query_time": 0.3156399726867676,
+            "result_length": 1053
+          }
+        }
+      },
+      {
+        "query_id": "Novel-dba48e64",
+        "query": "In the account of the travelers' visit to Kynance Cove, what natural landmarks are mentioned as being located near or within Kynance Cove, such as Asparagus Island, Gull Rock, and Bellows?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Asparagus Island, Gull Rock, and Bellows",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'4'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows.\n\nAsparagus Island is noted as a location that is not actually covered in asparagus, which adds a humorous observation to the narrative. It is part of the natural landscape of Kynance Cove and is visited by some of the characters. The island contributes to the vivid imagery of the setting and enhances the sense of place and the natural beauty of the region.\n\nGull Rock is described as a rocky formation near Kynance Cove, contributing to the dramatic scenery of the area. It is part of the natural environment that the characters observe during their visit. The presence of Gull Rock adds to the descriptive elements of the setting and the experiences of the characters.\n\nThe Bellows is a natural feature mentioned in the text, described as a curious sight where water forces itself through a fissure in the rock with a great roar. This feature is part of the landscape of Kynance Cove and is visited by the characters. The Bellows contributes to the vivid description of the location and the experiences of the characters, adding to the atmosphere and sense of wonder associated with the cove.\n\nThese natural landmarks, along with others such as the Steeple Rock and the Lion Rocks, contribute to the scenic value of Kynance Cove and play an important role in the narrative, shaping the characters' experiences and perceptions of the journey.",
+            "query_time": 0.354280948638916,
+            "result_length": 1542
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows.\n\nAsparagus Island is noted as a location that is not actually covered in asparagus, which adds a humorous observation to the narrative. It is part of the natural landscape of Kynance Cove and is visited by some of the characters. The island contributes to the vivid imagery of the setting and enhances the sense of place and the natural beauty of the region.\n\nGull Rock is described as a rocky formation near Kynance Cove, contributing to the dramatic scenery of the area. It is part of the natural environment that the characters observe during their visit. The presence of Gull Rock adds to the descriptive elements of the setting and the experiences of the characters.\n\nThe Bellows is a natural feature mentioned in the text, described as a curious sight where water forces itself through a fissure in the rock with a great roar. This feature is part of the landscape of Kynance Cove and is visited by the characters. The Bellows contributes to the vivid description of the location and the experiences of the characters, adding to the atmosphere and sense of wonder associated with the cove.\n\nThese natural landmarks, along with others such as the Steeple Rock and the Lion Rocks, contribute to the scenic value of Kynance Cove and play an important role in the narrative, shaping the characters' experiences and perceptions of the journey.",
+            "query_time": 0.38178277015686035,
+            "result_length": 1542
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the account of the travelers' visit to Kynance Cove, several natural landmarks are mentioned as being located near or within the cove. These include Asparagus Island, Gull Rock, and the Bellows.\n\nAsparagus Island is noted as a location that is not actually covered in asparagus, which adds a humorous observation to the narrative. It is part of the natural landscape of Kynance Cove and is visited by some of the characters. The island contributes to the vivid imagery of the setting and enhances the sense of place and the natural beauty of the region.\n\nGull Rock is described as a rocky formation near Kynance Cove, contributing to the dramatic scenery of the area. It is part of the natural environment that the characters observe during their visit. The presence of Gull Rock adds to the descriptive elements of the setting and the experiences of the characters.\n\nThe Bellows is a natural feature mentioned in the text, described as a curious sight where water forces itself through a fissure in the rock with a great roar. This feature is part of the landscape of Kynance Cove and is visited by the characters. The Bellows contributes to the vivid description of the location and the experiences of the characters, adding to the atmosphere and sense of wonder associated with the cove.\n\nThese natural landmarks, along with others such as the Steeple Rock and the Lion Rocks, contribute to the scenic value of Kynance Cove and play an important role in the narrative, shaping the characters' experiences and perceptions of the journey.",
+            "query_time": 0.31830406188964844,
+            "result_length": 1542
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ea3d4859",
+        "query": "During the travelers' exploration of the Cornish coastline in the narrative, what notable geographical feature is located near Housel Cove?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Penolver is located near Housel Cove.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and they are dazzling white. This structure is situated on the coast and is part of the landscape that the travelers admire during their visit to the area.",
+            "query_time": 0.4351346492767334,
+            "result_length": 417
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and they are dazzling white. This structure is situated on the coast and is part of the landscape that the travelers admire during their visit to the area.",
+            "query_time": 0.38995862007141113,
+            "result_length": 417
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "During the travelers' exploration of the Cornish coastline, a notable geographical feature located near Housel Cove is the Lizard Lights. The Lizard Lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and they are dazzling white. This structure is situated on the coast and is part of the landscape that the travelers admire during their visit to the area.",
+            "query_time": 0.4060690402984619,
+            "result_length": 417
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter the Lizard Lights. The Lizard Lights are a notable geographical feature located near Housel Cove. These lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. The Lizard Lights are significant as they are part of the landscape and serve as a landmark in the area.",
+            "query_time": 0.4573965072631836,
+            "result_length": 503
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter the Lizard Lights. The Lizard Lights are a notable geographical feature located near Housel Cove. These lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. The Lizard Lights are significant as they are part of the landscape and serve as a landmark in the area.",
+            "query_time": 0.30033349990844727,
+            "result_length": 503
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The narrative describes the travelers' exploration of the Cornish coastline, and during their visit to Housel Cove, they encounter the Lizard Lights. The Lizard Lights are a notable geographical feature located near Housel Cove. These lights are described as a huge low building with a tower at either side, resembling the Sydenham Crystal Palace, and are noted for their dazzling white appearance. The Lizard Lights are significant as they are part of the landscape and serve as a landmark in the area.",
+            "query_time": 0.30784010887145996,
+            "result_length": 503
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ba894e2c",
+        "query": "In the retelling of the Arthurian legend within the novel, who is the character credited with producing King Arthur?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Merlin produced King Arthur.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, King Arthur is credited with being produced by Uther Pendragon. According to the narrative, Uther Pendragon fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married Ygrayne. This union resulted in the birth of Arthur, who was later raised by Sir Ector. Uther's actions are foundational to the legend of King Arthur and his lineage, emphasizing themes of power, destiny, and moral responsibility.\n\nUther Pendragon's role in the origin of King Arthur is central to the Arthurian legends. His relationship with Ygrayne is described as a romantic one that led to violent actions against her husband. The data states that Uther besieged them in their castles, killed her husband, and married Ygrayne. Ygrayne gave birth to Arthur, who was later raised by Sir Ector. This relationship is central to the origin of Arthur's story and highlights themes of passion, betrayal, and the intertwining of personal desires with political and familial obligations.\n\nThe connection between Uther Pendragon and Ygrayne is part of the Arthurian mythos and highlights the tragic and romantic elements of the narrative. The connection between Ygrayne and Uther Pendragon underscores the complex dynamics of power and love in the Arthurian legends. Uther's actions set the stage for the origin of King Arthur, making him a pivotal figure in the legend.",
+            "query_time": 0.30422210693359375,
+            "result_length": 1459
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, King Arthur is credited with being produced by Uther Pendragon. According to the narrative, Uther Pendragon fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married Ygrayne. This union resulted in the birth of Arthur, who was later raised by Sir Ector. Uther's actions are foundational to the legend of King Arthur and his lineage, emphasizing themes of power, destiny, and moral responsibility.\n\nUther Pendragon's role in the origin of King Arthur is central to the Arthurian legends. His relationship with Ygrayne is described as a romantic one that led to violent actions against her husband. The data states that Uther besieged them in their castles, killed her husband, and married Ygrayne. Ygrayne gave birth to Arthur, who was later raised by Sir Ector. This relationship is central to the origin of Arthur's story and highlights themes of passion, betrayal, and the intertwining of personal desires with political and familial obligations.\n\nThe connection between Uther Pendragon and Ygrayne is part of the Arthurian mythos and highlights the tragic and romantic elements of the narrative. The connection between Ygrayne and Uther Pendragon underscores the complex dynamics of power and love in the Arthurian legends. Uther's actions set the stage for the origin of King Arthur, making him a pivotal figure in the legend.",
+            "query_time": 0.40851402282714844,
+            "result_length": 1459
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the retelling of the Arthurian legend within the novel, King Arthur is credited with being produced by Uther Pendragon. According to the narrative, Uther Pendragon fell in love with Ygrayne, the wife of the Duke of Cornwall. He besieged them in their castles, killed her husband, and married Ygrayne. This union resulted in the birth of Arthur, who was later raised by Sir Ector. Uther's actions are foundational to the legend of King Arthur and his lineage, emphasizing themes of power, destiny, and moral responsibility.\n\nUther Pendragon's role in the origin of King Arthur is central to the Arthurian legends. His relationship with Ygrayne is described as a romantic one that led to violent actions against her husband. The data states that Uther besieged them in their castles, killed her husband, and married Ygrayne. Ygrayne gave birth to Arthur, who was later raised by Sir Ector. This relationship is central to the origin of Arthur's story and highlights themes of passion, betrayal, and the intertwining of personal desires with political and familial obligations.\n\nThe connection between Uther Pendragon and Ygrayne is part of the Arthurian mythos and highlights the tragic and romantic elements of the narrative. The connection between Ygrayne and Uther Pendragon underscores the complex dynamics of power and love in the Arthurian legends. Uther's actions set the stage for the origin of King Arthur, making him a pivotal figure in the legend.",
+            "query_time": 0.36374711990356445,
+            "result_length": 1459
+          }
+        }
+      },
+      {
+        "query_id": "Novel-42f1975a",
+        "query": "According to the narrative's summary of Arthurian history, who was proclaimed king after the death of Uther Pendragon?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "King Arthur was proclaimed king after Uther Pendragon.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The story describes how Uther fell in love with Ygrayne, the wife of the Duke of Cornwall, and besieged them in their castles, killing her husband and marrying her. This led to the birth of Arthur, who was later raised by Sir Ector. Upon Uther's death, Merlin, the enchanter, arranged for Arthur to be recognized as the rightful heir and proclaimed king. This transition marked the beginning of Arthur's reign and his journey to becoming a legendary figure in the Arthurian myths.",
+            "query_time": 0.30916690826416016,
+            "result_length": 602
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The story describes how Uther fell in love with Ygrayne, the wife of the Duke of Cornwall, and besieged them in their castles, killing her husband and marrying her. This led to the birth of Arthur, who was later raised by Sir Ector. Upon Uther's death, Merlin, the enchanter, arranged for Arthur to be recognized as the rightful heir and proclaimed king. This transition marked the beginning of Arthur's reign and his journey to becoming a legendary figure in the Arthurian myths.",
+            "query_time": 0.31450819969177246,
+            "result_length": 602
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "According to the narrative's summary of Arthurian history, Arthur was proclaimed king after the death of Uther Pendragon. The story describes how Uther fell in love with Ygrayne, the wife of the Duke of Cornwall, and besieged them in their castles, killing her husband and marrying her. This led to the birth of Arthur, who was later raised by Sir Ector. Upon Uther's death, Merlin, the enchanter, arranged for Arthur to be recognized as the rightful heir and proclaimed king. This transition marked the beginning of Arthur's reign and his journey to becoming a legendary figure in the Arthurian myths.",
+            "query_time": 0.31973767280578613,
+            "result_length": 602
+          }
+        }
+      },
+      {
+        "query_id": "Novel-419cadfe",
+        "query": "Within the summary of Arthurian legend provided in the narrative, with whom did King Arthur engage in battle?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "King Arthur fought with Mordred.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with **Mordred**. According to the data, Mordred was Arthur's nephew who raised a rebellion against him and ultimately defeated him at Camelford. This confrontation marked the end of Arthur's reign and the beginning of his mysterious disappearance. The relationship between Arthur and Mordred is described as hostile, culminating in Mordred's betrayal and the defeat of Arthur at the Battle of Camelford. This event is central to the legend, symbolizing the fall of a great king and the loss of his dream of a perfect kingdom. The battle is directly tied to the events that led to Arthur's death wound and his eventual disappearance, which is further reinforced by the legend of Excalibur being thrown into the lake by Sir Bedevere at Arthur's request.",
+            "query_time": 0.3613758087158203,
+            "result_length": 813
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with **Mordred**. According to the data, Mordred was Arthur's nephew who raised a rebellion against him and ultimately defeated him at Camelford. This confrontation marked the end of Arthur's reign and the beginning of his mysterious disappearance. The relationship between Arthur and Mordred is described as hostile, culminating in Mordred's betrayal and the defeat of Arthur at the Battle of Camelford. This event is central to the legend, symbolizing the fall of a great king and the loss of his dream of a perfect kingdom. The battle is directly tied to the events that led to Arthur's death wound and his eventual disappearance, which is further reinforced by the legend of Excalibur being thrown into the lake by Sir Bedevere at Arthur's request.",
+            "query_time": 0.32157421112060547,
+            "result_length": 813
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "Within the narrative provided, King Arthur engaged in battle with **Mordred**. According to the data, Mordred was Arthur's nephew who raised a rebellion against him and ultimately defeated him at Camelford. This confrontation marked the end of Arthur's reign and the beginning of his mysterious disappearance. The relationship between Arthur and Mordred is described as hostile, culminating in Mordred's betrayal and the defeat of Arthur at the Battle of Camelford. This event is central to the legend, symbolizing the fall of a great king and the loss of his dream of a perfect kingdom. The battle is directly tied to the events that led to Arthur's death wound and his eventual disappearance, which is further reinforced by the legend of Excalibur being thrown into the lake by Sir Bedevere at Arthur's request.",
+            "query_time": 0.3470907211303711,
+            "result_length": 813
+          }
+        }
+      },
+      {
+        "query_id": "Novel-9e7500a0",
+        "query": "In the context of the Arthurian story as recounted in the narrative, which character fell in love with Ygrayne, leading to significant events in the legend?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Uther Pendragon fell in love with Ygrayne.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'12'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the Arthurian legends, as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. Uther Pendragon was the King of Britain who became enamored with Ygrayne, the wife of the Duke of Cornwall. His desire for her resulted in a series of dramatic and tragic actions. Uther besieged Ygrayne and her husband in their castles, killed her husband, and then married Ygrayne. This union ultimately led to the birth of Arthur, who was later raised by Sir Ector. Uther's actions set the stage for the origin of King Arthur and his lineage, highlighting themes of power, destiny, and moral responsibility within the Arthurian mythos.\n\nThe story of Uther Pendragon and Ygrayne is deeply intertwined with the broader narrative of the Arthurian legends, particularly through the symbolic and historical significance of Tintagel Castle. Tintagel is directly linked to the legend of Arthur and Ygrayne, serving as a place where their connection is rooted in the mythos. The castle is described as a physical and symbolic representation of the Arthurian legends, reinforcing its cultural and historical significance. Uther's actions not only shaped the early life of Arthur but also contributed to the complex web of relationships and events that define the Arthurian lore.",
+            "query_time": 0.36532163619995117,
+            "result_length": 1322
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the Arthurian legends, as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. Uther Pendragon was the King of Britain who became enamored with Ygrayne, the wife of the Duke of Cornwall. His desire for her resulted in a series of dramatic and tragic actions. Uther besieged Ygrayne and her husband in their castles, killed her husband, and then married Ygrayne. This union ultimately led to the birth of Arthur, who was later raised by Sir Ector. Uther's actions set the stage for the origin of King Arthur and his lineage, highlighting themes of power, destiny, and moral responsibility within the Arthurian mythos.\n\nThe story of Uther Pendragon and Ygrayne is deeply intertwined with the broader narrative of the Arthurian legends, particularly through the symbolic and historical significance of Tintagel Castle. Tintagel is directly linked to the legend of Arthur and Ygrayne, serving as a place where their connection is rooted in the mythos. The castle is described as a physical and symbolic representation of the Arthurian legends, reinforcing its cultural and historical significance. Uther's actions not only shaped the early life of Arthur but also contributed to the complex web of relationships and events that define the Arthurian lore.",
+            "query_time": 0.3300011157989502,
+            "result_length": 1322
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the Arthurian legends, as recounted in the narrative, **Uther Pendragon** fell in love with Ygrayne, which led to significant events in the legend. Uther Pendragon was the King of Britain who became enamored with Ygrayne, the wife of the Duke of Cornwall. His desire for her resulted in a series of dramatic and tragic actions. Uther besieged Ygrayne and her husband in their castles, killed her husband, and then married Ygrayne. This union ultimately led to the birth of Arthur, who was later raised by Sir Ector. Uther's actions set the stage for the origin of King Arthur and his lineage, highlighting themes of power, destiny, and moral responsibility within the Arthurian mythos.\n\nThe story of Uther Pendragon and Ygrayne is deeply intertwined with the broader narrative of the Arthurian legends, particularly through the symbolic and historical significance of Tintagel Castle. Tintagel is directly linked to the legend of Arthur and Ygrayne, serving as a place where their connection is rooted in the mythos. The castle is described as a physical and symbolic representation of the Arthurian legends, reinforcing its cultural and historical significance. Uther's actions not only shaped the early life of Arthur but also contributed to the complex web of relationships and events that define the Arthurian lore.",
+            "query_time": 0.3278176784515381,
+            "result_length": 1322
+          }
+        }
+      },
+      {
+        "query_id": "Novel-bffd01c2",
+        "query": "In the novel's retelling of the end of King Arthur's story, who was the knight entrusted to throw the sword Excalibur into the mere?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Sir Bedevere threw Excalibur.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'2'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted with the task of throwing the sword Excalibur into the mere was Sir Bedevere. This act was carried out at Arthur's request, marking the final moments of his life and the beginning of his mysterious disappearance. Sir Bedevere's loyalty to Arthur is a defining trait in the legend, and his actions are pivotal in the narrative of Arthur's death. The event is described as a symbolic gesture that signifies the end of Arthur's reign and the conclusion of his legendary journey.",
+            "query_time": 0.34270310401916504,
+            "result_length": 556
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted with the task of throwing the sword Excalibur into the mere was Sir Bedevere. This act was carried out at Arthur's request, marking the final moments of his life and the beginning of his mysterious disappearance. Sir Bedevere's loyalty to Arthur is a defining trait in the legend, and his actions are pivotal in the narrative of Arthur's death. The event is described as a symbolic gesture that signifies the end of Arthur's reign and the conclusion of his legendary journey.",
+            "query_time": 0.31418848037719727,
+            "result_length": 556
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the novel's retelling of the end of King Arthur's story, the knight entrusted with the task of throwing the sword Excalibur into the mere was Sir Bedevere. This act was carried out at Arthur's request, marking the final moments of his life and the beginning of his mysterious disappearance. Sir Bedevere's loyalty to Arthur is a defining trait in the legend, and his actions are pivotal in the narrative of Arthur's death. The event is described as a symbolic gesture that signifies the end of Arthur's reign and the conclusion of his legendary journey.",
+            "query_time": 0.3148312568664551,
+            "result_length": 556
+          }
+        }
+      },
+      {
+        "query_id": "Novel-ef451592",
+        "query": "Aside from Penolver, what other prominent feature is described as being near Housel Cove in the narrative?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Lizard Lights is near Housel Cove.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'5'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the narrative, Housel Cove is described as a beautiful and serene location, noted for its soft sand and peaceful environment. Alongside this, another prominent feature near Housel Cove is **Penolver**, which is mentioned as a headland visible from the Lizard. However, aside from Penolver, the text also highlights **Belidden**, described as a green slope that is thought to be the remains of a Druidical temple. This feature contributes to the scenic beauty of the area and adds an archaeological dimension to the landscape around Housel Cove.\n\nAdditionally, the narrative mentions the **Lizard Lights**, which are referenced as something the characters intend to examine during their stay. These lights are part of the natural and geographical features of the region, contributing to the overall atmosphere of the journey. While not directly adjacent to Housel Cove, they are part of the broader landscape that the travelers explore in the vicinity of the cove. \n\nThe **Devil's Throat** and **the Bellows**, though more closely associated with Kynance Cove, are also part of the Cornish coastal environment and contribute to the vivid descriptions of natural formations that accompany the journey. However, these specific features are not directly linked to Housel Cove in the text provided.",
+            "query_time": 0.2978231906890869,
+            "result_length": 1296
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the narrative, Housel Cove is described as a beautiful and serene location, noted for its soft sand and peaceful environment. Alongside this, another prominent feature near Housel Cove is **Penolver**, which is mentioned as a headland visible from the Lizard. However, aside from Penolver, the text also highlights **Belidden**, described as a green slope that is thought to be the remains of a Druidical temple. This feature contributes to the scenic beauty of the area and adds an archaeological dimension to the landscape around Housel Cove.\n\nAdditionally, the narrative mentions the **Lizard Lights**, which are referenced as something the characters intend to examine during their stay. These lights are part of the natural and geographical features of the region, contributing to the overall atmosphere of the journey. While not directly adjacent to Housel Cove, they are part of the broader landscape that the travelers explore in the vicinity of the cove. \n\nThe **Devil's Throat** and **the Bellows**, though more closely associated with Kynance Cove, are also part of the Cornish coastal environment and contribute to the vivid descriptions of natural formations that accompany the journey. However, these specific features are not directly linked to Housel Cove in the text provided.",
+            "query_time": 0.33757877349853516,
+            "result_length": 1296
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the narrative, Housel Cove is described as a beautiful and serene location, noted for its soft sand and peaceful environment. Alongside this, another prominent feature near Housel Cove is **Penolver**, which is mentioned as a headland visible from the Lizard. However, aside from Penolver, the text also highlights **Belidden**, described as a green slope that is thought to be the remains of a Druidical temple. This feature contributes to the scenic beauty of the area and adds an archaeological dimension to the landscape around Housel Cove.\n\nAdditionally, the narrative mentions the **Lizard Lights**, which are referenced as something the characters intend to examine during their stay. These lights are part of the natural and geographical features of the region, contributing to the overall atmosphere of the journey. While not directly adjacent to Housel Cove, they are part of the broader landscape that the travelers explore in the vicinity of the cove. \n\nThe **Devil's Throat** and **the Bellows**, though more closely associated with Kynance Cove, are also part of the Cornish coastal environment and contribute to the vivid descriptions of natural formations that accompany the journey. However, these specific features are not directly linked to Housel Cove in the text provided.",
+            "query_time": 0.29361939430236816,
+            "result_length": 1296
+          }
+        }
+      },
+      {
+        "query_id": "Novel-eab59fae",
+        "query": "According to the journey described in the narrative, in which county of England is the town of Marazion located?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Marazion is located in Cornwall.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.44173765182495117,
+            "result_length": 67
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.34444427490234375,
+            "result_length": 67
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.4420483112335205,
+            "result_length": 67
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.31815385818481445,
+            "result_length": 67
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.31509995460510254,
+            "result_length": 67
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The town of Marazion is located in the county of Cornwall, England.",
+            "query_time": 0.3321859836578369,
+            "result_length": 67
+          }
+        }
+      },
+      {
+        "query_id": "Novel-61cf41ee",
+        "query": "During the journey through Cornwall, who is identified as the driver responsible for transporting the main party by carriage?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Charles is the driver of the carriage.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horses and ensures the party's safe travel. Charles is noted for his punctuality and practical approach to their travels, and he often engages in conversation with the travelers, providing them with information and assistance throughout their journey.",
+            "query_time": 0.3522803783416748,
+            "result_length": 452
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horses and ensures the party's safe travel. Charles is noted for his punctuality and practical approach to their travels, and he often engages in conversation with the travelers, providing them with information and assistance throughout their journey.",
+            "query_time": 0.32857275009155273,
+            "result_length": 452
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horses and ensures the party's safe travel. Charles is noted for his punctuality and practical approach to their travels, and he often engages in conversation with the travelers, providing them with information and assistance throughout their journey.",
+            "query_time": 0.3287200927734375,
+            "result_length": 452
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horse and ensures the smooth transportation of the group. Charles is mentioned as being punctual and attentive to the needs of the travelers, providing them with a comfortable and practical means of travel throughout their journey. His role is crucial in facilitating their exploration of Cornwall, and he is consistently referred to with a sense of trust and appreciation by the main characters.",
+            "query_time": 0.39214229583740234,
+            "result_length": 597
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horse and ensures the smooth transportation of the group. Charles is mentioned as being punctual and attentive to the needs of the travelers, providing them with a comfortable and practical means of travel throughout their journey. His role is crucial in facilitating their exploration of Cornwall, and he is consistently referred to with a sense of trust and appreciation by the main characters.",
+            "query_time": 0.33962035179138184,
+            "result_length": 597
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "The driver responsible for transporting the main party by carriage during the journey through Cornwall is identified as Charles. He is described as a kind and reliable individual who takes care of the horse and ensures the smooth transportation of the group. Charles is mentioned as being punctual and attentive to the needs of the travelers, providing them with a comfortable and practical means of travel throughout their journey. His role is crucial in facilitating their exploration of Cornwall, and he is consistently referred to with a sense of trust and appreciation by the main characters.",
+            "query_time": 0.3302750587463379,
+            "result_length": 597
+          }
+        }
+      },
+      {
+        "query_id": "Novel-09d21113",
+        "query": "In the account of the road journey after passing through Penzance, to which location did Charles travel with the carriage?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Charles went to Whitesand Bay after passing through Penzance.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "success",
+            "result": "In the account of the road journey after passing through Penzance, Charles traveled with the carriage to several locations. He first took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey to St. Ives, where they met a kind local who showed them around the town. After St. Ives, Charles took them to Marazion, where they stayed at a hotel. The journey also included a visit to the Lizard, where they stayed at an inn, and later to Tintagel, where they explored the area and visited the castle. Finally, they traveled to Bodmin Road, continuing their journey along the coast.",
+            "query_time": 0.29560112953186035,
+            "result_length": 642
+          },
+          "basic_rag_local": {
+            "status": "success",
+            "result": "In the account of the road journey after passing through Penzance, Charles traveled with the carriage to several locations. He first took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey to St. Ives, where they met a kind local who showed them around the town. After St. Ives, Charles took them to Marazion, where they stayed at a hotel. The journey also included a visit to the Lizard, where they stayed at an inn, and later to Tintagel, where they explored the area and visited the castle. Finally, they traveled to Bodmin Road, continuing their journey along the coast.",
+            "query_time": 0.304934024810791,
+            "result_length": 642
+          },
+          "basic_rag_global": {
+            "status": "success",
+            "result": "In the account of the road journey after passing through Penzance, Charles traveled with the carriage to several locations. He first took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey to St. Ives, where they met a kind local who showed them around the town. After St. Ives, Charles took them to Marazion, where they stayed at a hotel. The journey also included a visit to the Lizard, where they stayed at an inn, and later to Tintagel, where they explored the area and visited the castle. Finally, they traveled to Bodmin Road, continuing their journey along the coast.",
+            "query_time": 0.4437241554260254,
+            "result_length": 642
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to several locations. He took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey, and Charles helped them navigate the area around the Land's End. The account also mentions that they visited places like Treryn, Pardeneck Point, and Tol Pedn Penwith, though it was impractical to see all of them. The journey continued towards St. Ives, where they encountered a friendly local who showed them around the town. The narrative also includes a visit to Poltesco, where they saw the serpentine works, and a trip to the coast near Cadgwith. Throughout the journey, Charles was instrumental in guiding the travelers and ensuring they saw as much as possible.",
+            "query_time": 0.335613489151001,
+            "result_length": 785
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to several locations. He took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey, and Charles helped them navigate the area around the Land's End. The account also mentions that they visited places like Treryn, Pardeneck Point, and Tol Pedn Penwith, though it was impractical to see all of them. The journey continued towards St. Ives, where they encountered a friendly local who showed them around the town. The narrative also includes a visit to Poltesco, where they saw the serpentine works, and a trip to the coast near Cadgwith. Throughout the journey, Charles was instrumental in guiding the travelers and ensuring they saw as much as possible.",
+            "query_time": 0.31639599800109863,
+            "result_length": 785
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "After passing through Penzance, Charles traveled with the carriage to several locations. He took the group to the Land's End, where they had a meal at the First and Last Inn. From there, they continued their journey, and Charles helped them navigate the area around the Land's End. The account also mentions that they visited places like Treryn, Pardeneck Point, and Tol Pedn Penwith, though it was impractical to see all of them. The journey continued towards St. Ives, where they encountered a friendly local who showed them around the town. The narrative also includes a visit to Poltesco, where they saw the serpentine works, and a trip to the coast near Cadgwith. Throughout the journey, Charles was instrumental in guiding the travelers and ensuring they saw as much as possible.",
+            "query_time": 0.3252720832824707,
+            "result_length": 785
+          }
+        }
+      },
+      {
+        "query_id": "Novel-1b7a0e02",
+        "query": "During the first evening at The Lizard, what did Charles call out excitedly upon seeing the lights, as described in the narrative?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Charles called out 'The Lizard Lights'.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'7'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'7'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'7'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"There's the Lizard Lights!\" This moment highlights his enthusiasm and familiarity with the location, as he was a local guide who had driven visitors to the area multiple times. His excitement reflects the significance of the Lizard Lights as a notable landmark and navigational aid in the region.",
+            "query_time": 0.34154653549194336,
+            "result_length": 435
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"There's the Lizard Lights!\" This moment highlights his enthusiasm and familiarity with the location, as he was a local guide who had driven visitors to the area multiple times. His excitement reflects the significance of the Lizard Lights as a notable landmark and navigational aid in the region.",
+            "query_time": 0.31996655464172363,
+            "result_length": 435
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "During the first evening at The Lizard, as described in the narrative, Charles called out excitedly upon seeing the lights. He exclaimed, \"There's the Lizard Lights!\" This moment highlights his enthusiasm and familiarity with the location, as he was a local guide who had driven visitors to the area multiple times. His excitement reflects the significance of the Lizard Lights as a notable landmark and navigational aid in the region.",
+            "query_time": 0.32886528968811035,
+            "result_length": 435
+          }
+        }
+      },
+      {
+        "query_id": "Novel-752ca0c2",
+        "query": "In the context of the story's visit to Mullion, which individual did Mary Mundy express her admiration for?",
+        "query_type": "Fact Retrieval",
+        "expected_answer": "Mary Mundy admired the Professor.",
+        "results": {
+          "basic_rag_naive": {
+            "status": "failed",
+            "error": "'8'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_local": {
+            "status": "failed",
+            "error": "'8'",
+            "error_type": "KeyError"
+          },
+          "basic_rag_global": {
+            "status": "failed",
+            "error": "'8'",
+            "error_type": "KeyError"
+          },
+          "enhanced_rag_naive": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. The narrative highlights that the Professor is referred to as \"the brightest thing on Cornish land\" by Mary Mundy, indicating a deep level of respect and admiration for him. This admiration is further emphasized by the fact that Mary Mundy mentions the Professor in a poetic line that underscores his significance in the area. Additionally, she expresses hope that he will be well and even mentions having his poem in her visitors' book and his portrait in her album, which further illustrates her connection to and admiration for him.",
+            "query_time": 0.3144657611846924,
+            "result_length": 638
+          },
+          "enhanced_rag_local": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. The narrative highlights that the Professor is referred to as \"the brightest thing on Cornish land\" by Mary Mundy, indicating a deep level of respect and admiration for him. This admiration is further emphasized by the fact that Mary Mundy mentions the Professor in a poetic line that underscores his significance in the area. Additionally, she expresses hope that he will be well and even mentions having his poem in her visitors' book and his portrait in her album, which further illustrates her connection to and admiration for him.",
+            "query_time": 0.30959415435791016,
+            "result_length": 638
+          },
+          "enhanced_rag_global": {
+            "status": "success",
+            "result": "In the context of the story's visit to Mullion, Mary Mundy expressed her admiration for the Professor. The narrative highlights that the Professor is referred to as \"the brightest thing on Cornish land\" by Mary Mundy, indicating a deep level of respect and admiration for him. This admiration is further emphasized by the fact that Mary Mundy mentions the Professor in a poetic line that underscores his significance in the area. Additionally, she expresses hope that he will be well and even mentions having his poem in her visitors' book and his portrait in her album, which further illustrates her connection to and admiration for him.",
+            "query_time": 0.29935622215270996,
+            "result_length": 638
+          }
+        }
+      }
+    ],
+    "complexity_analysis": {
+      "status": "success",
+      "classification_results": [
+        {
+          "query": "What is the scientific name of Cornish heath?",
+          "complexity": "one_hop",
+          "confidence": 0.599609375,
+          "probabilities": {
+            "LABEL_0": 0.33837890625,
+            "LABEL_1": 0.599609375,
+            "LABEL_2": 0.06201171875
+          }
+        },
+        {
+          "query": "Who married Princess Frederica of Hanover according to the royal visit account?",
+          "complexity": "multi_hop",
+          "confidence": 0.69384765625,
+          "probabilities": {
+            "LABEL_0": 0.0094451904296875,
+            "LABEL_1": 0.296875,
+            "LABEL_2": 0.69384765625
+          }
+        },
+        {
+          "query": "Compare the relationship between the plant Erica vagans and its common names across different regions mentioned in the narrative.",
+          "complexity": "multi_hop",
+          "confidence": 0.51171875,
+          "probabilities": {
+            "LABEL_0": 0.05712890625,
+            "LABEL_1": 0.43115234375,
+            "LABEL_2": 0.51171875
+          }
+        }
+      ],
+      "calibration_tested": true,
+      "calibrated_results": [
+        0.6654285034987552,
+        0.6467876886324588,
+        0.6745630742514217,
+        0.6561682249558661
+      ]
+    },
+    "performance": {
+      "basic_rag": {
+        "avg_time": 0.3188275496164958,
+        "min_time": 0.3086740970611572,
+        "max_time": 0.33472371101379395,
+        "std_time": 0.01138360298566883,
+        "times": [
+          0.3086740970611572,
+          0.31308484077453613,
+          0.33472371101379395
+        ]
+      },
+      "enhanced_rag": {
+        "avg_time": 0.33553608258565265,
+        "min_time": 0.3175466060638428,
+        "max_time": 0.3508419990539551,
+        "std_time": 0.013724598828674755,
+        "times": [
+          0.33821964263916016,
+          0.3508419990539551,
+          0.3175466060638428
+        ]
+      }
+    }
+  },
+  "timestamp": "2025-08-05 18:06:42",
+  "summary": {
+    "total_tests": 123,
+    "successful_tests": 76,
+    "failed_tests": 47,
+    "modules_tested": [
+      "document_insertion_basic_rag",
+      "document_insertion_enhanced_rag",
+      "query_processing",
+      "complexity_analysis"
+    ],
+    "performance_summary": {
+      "basic_rag": {
+        "avg_time": 0.3188275496164958,
+        "min_time": 0.3086740970611572,
+        "max_time": 0.33472371101379395
+      },
+      "enhanced_rag": {
+        "avg_time": 0.33553608258565265,
+        "min_time": 0.3175466060638428,
+        "max_time": 0.3508419990539551
+      }
+    },
+    "data_statistics": {
+      "total_queries_tested": 20,
+      "successful_query_responses": 75
+    },
+    "success_rate": 0.6178861788617886
+  },
+  "advanced_features_results": {
+    "graph_neural_network": {
+      "status": "success",
+      "gnn_processing_time": 0.08287858963012695,
+      "input_nodes": 100,
+      "output_shape": [
+        100
+      ],
+      "embedding_dim": [
+        100
+      ],
+      "attention_computed": true
+    },
+    "advanced_evaluation": {
+      "status": "success",
+      "evaluation_time": 0.8824691772460938,
+      "eval_results": {
+        "individual_results": [
+          {
+            "faithfulness": 0.3333333333333333,
+            "answer_relevancy": "0.21867195",
+            "context_precision": 0.0,
+            "information_density": 0.7104838709677419,
+            "faithfulness_weighted": 0.39999999999999997,
+            "answer_relevancy_weighted": 0.26240633726119994,
+            "context_precision_weighted": 0.0,
+            "information_density_weighted": 0.7104838709677419,
+            "overall_score": 0.1840017603503333,
+            "question": "What is the main topic of this text?",
+            "answer": "The text discusses: Produced by Chris Curnow and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images generously made available by The Internet Archive) AN UNSENTIMENTAL JOU",
+            "complexity_type": "one_hop",
+            "num_contexts": 2,
+            "answer_length": 31,
+            "contexts_total_length": 33
+          },
+          {
+            "faithfulness": 0.5,
+            "answer_relevancy": "0.54647654",
+            "context_precision": 0.0,
+            "information_density": 0.9092105263157895,
+            "faithfulness_weighted": 0.6,
+            "answer_relevancy_weighted": 0.6557718515396118,
+            "context_precision_weighted": 0.0,
+            "information_density_weighted": 0.9092105263157895,
+            "overall_score": 0.34882551431655884,
+            "question": "What is the main topic of this text?",
+            "answer": "The text discusses: We will avoid all huge hotels, all fashionable towns; we will study life in its simplicity, and make ourselves happy in our own humble, feminine way. Not 'roughing it' in any needless or reckless fash",
+            "complexity_type": "one_hop",
+            "num_contexts": 2,
+            "answer_length": 38,
+            "contexts_total_length": 40
+          },
+          {
+            "faithfulness": 1.0,
+            "answer_relevancy": "0.19220285",
+            "context_precision": 0.0,
+            "information_density": 0.9605263157894737,
+            "faithfulness_weighted": 1.0,
+            "answer_relevancy_weighted": 0.23064342141151428,
+            "context_precision_weighted": 0.0,
+            "information_density_weighted": 0.9605263157894737,
+            "overall_score": 0.3974009503920873,
+            "question": "What is the main topic of this text?",
+            "answer": "The text discusses: their parlour windows; then Plymouth and Saltash, where the magnificent bridge reminded us of the one over the Tay, which we had once crossed, not long before that Sunday night when, sitting in a quie",
+            "complexity_type": "one_hop",
+            "num_contexts": 2,
+            "answer_length": 38,
+            "contexts_total_length": 40
+          },
+          {
+            "faithfulness": 1.0,
+            "answer_relevancy": "0.33888847",
+            "context_precision": 0.0,
+            "information_density": 0.9864864864864865,
+            "faithfulness_weighted": 1.0,
+            "answer_relevancy_weighted": 0.4066661596298218,
+            "context_precision_weighted": 0.0,
+            "information_density_weighted": 0.9864864864864865,
+            "overall_score": 0.44629615545272827,
+            "question": "What is the main topic of this text?",
+            "answer": "The text discusses: it is always good to hear everybody's advice, and follow your own--we carried our love of quietness so far that we eschewed the magnificent new Falmouth Hotel, with its _table d'hote_, lawn tennis gro",
+            "complexity_type": "one_hop",
+            "num_contexts": 2,
+            "answer_length": 37,
+            "contexts_total_length": 39
+          },
+          {
+            "faithfulness": 0.5,
+            "answer_relevancy": "0.2695198",
+            "context_precision": 0.0,
+            "information_density": 0.8527777777777779,
+            "faithfulness_weighted": 0.6,
+            "answer_relevancy_weighted": 0.3234237670898437,
+            "context_precision_weighted": 0.0,
+            "information_density_weighted": 0.8527777777777779,
+            "overall_score": 0.25650660196940106,
+            "question": "What is the main topic of this text?",
+            "answer": "The text discusses: sheltered bay and glittering sea beyond. Landward were the villages of Mabe and Constantine, with their great quarries of granite, and in the distance lay wide sweeps of undulating land, barren and tr",
+            "complexity_type": "one_hop",
+            "num_contexts": 2,
+            "answer_length": 36,
+            "contexts_total_length": 38
+          }
+        ],
+        "batch_statistics": {
+          "faithfulness": {
+            "mean": 0.6666666666666666,
+            "std": 0.27888667551135854,
+            "min": 0.3333333333333333,
+            "max": 1.0,
+            "median": 0.5
+          },
+          "answer_relevancy": {
+            "mean": "0.31315193",
+            "std": "0.12693436",
+            "min": "0.19220285",
+            "max": "0.54647654",
+            "median": "0.2695198"
+          },
+          "context_precision": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "median": 0.0
+          },
+          "information_density": {
+            "mean": 0.8838969954674539,
+            "std": 0.09805911350092716,
+            "min": 0.7104838709677419,
+            "max": 0.9864864864864865,
+            "median": 0.9092105263157895
+          },
+          "overall_score": {
+            "mean": 0.3266061964962218,
+            "std": 0.09495394662666633,
+            "min": 0.1840017603503333,
+            "max": 0.44629615545272827,
+            "median": 0.34882551431655884
+          },
+          "complexity_breakdown": {
+            "one_hop": {
+              "count": 5,
+              "mean_score": 0.3266061964962218,
+              "std_score": 0.09495394662666633
+            }
+          }
+        },
+        "total_evaluated": 5
+      },
+      "baseline_comparison": {
+        "baseline_name": "naive_rag",
+        "baseline_config": "BaselineConfig(name='Naive RAG', description='基础RAG：单一向量检索 + 简单拼接', paper_reference='Lewis et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS.', implementation_notes='', expected_performance={'faithfulness': 0.65, 'answer_relevancy': 0.7, 'context_precision': 0.6})",
+        "individual_results": [
+          {
+            "question": "What is the main topic of this text?",
+            "complexity_type": "one_hop",
+            "baseline_method": "naive_rag",
+            "scores": {
+              "faithfulness": 0.6822864199457301,
+              "answer_relevancy": 0.7347699907107863,
+              "context_precision": 0.629802849180674,
+              "context_recall": 0.5668225642626066,
+              "semantic_similarity": 0.7829984854528512,
+              "answer_completeness": 0.7397987726295555
+            },
+            "simulated": true
+          },
+          {
+            "question": "What is the main topic of this text?",
+            "complexity_type": "one_hop",
+            "baseline_method": "naive_rag",
+            "scores": {
+              "faithfulness": 0.6667309951474051,
+              "answer_relevancy": 0.7180179947741284,
+              "context_precision": 0.6154439955206815,
+              "context_recall": 0.5538995959686134,
+              "semantic_similarity": 0.633347741046497,
+              "answer_completeness": 0.6860884429948023
+            },
+            "simulated": true
+          },
+          {
+            "question": "What is the main topic of this text?",
+            "complexity_type": "one_hop",
+            "baseline_method": "naive_rag",
+            "scores": {
+              "faithfulness": 0.6012100433783683,
+              "answer_relevancy": 0.6474569697920889,
+              "context_precision": 0.5549631169646476,
+              "context_recall": 0.4994668052681829,
+              "semantic_similarity": 0.689827709452018,
+              "answer_completeness": 0.7413857570927228
+            },
+            "simulated": true
+          },
+          {
+            "question": "What is the main topic of this text?",
+            "complexity_type": "one_hop",
+            "baseline_method": "naive_rag",
+            "scores": {
+              "faithfulness": 0.6517143602352216,
+              "answer_relevancy": 0.7018462340994693,
+              "context_precision": 0.6015824863709737,
+              "context_recall": 0.5414242377338763,
+              "semantic_similarity": 0.6703618254887657,
+              "answer_completeness": 0.6615934349118759
+            },
+            "simulated": true
+          },
+          {
+            "question": "What is the main topic of this text?",
+            "complexity_type": "one_hop",
+            "baseline_method": "naive_rag",
+            "scores": {
+              "faithfulness": 0.6880169295915837,
+              "answer_relevancy": 0.7409413087909362,
+              "context_precision": 0.635092550392231,
+              "context_recall": 0.5715832953530079,
+              "semantic_similarity": 0.6622607728789371,
+              "answer_completeness": 0.7637113796974727
+            },
+            "simulated": true
+          }
+        ],
+        "average_scores": {
+          "faithfulness": 0.6579917496596618,
+          "answer_relevancy": 0.7086064996334819,
+          "context_precision": 0.6073769996858416
+        },
+        "total_questions": 5,
+        "complexity_distribution": {
+          "one_hop": 5
+        }
+      },
+      "detailed_metrics": {
+        "total_questions": 5,
+        "evaluation_time": 0.8824691772460938,
+        "complexity_distribution": {
+          "one_hop": 5
+        },
+        "evaluator_summary": {
+          "faithfulness": {
+            "mean": 0.6666666666666666,
+            "std": 0.27888667551135854,
+            "min": 0.3333333333333333,
+            "max": 1.0,
+            "median": 0.5
+          },
+          "answer_relevancy": {
+            "mean": "0.31315193",
+            "std": "0.12693436",
+            "min": "0.19220285",
+            "max": "0.54647654",
+            "median": "0.2695198"
+          },
+          "context_precision": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "median": 0.0
+          },
+          "information_density": {
+            "mean": 0.8838969954674539,
+            "std": 0.09805911350092716,
+            "min": 0.7104838709677419,
+            "max": 0.9864864864864865,
+            "median": 0.9092105263157895
+          },
+          "overall_score": {
+            "mean": 0.3266061964962218,
+            "std": 0.09495394662666633,
+            "min": 0.1840017603503333,
+            "max": 0.44629615545272827,
+            "median": 0.34882551431655884
+          },
+          "complexity_breakdown": {
+            "one_hop": {
+              "count": 5,
+              "mean_score": 0.3266061964962218,
+              "std_score": 0.09495394662666633
+            }
+          }
+        }
+      },
+      "metrics_computed": [
+        "faithfulness",
+        "answer_relevancy",
+        "context_precision",
+        "semantic_similarity",
+        "complexity_score"
+      ]
+    },
+    "advanced_fusion": {
+      "status": "success",
+      "fusion_time": 0.02664041519165039,
+      "fusion_result": {
+        "cross_attention_weights": "tensor([0.2051, 0.2308, 0.1746, 0.2090, 0.1635])",
+        "cross_attention_output": "tensor([2.1421e+00, 1.5828e+00, 0.0000e+00, 5.7966e-01, 0.0000e+00, 1.3639e-01,\n        0.0000e+00, 1.9021e+00, 7.1011e-01, 6.8630e-01, 0.0000e+00, 0.0000e+00,\n        2.6961e-01, 0.0000e+00, 0.0000e+00, 9.1780e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 1.1122e+00, 0.0000e+00, 1.5576e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.8807e-01, 0.0000e+00,\n        2.1944e+00, 1.2860e+00, 0.0000e+00, 0.0000e+00, 4.0084e-01, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 1.3028e+00, 8.8154e-01, 1.7056e+00,\n        0.0000e+00, 2.7278e+00, 0.0000e+00, 5.6087e-01, 0.0000e+00, 4.6349e-02,\n        0.0000e+00, 1.0710e+00, 1.4572e-02, 1.2813e+00, 2.1672e+00, 1.1167e+00,\n        8.4223e-01, 0.0000e+00, 1.6540e+00, 0.0000e+00, 3.5909e-01, 3.3080e-01,\n        2.1318e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 9.8051e-01, 0.0000e+00,\n        0.0000e+00, 1.8102e+00, 2.0086e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        6.4145e-01, 0.0000e+00, 1.3150e+00, 3.4516e-02, 3.6954e-01, 0.0000e+00,\n        5.3310e-02, 1.2088e+00, 0.0000e+00, 4.6655e-01, 1.3552e-02, 1.6279e+00,\n        0.0000e+00, 4.2903e-01, 0.0000e+00, 1.2808e+00, 0.0000e+00, 5.5619e-01,\n        5.2401e-01, 0.0000e+00, 1.1218e+00, 8.8139e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 8.2580e-01, 0.0000e+00, 3.0219e-01, 8.4159e-01, 0.0000e+00,\n        7.3464e-01, 0.0000e+00, 1.3972e-01, 7.5216e-01, 1.1505e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 3.2040e-01, 0.0000e+00, 1.4619e+00,\n        0.0000e+00, 4.3474e-01, 1.9392e+00, 3.5137e-01, 0.0000e+00, 7.9620e-01,\n        0.0000e+00, 1.8987e+00, 1.6441e+00, 7.8242e-02, 4.8297e-01, 0.0000e+00,\n        1.2310e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.9906e+00, 0.0000e+00,\n        0.0000e+00, 1.8863e+00, 0.0000e+00, 0.0000e+00, 2.2030e+00, 0.0000e+00,\n        1.4695e+00, 1.3598e+00, 2.1093e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 3.3172e-02, 0.0000e+00, 0.0000e+00, 1.2458e+00, 0.0000e+00,\n        9.9112e-01, 0.0000e+00, 1.0418e+00, 4.3402e-01, 2.4274e-01, 2.4310e-01,\n        0.0000e+00, 9.0690e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        1.9467e+00, 0.0000e+00, 2.0075e-01, 0.0000e+00, 1.5621e-01, 1.4500e-01,\n        8.2255e-01, 6.5670e-02, 0.0000e+00, 1.0817e-01, 1.6581e-01, 8.1733e-01,\n        0.0000e+00, 0.0000e+00, 5.4219e-01, 2.4911e-01, 5.7335e-01, 1.1480e+00,\n        8.1330e-02, 1.4873e+00, 0.0000e+00, 1.3269e-01, 3.5269e-01, 6.0668e-03,\n        1.6793e+00, 0.0000e+00, 5.2787e-01, 2.1312e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 1.0477e+00, 5.3552e-01, 0.0000e+00, 1.5430e+00,\n        0.0000e+00, 5.4196e-01, 0.0000e+00, 0.0000e+00, 1.4778e+00, 0.0000e+00,\n        4.4121e-01, 0.0000e+00, 7.6490e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 5.1103e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 3.0738e-01, 1.8993e+00, 0.0000e+00,\n        0.0000e+00, 9.3133e-01, 0.0000e+00, 9.8992e-01, 0.0000e+00, 2.2193e-01,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.5986e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 2.7828e-01, 0.0000e+00, 3.0417e-01, 0.0000e+00,\n        0.0000e+00, 6.6800e-01, 9.4892e-01, 8.1140e-01, 0.0000e+00, 5.0572e-01,\n        9.0937e-01, 0.0000e+00, 9.0304e-01, 3.9439e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 1.6031e+00, 0.0000e+00, 1.8472e+00, 3.9690e-01, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 5.6755e-01, 5.6616e-01, 3.8152e-01, 8.4590e-01,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 9.4568e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.2592e+00,\n        2.8926e+00, 0.0000e+00, 6.6027e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 9.4677e-01, 6.5712e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 1.2178e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        1.4551e+00, 0.0000e+00, 0.0000e+00, 1.3990e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 9.4235e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        1.2735e+00, 1.8054e-01, 9.1466e-01, 5.1285e-01, 1.4589e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 8.1225e-01, 0.0000e+00, 1.2725e+00, 1.7757e+00,\n        0.0000e+00, 2.1886e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        9.5854e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 9.9379e-01, 0.0000e+00,\n        6.5045e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 2.3910e-01, 3.0369e-01,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        1.4043e+00, 0.0000e+00, 0.0000e+00, 4.4835e-02, 0.0000e+00, 1.6596e+00,\n        0.0000e+00, 2.5005e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 1.0219e+00, 9.1677e-01, 5.6893e-01, 1.6271e+00,\n        2.1760e-01, 0.0000e+00, 1.4438e+00, 0.0000e+00, 0.0000e+00, 1.7495e+00,\n        0.0000e+00, 5.5397e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        4.2721e-01, 0.0000e+00, 1.4283e+00, 0.0000e+00, 7.9040e-01, 4.2509e-01,\n        1.0197e+00, 0.0000e+00, 0.0000e+00, 1.6275e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.5124e+00, 0.0000e+00,\n        7.7706e-01, 0.0000e+00, 0.0000e+00, 4.7649e-01, 1.5715e+00, 3.0399e-01,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 3.5528e-01, 0.0000e+00, 2.7516e+00,\n        0.0000e+00, 1.5514e-01, 1.3574e-01, 0.0000e+00, 0.0000e+00, 5.3395e-01,\n        1.4689e-01, 1.1990e+00, 0.0000e+00, 0.0000e+00, 8.2898e-01, 0.0000e+00,\n        6.9581e-01, 2.2382e-01, 0.0000e+00, 1.8367e-01, 0.0000e+00, 0.0000e+00,\n        1.7630e-01, 0.0000e+00, 0.0000e+00, 2.4033e-01, 0.0000e+00, 0.0000e+00,\n        1.5467e-01, 2.6300e+00, 1.9645e+00, 2.2892e+00, 0.0000e+00, 2.8676e-01,\n        3.4641e-04, 9.1906e-01, 0.0000e+00, 1.1871e+00, 0.0000e+00, 1.2099e+00,\n        0.0000e+00, 8.0581e-02, 0.0000e+00, 2.6595e-01, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.1405e-01, 5.7534e-01,\n        2.1940e+00, 7.3577e-01, 2.1370e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 1.1566e+00, 8.7534e-01, 0.0000e+00,\n        0.0000e+00, 5.2528e-01, 0.0000e+00, 0.0000e+00, 8.7397e-02, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 5.9998e-01, 0.0000e+00, 9.0446e-01, 1.3306e+00,\n        0.0000e+00, 1.4455e+00, 6.3153e-01, 2.6774e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 4.4869e-01, 1.3351e+00, 2.7013e-01, 0.0000e+00,\n        9.5590e-01, 3.3912e-01, 1.6398e+00, 1.4246e+00, 0.0000e+00, 0.0000e+00,\n        4.5367e-01, 0.0000e+00, 0.0000e+00, 6.8583e-01, 0.0000e+00, 0.0000e+00,\n        1.1570e+00, 0.0000e+00, 0.0000e+00, 1.2179e+00, 0.0000e+00, 6.3464e-01,\n        1.0253e+00, 1.1907e+00, 1.3411e+00, 4.7386e-01, 4.1794e-01, 1.2399e+00,\n        0.0000e+00, 0.0000e+00, 2.2635e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        1.8026e+00, 4.7294e-01, 8.2493e-01, 9.1703e-01, 0.0000e+00, 1.2769e-01,\n        9.9141e-01, 1.4465e+00, 0.0000e+00, 1.3913e-01, 0.0000e+00, 1.5549e+00,\n        5.6160e-01, 0.0000e+00, 0.0000e+00, 1.3565e-01, 0.0000e+00, 0.0000e+00,\n        8.5188e-01, 0.0000e+00, 0.0000e+00, 4.0034e-01, 0.0000e+00, 3.9299e-01,\n        0.0000e+00, 2.0963e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 5.2399e-01,\n        0.0000e+00, 3.1477e+00, 0.0000e+00, 1.0160e-02, 0.0000e+00, 4.2599e-01,\n        9.7200e-01, 1.8018e-01, 0.0000e+00, 6.3234e-01, 0.0000e+00, 1.8419e+00,\n        3.2357e-01, 2.5729e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 2.3205e+00, 3.9690e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.5383e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 3.2492e-02,\n        0.0000e+00, 0.0000e+00, 1.5565e+00, 0.0000e+00, 0.0000e+00, 6.5089e-01,\n        1.0093e+00, 0.0000e+00, 1.8579e+00, 0.0000e+00, 3.8803e-01, 2.0438e+00,\n        0.0000e+00, 2.5643e+00, 1.0003e+00, 0.0000e+00, 8.6200e-01, 1.7866e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 1.2455e+00, 4.8148e-01, 0.0000e+00,\n        1.5538e+00, 1.3492e-01, 0.0000e+00, 2.3030e-01, 0.0000e+00, 4.2585e-01,\n        2.3888e-01, 0.0000e+00, 0.0000e+00, 8.9237e-01, 1.8799e+00, 0.0000e+00,\n        7.2887e-02, 1.8315e+00, 8.5288e-01, 0.0000e+00, 0.0000e+00, 8.2280e-01,\n        6.9298e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 5.2498e-01,\n        0.0000e+00, 1.4288e+00, 7.7202e-02, 0.0000e+00, 0.0000e+00, 7.7402e-01,\n        1.1783e+00, 1.6109e-01, 0.0000e+00, 1.8635e+00, 1.5226e+00, 0.0000e+00,\n        0.0000e+00, 1.6733e-01, 3.6018e-01, 0.0000e+00, 0.0000e+00, 2.2391e+00,\n        4.0868e-01, 0.0000e+00, 1.3590e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        1.7795e+00, 0.0000e+00, 9.3545e-01, 6.8893e-01, 7.2531e-01, 1.2445e+00,\n        1.3670e-01, 1.1107e+00, 0.0000e+00, 0.0000e+00, 9.5680e-01, 0.0000e+00,\n        0.0000e+00, 1.6889e+00, 0.0000e+00, 9.6905e-01, 2.1581e-01, 0.0000e+00,\n        4.6686e-01, 0.0000e+00, 1.4114e+00, 9.5727e-01, 0.0000e+00, 4.4132e-01,\n        6.4556e-02, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 3.3128e-02,\n        3.8485e-02, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00,\n        9.1747e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 5.9436e-01, 0.0000e+00,\n        6.2509e-01, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.4901e+00,\n        6.5292e-01, 1.5238e-01, 0.0000e+00, 1.1321e+00, 9.2365e-01, 0.0000e+00,\n        0.0000e+00, 0.0000e+00, 2.3894e+00, 0.0000e+00, 0.0000e+00, 1.9775e-01,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 1.0016e+00, 0.0000e+00, 1.4088e+00,\n        0.0000e+00, 1.3488e+00, 0.0000e+00, 2.1677e-01, 1.4329e+00, 1.5268e+00,\n        1.1778e+00, 0.0000e+00, 6.0782e-01, 0.0000e+00, 1.0175e+00, 9.5034e-01,\n        0.0000e+00, 0.0000e+00, 0.0000e+00, 8.3655e-01, 0.0000e+00, 0.0000e+00])",
+        "self_attention_weights": [
+          "tensor([[[0.1662, 0.2163, 0.2033, 0.1983, 0.2035],\n         [0.2220, 0.1898, 0.2219, 0.2187, 0.2097],\n         [0.2217, 0.2093, 0.2094, 0.1620, 0.2071],\n         [0.2490, 0.2010, 0.2016, 0.2208, 0.1844],\n         [0.2385, 0.2085, 0.1829, 0.1453, 0.2121]]])",
+          "tensor([[[0.2310, 0.2186, 0.1635, 0.1731, 0.2061],\n         [0.2422, 0.2096, 0.1994, 0.1721, 0.2368],\n         [0.1710, 0.2103, 0.1902, 0.1854, 0.1893],\n         [0.2062, 0.2127, 0.1945, 0.1983, 0.2120],\n         [0.1645, 0.2066, 0.1452, 0.1914, 0.1964]]])",
+          "tensor([[[0.2355, 0.2043, 0.2097, 0.1892, 0.2149],\n         [0.2387, 0.1684, 0.2204, 0.2206, 0.1621],\n         [0.2098, 0.2091, 0.1711, 0.2116, 0.2138],\n         [0.2128, 0.2103, 0.1992, 0.2072, 0.1695],\n         [0.2102, 0.2354, 0.1728, 0.1940, 0.2280]]])"
+        ],
+        "self_attention_output": "tensor([-4.5161e-01, -3.5468e-01,  1.3173e+00,  9.1229e-02,  3.6492e-02,\n         1.0663e+00,  2.7068e-02,  1.3215e-01,  2.3895e-01, -1.5186e-01,\n        -3.8564e-02, -2.3994e-01, -3.7784e-01,  3.9879e-01, -4.3646e-01,\n         4.8996e-01, -7.7524e-02,  6.1099e-01,  5.7946e-02, -1.4317e-01,\n        -4.7349e-01,  9.4177e-01,  2.0404e-02,  2.1202e-01, -2.8956e-01,\n        -3.3135e-01,  4.2424e-01, -8.5451e-02,  4.4675e-01,  2.8489e-01,\n        -1.6247e-02, -8.6203e-01,  3.9417e-01, -3.8313e-01, -3.0274e-01,\n         7.4775e-01, -3.9673e-01,  1.7701e-01,  1.8908e-01,  5.3610e-01,\n        -2.9531e-02,  1.7358e-01,  1.1701e-01,  6.1792e-01, -2.3572e-01,\n         5.8195e-01, -4.9744e-01, -1.9506e-01, -1.9446e-01,  2.8784e-01,\n         7.8478e-02,  5.7169e-02,  3.5665e-01,  1.4424e-01, -1.2784e-01,\n         2.6787e-01,  9.0635e-01, -2.4020e-01,  2.2793e-01, -1.6348e-01,\n         1.9812e-01,  4.6426e-01, -4.4462e-01,  6.0711e-02,  4.9932e-02,\n         1.4567e-02,  5.6963e-01,  3.6612e-01, -2.8982e-01, -2.5996e-01,\n        -4.4406e-01,  4.0905e-02, -3.2891e-01,  1.6204e-01, -6.6535e-01,\n        -1.7504e-01,  4.4792e-01, -1.7368e-01, -4.8632e-01,  9.8264e-01,\n         2.1669e-01, -1.9242e-01,  9.4130e-03, -1.5815e-01,  4.4522e-01,\n         4.3303e-01, -3.8585e-01,  2.3030e-01,  2.3602e-01, -3.0494e-01,\n         3.8846e-01,  2.1297e-01,  1.2685e-01, -6.8935e-01, -3.1421e-01,\n        -3.7161e-01,  3.4582e-01, -3.9660e-01, -1.1246e-01, -3.7549e-01,\n         1.9955e-01, -3.2181e-01,  5.1036e-01, -2.8093e-01,  3.9962e-01,\n         3.1443e-01, -1.4301e-01, -2.2773e-01, -1.3949e-01, -6.4765e-01,\n        -2.9143e-01,  3.3379e-02,  2.4746e-01, -7.3044e-01, -2.7318e-01,\n         1.0317e+00,  4.2125e-02, -3.1132e-04, -2.4504e-01, -1.2394e-01,\n         8.4216e-02, -1.9151e-01,  4.5273e-01, -1.6212e-02,  2.0190e-01,\n         3.4681e-01, -2.9190e-02, -3.6900e-01,  3.2608e-01, -1.0904e+00,\n        -9.4993e-02,  3.1846e-01,  7.0536e-02, -1.5476e-01, -9.9283e-01,\n        -8.7095e-01, -8.9273e-02, -2.2974e-01,  6.3220e-01, -2.9129e-01,\n        -3.0605e-01,  7.6106e-01,  1.6511e-01, -2.1391e-01,  1.7035e-01,\n         4.2219e-02, -3.6686e-01,  1.0158e-02,  7.2738e-01,  1.3066e-01,\n         2.3614e-01, -4.2599e-01,  1.0499e-01,  1.4092e-01, -3.8891e-01,\n        -3.6452e-01, -2.2869e-01,  1.4185e-01, -1.6086e-01,  2.3194e-02,\n        -9.5822e-01, -3.8451e-01, -3.6999e-01, -2.1604e-01,  9.4514e-02,\n        -2.2513e-01,  4.5653e-01, -1.3975e-02,  7.7483e-02, -4.8677e-01,\n        -1.8688e-01,  6.1418e-01, -3.7192e-01, -3.7794e-01,  3.1265e-01,\n        -1.1214e+00,  3.7427e-01, -4.2884e-01, -2.9575e-01, -3.4662e-01,\n         1.4388e-01, -9.7601e-01,  4.3931e-01,  4.6482e-01, -4.0812e-01,\n        -2.2184e-01, -4.4795e-01,  6.5193e-01, -6.9728e-01,  6.1128e-02,\n         4.9101e-01,  1.0130e-01, -5.6109e-01, -7.9556e-01, -3.0049e-01,\n         3.9865e-01, -7.8620e-01,  7.2756e-01,  7.7645e-02, -1.0905e-01,\n         4.0717e-02,  9.7576e-01, -4.8082e-01, -4.3665e-01, -1.9712e-01,\n        -4.2569e-01, -4.8516e-01,  2.0956e-01,  6.4242e-03,  8.6842e-01,\n        -9.8097e-02,  1.9860e-01, -2.2302e-01, -8.7161e-01,  5.0813e-01,\n         1.0036e-02,  7.2467e-02, -2.9150e-01,  2.9058e-01, -2.5188e-01,\n         8.0936e-01,  6.5911e-02,  4.7618e-01,  7.2667e-02, -2.4729e-01,\n        -2.4460e-01, -3.1165e-01,  9.0529e-01,  3.2931e-01, -2.3815e-01,\n        -2.1863e-02,  6.8667e-01, -4.6462e-03,  8.0990e-02,  2.7353e-01,\n         4.2079e-01,  6.2324e-01,  3.4432e-01, -1.7863e-01,  3.6181e-01,\n        -8.4914e-02, -1.7811e-01,  1.6899e-01, -1.0457e-01, -7.4389e-01,\n         7.1794e-01,  3.3003e-01, -1.9663e-01, -4.4032e-01,  9.3422e-01,\n         3.1183e-01,  6.5338e-01,  7.3182e-01, -1.3052e-01,  2.9365e-02,\n        -6.5311e-01, -5.7447e-01,  1.2193e+00, -1.8089e-01,  2.3011e-01,\n        -4.4551e-01,  1.5535e-01, -5.6297e-01,  3.5195e-01, -2.5401e-01,\n         3.9626e-01, -2.2852e-01, -2.4098e-01, -2.2911e-01,  2.8673e-01,\n        -2.1323e-01, -3.6639e-01, -8.0254e-03, -2.9607e-01, -1.1501e+00,\n        -5.0108e-02, -5.2674e-01, -1.8978e-01,  3.0854e-01, -1.5996e-01,\n        -3.0500e-02,  3.3132e-01,  2.4530e-01, -6.9178e-01, -1.6044e-02,\n        -1.8411e-01,  1.6778e-02,  3.7317e-01, -9.3455e-02,  4.5721e-01,\n        -2.2025e-01,  5.1732e-01, -2.7815e-01, -7.7655e-02,  2.9606e-01,\n        -9.7192e-01,  3.6223e-01,  2.4771e-01, -2.5714e-02, -9.8483e-01,\n         3.7790e-02, -2.5422e-01, -2.0981e-01, -4.6639e-01,  3.4482e-01,\n        -9.6079e-01,  1.1395e-01, -1.7692e-01, -5.6040e-01, -2.2761e-01,\n        -2.2087e-01, -3.5589e-02, -6.0185e-01,  7.3421e-02,  1.0615e-01,\n         2.4121e-01, -6.1440e-02, -1.8243e-01,  1.9130e-01, -1.6688e-01,\n         3.6153e-01, -4.7919e-01,  3.3149e-01,  3.7112e-01,  3.3168e-03,\n        -7.6916e-02, -2.5358e-01,  8.3239e-02,  6.1495e-02,  4.3545e-02,\n         6.9876e-02,  5.8894e-01,  1.5303e-01, -2.6066e-01,  8.2467e-01,\n         4.2716e-01, -3.5404e-01, -6.8663e-01, -2.8640e-01, -8.5190e-01,\n         2.8860e-02, -2.1757e-01, -3.1228e-01, -5.1379e-01,  2.6872e-01,\n         2.5921e-01,  1.9216e-01,  1.6945e-01,  9.9232e-01,  1.5868e-01,\n         2.9029e-01, -1.5145e-01,  6.9446e-01, -4.7756e-01, -5.3376e-01,\n        -1.3880e-01, -9.1672e-02,  1.1092e-01,  1.8454e-01, -2.7058e-01,\n        -5.9914e-01, -5.2055e-01,  1.1856e+00,  7.2716e-01, -1.1799e-01,\n        -3.7347e-01, -6.9069e-01, -6.4795e-01,  2.3396e-01,  1.6264e-01,\n        -6.4290e-01,  1.0683e-02,  1.5773e-01, -1.6467e-01,  3.2970e-01,\n         3.2894e-01,  4.5416e-02,  7.2207e-01,  8.7721e-01, -6.5981e-01,\n        -3.9952e-01,  2.3397e-01,  8.5835e-01,  1.9048e-01,  3.2202e-02,\n        -1.7529e-01, -2.1640e-01,  4.8137e-03, -4.3305e-01,  4.7036e-01,\n         1.6045e-01,  4.3880e-01, -5.6366e-01,  2.6948e-01, -2.1800e-01,\n         7.0758e-01, -1.5395e-01, -3.1232e-01,  7.3832e-04,  2.5132e-02,\n         7.1400e-02,  2.5859e-01,  5.9055e-01, -1.5244e-01, -7.5174e-02,\n        -9.6289e-01,  1.4412e-01, -5.3437e-01, -4.5903e-01,  2.1877e-01,\n         2.3317e-03, -2.2442e-01, -7.6532e-02,  5.6312e-01,  3.7722e-01,\n         4.4257e-01, -4.5559e-01,  8.3937e-01, -1.7127e-01, -7.9675e-02,\n         1.9012e-01,  2.2313e-01,  5.0026e-01,  1.2400e-01,  3.0481e-01,\n         2.7797e-02, -9.4783e-02,  1.6660e-03, -9.5434e-02, -2.1777e-01,\n        -1.9430e-01,  3.8239e-01, -2.1771e-02, -2.7141e-01, -1.9838e-01,\n        -4.6650e-02,  1.0424e-01, -4.3074e-01,  3.3960e-01,  2.8557e-01,\n         5.2733e-01, -2.4042e-01, -2.5526e-01, -3.1349e-01, -2.4245e-01,\n         4.8083e-01, -6.0233e-01, -2.4189e-01,  1.6850e-01, -3.9521e-02,\n        -9.4515e-02,  4.9412e-01, -4.2408e-01, -1.7820e-02,  7.2483e-02,\n        -4.7663e-01,  2.2259e-01,  1.4157e-01, -7.2823e-01,  4.5658e-01,\n        -3.9699e-01,  3.7541e-01,  1.7919e-01, -3.2117e-02, -1.2688e-01,\n        -1.4148e-01, -1.1144e-01,  2.5098e-01,  2.7355e-01,  1.5513e-01,\n        -2.4364e-01,  2.5499e-02, -2.1101e-01, -3.1784e-02,  8.3617e-01,\n        -1.2573e-01, -1.1598e-02, -6.8634e-01, -5.7940e-01,  1.4892e-01,\n        -9.1615e-01, -4.1190e-02, -1.5599e-01, -1.6485e-01,  2.4681e-01,\n        -9.1201e-02, -5.3077e-01,  5.0370e-02, -3.4478e-01, -2.4698e-01,\n        -5.1214e-02, -1.5091e-01, -2.3373e-01, -5.8781e-01, -8.1841e-01,\n         4.3604e-02, -3.1946e-01,  7.9276e-01,  4.9294e-01,  7.7115e-01,\n         1.0703e+00, -1.1780e-01, -1.0886e-01, -2.4086e-02,  2.3427e-02,\n         1.6904e-01, -2.2555e-01, -6.6793e-01,  1.5924e-01,  3.8462e-01,\n         5.1957e-01, -1.6634e-01,  3.5575e-01, -5.6989e-01, -6.1794e-02,\n        -3.8587e-01, -6.4193e-03,  1.6268e-01,  8.5204e-02,  4.6623e-02,\n         5.3484e-01, -2.8853e-02,  2.6597e-01,  1.7079e-01,  6.5062e-01,\n         1.4524e-01,  3.1430e-03,  7.8201e-01,  2.1384e-01,  1.6675e-01,\n        -2.3022e-01, -4.9187e-02,  3.4300e-02,  1.0351e-01, -4.7624e-01,\n         8.5795e-02, -2.8345e-01,  2.2821e-01,  5.3700e-01,  1.9507e-02,\n         6.8007e-02, -8.5658e-01, -4.6638e-02, -2.2016e-01, -5.7121e-01,\n        -6.6543e-01,  2.4936e-01,  3.8333e-01, -1.3749e-02, -2.8286e-01,\n        -6.7626e-01,  2.9120e-01,  7.3470e-01,  3.6513e-01,  9.4949e-01,\n        -9.3428e-02, -2.4145e-01, -3.1533e-01, -2.7045e-01,  1.9910e-01,\n         4.9786e-01, -6.6546e-01,  3.8466e-01,  2.4060e-01, -1.4875e-03,\n        -1.5736e-01,  1.4308e-01,  2.5528e-01,  1.6297e-01,  4.2148e-01,\n        -8.8229e-01,  1.2621e-01, -6.8992e-01,  2.3971e-01,  7.8659e-02,\n         8.5638e-01,  5.7861e-01, -2.5681e-01,  4.8852e-01, -5.8217e-02,\n        -4.0728e-02, -1.9107e-01,  1.6396e-01,  4.4685e-02, -6.1742e-01,\n         5.3113e-03, -6.6466e-01, -3.8526e-01,  8.3454e-01,  1.8792e-01,\n         2.5493e-01, -2.0617e-01, -7.4673e-01, -6.0379e-01,  1.4753e-01,\n        -6.2159e-01,  2.2801e-01, -1.8524e-02,  4.1830e-01, -2.1964e-01,\n         3.1526e-01, -5.5311e-01, -5.1858e-01,  2.0881e-01, -2.9266e-01,\n         6.3211e-01, -2.0547e-01,  1.3860e-02,  7.4777e-01, -4.3771e-01,\n        -4.5669e-01,  3.6937e-01, -3.3481e-01,  1.8571e-01,  3.1159e-01,\n         3.7701e-01,  2.5952e-01, -3.7872e-01,  2.4974e-01,  3.5168e-01,\n         3.0244e-01,  2.5922e-01,  2.5720e-01, -2.2742e-01, -3.3013e-02,\n        -7.7037e-02, -1.1862e-01,  2.1371e-01,  1.2163e-01, -9.1823e-02,\n        -3.7712e-01,  1.4631e-01, -2.8313e-01,  4.0220e-01,  5.3339e-02,\n        -9.4131e-02, -2.3603e-01,  2.4874e-01, -6.8738e-01, -5.7755e-01,\n         3.0950e-02, -6.1317e-01,  8.4861e-01,  1.1571e-01,  5.3455e-01,\n         5.3139e-01, -2.0205e-02, -4.7245e-01, -3.8350e-01,  5.2025e-01,\n        -1.6751e-01, -4.0845e-01, -4.7982e-01, -4.4123e-03,  7.1333e-02,\n        -5.6779e-01,  5.8724e-01,  1.8142e-01,  3.5763e-02, -1.0984e-01,\n        -2.9671e-01, -3.2757e-01, -2.4978e-01,  8.2296e-01, -7.1641e-01,\n         2.2861e-01, -1.9319e-01, -1.1772e-01, -4.3134e-01,  5.3547e-02,\n        -2.9653e-01, -7.8701e-03, -3.9955e-01,  1.8278e-02,  3.2929e-01,\n        -6.2581e-01, -2.2929e-01, -5.1261e-01, -3.3132e-01,  5.0487e-01,\n        -8.1898e-01, -2.0646e-01,  3.4867e-01,  1.8168e-01,  5.4268e-01,\n        -1.7076e-01, -7.5460e-02,  4.4161e-02,  2.0387e-01,  2.0171e-02,\n        -6.4804e-01, -9.7649e-02, -2.9058e-01, -4.5871e-01,  6.0904e-01,\n         8.2212e-01,  4.4246e-01, -6.9799e-02,  6.1078e-01,  9.6531e-02,\n         7.7173e-02,  8.0135e-02, -2.9000e-01, -3.3550e-01,  1.3226e-02,\n         9.0733e-01,  6.4184e-03, -7.3564e-02, -8.7940e-02, -5.7532e-01,\n         2.5342e-01, -3.1204e-02,  5.1155e-02,  2.1619e-01,  2.7874e-01,\n         7.4584e-01, -4.9480e-01,  1.4517e-01,  8.0902e-01,  4.7204e-01,\n         2.9082e-01,  2.8337e-01,  8.5885e-01, -6.2519e-02,  2.9982e-01,\n        -1.1574e+00, -4.6119e-01,  9.8416e-02,  1.0304e-01,  1.1567e-01,\n        -1.3781e-01, -1.0503e+00,  2.8690e-01,  2.3656e-01,  9.4192e-02,\n         3.1509e-01, -6.1192e-01, -2.5945e-01, -3.4069e-01,  1.9340e-01,\n         2.0927e-01, -5.7262e-01, -1.1695e-01,  4.8767e-02,  4.3800e-01,\n         4.5654e-01, -1.1287e-01,  2.5090e-01, -3.5425e-01,  8.4161e-02,\n        -1.4835e-01,  9.4787e-02,  5.9115e-01,  1.5382e-01,  1.7476e-02,\n         6.6469e-01,  1.9562e-01,  6.9376e-02, -5.4618e-02,  2.4740e-01,\n         7.7044e-01, -3.5059e-01, -5.6218e-03,  5.2951e-01, -3.6465e-01,\n         2.7627e-01, -7.5927e-01,  3.7127e-01])",
+        "fused_representation": "tensor([ 6.7065e-01,  4.7524e-01,  5.7975e-01, -7.4901e-02,  5.3327e-01,\n         1.6649e-01,  5.0397e-01, -3.7032e-02,  5.2706e-01, -4.7257e-02,\n        -5.5525e-01, -3.2197e-01, -3.2664e-01, -5.9569e-01, -9.5122e-02,\n        -5.4099e-01,  4.0693e-01,  4.4485e-01,  4.1974e-01, -8.9658e-01,\n         5.9041e-01,  8.3199e-02, -7.5193e-03,  4.0367e-01, -1.0231e+00,\n         2.1994e-01, -2.3995e-01, -8.5889e-01,  5.9106e-02, -3.4808e-01,\n        -3.6369e-01, -3.4451e-01, -1.7269e-01,  1.8416e-01, -3.4036e-01,\n        -5.8492e-03,  7.6406e-02,  1.3000e-01, -7.6846e-02, -3.7601e-01,\n         2.9322e-01,  2.3962e-01,  5.6501e-01,  4.6669e-01, -4.9420e-02,\n        -2.6516e-01,  7.2121e-02,  2.0147e-01,  5.0376e-01, -1.6400e-01,\n        -2.0375e-01, -1.3369e-01, -2.2433e-01, -2.6971e-01, -8.9731e-03,\n        -1.6714e-01, -8.2846e-02,  2.9580e-02, -6.4241e-01, -3.4843e-01,\n         1.4124e-01, -6.4954e-01, -9.0154e-02, -7.9866e-02, -7.2419e-02,\n        -5.4705e-01,  4.0371e-02,  4.1512e-01, -4.7415e-01,  8.2373e-01,\n        -1.4582e-01, -5.4430e-01, -6.5836e-01, -3.1682e-02,  1.4602e-01,\n        -3.0293e-01, -4.7909e-01, -4.5437e-01,  1.4526e-01, -9.1427e-01,\n         3.5732e-01,  2.9175e-02,  1.9246e-01,  3.2194e-01,  3.6259e-01,\n         4.2295e-01,  3.3028e-01,  1.6154e-01,  4.7443e-01,  3.8565e-01,\n        -7.1473e-01, -2.5093e-01,  2.4044e-01, -7.6229e-02, -5.5085e-02,\n         4.9029e-01, -9.4255e-02,  3.6925e-02, -4.5068e-01,  6.8670e-01,\n         4.4705e-01,  7.5190e-01, -3.1114e-01,  6.1043e-01, -4.6965e-01,\n         4.1030e-01,  6.0211e-01, -1.0669e-01, -1.8540e-01, -2.8291e-01,\n         7.7091e-01, -3.0453e-01, -6.8457e-01, -1.2714e-01, -5.3902e-02,\n        -6.3599e-02, -3.2021e-01, -2.3173e-01,  5.9076e-01, -4.3584e-01,\n        -3.6552e-01, -2.5205e-01, -6.2905e-01, -2.1278e-01,  4.4126e-01,\n         2.8512e-01,  2.8750e-01,  4.1896e-01,  3.4154e-02,  3.2940e-01,\n        -4.0870e-01,  3.4550e-01, -5.5695e-02, -1.8883e-01,  1.1057e-02,\n         4.7595e-01,  3.1562e-02,  3.5697e-01,  3.3890e-01, -7.7243e-01,\n        -1.8241e-01,  3.5387e-01, -1.9661e-01,  6.1947e-01, -4.4663e-01,\n         3.8852e-01, -3.0875e-01, -6.4002e-01, -3.4988e-01,  4.2958e-01,\n        -2.2248e-01, -5.9702e-01, -7.3014e-01,  4.5634e-01,  5.1858e-01,\n        -5.6332e-01,  3.1769e-02,  2.7484e-01, -6.2626e-02,  5.1262e-01,\n         6.5661e-02, -8.8681e-03,  1.2974e-01, -5.7354e-02,  1.8354e-01,\n         6.1165e-02, -1.8845e-01,  2.6062e-01,  3.0938e-01,  3.0697e-01,\n         2.9712e-01,  1.7424e-02,  8.6532e-02,  2.8468e-01,  5.6864e-01,\n         3.0902e-01, -7.3040e-02, -1.2198e-01,  3.5913e-01,  2.6343e-01,\n         1.9577e-01,  7.0175e-02,  1.0173e+00,  6.0386e-01, -2.1328e-01,\n         1.6509e-01, -6.0908e-01,  6.1654e-01, -4.7958e-02,  8.5420e-01,\n        -5.0866e-01, -3.2726e-01,  6.0266e-02, -3.7153e-01,  1.1253e+00,\n         7.6254e-02, -7.0704e-01,  5.8616e-01,  1.5470e-01,  3.1248e-02,\n        -1.7806e-01, -1.4251e-01, -2.0795e-01,  2.6903e-01, -7.3298e-02,\n        -8.6743e-02, -8.4659e-02,  2.6154e-01,  1.8377e-01, -1.1225e-01,\n         1.5935e-02,  5.4678e-01,  6.0121e-01,  7.2641e-02,  3.6425e-01,\n        -5.9730e-01,  3.0021e-01,  3.3997e-01,  4.7388e-01,  8.9163e-01,\n        -5.2843e-01,  2.4390e-01,  6.0337e-01, -3.9160e-01, -2.6944e-02,\n         4.6696e-01, -5.2226e-01,  5.1534e-01, -2.5342e-01, -6.1061e-01,\n        -1.3840e-01, -3.1136e-01,  1.1174e-01, -8.8966e-02,  4.9652e-01,\n         1.1984e-01, -3.5769e-01,  1.2535e-02,  1.0420e+00,  6.2391e-01,\n         2.4802e-01,  2.5781e-01,  9.5522e-01,  1.4297e-01,  9.2152e-02,\n        -6.9069e-01, -2.3278e-01, -4.3770e-01,  1.0049e-01, -3.8239e-01,\n         3.8281e-02,  9.5246e-02, -4.5874e-01, -2.9581e-02,  1.7243e-04,\n         1.3928e-01, -2.5850e-01, -8.0047e-02,  5.6560e-01,  2.6154e-01,\n         4.6761e-01,  4.4472e-01,  5.0624e-02, -7.4426e-01, -4.0144e-01,\n        -6.7179e-02, -8.9220e-02,  9.1337e-03,  1.4616e-01, -4.7918e-01,\n        -7.2101e-01,  2.1785e-01, -2.2635e-01,  5.8157e-03,  8.5758e-02,\n        -4.3195e-02, -3.8931e-01, -5.8824e-01, -1.4672e-01, -6.0383e-01,\n         2.0045e-01,  1.1029e-01,  2.4450e-01,  7.6134e-01,  3.3676e-01,\n         4.3410e-01,  3.6839e-01, -2.7051e-01,  6.5810e-02,  8.2562e-03,\n         1.8020e-01, -3.6851e-01,  2.8117e-01, -2.4563e-02,  4.0988e-01,\n         3.2484e-01,  3.4033e-01,  8.8249e-01,  2.3984e-01,  4.9794e-01,\n        -4.5024e-01, -1.7240e-01,  4.4895e-01, -5.0930e-02,  6.3614e-02,\n         3.1027e-01,  4.2079e-01,  3.9922e-01,  8.9285e-01,  6.5410e-01,\n        -3.0383e-01, -3.2560e-01, -1.1107e-01, -5.5990e-02, -2.4586e-01,\n         6.4834e-02, -6.8386e-03,  6.8764e-01, -3.6688e-01,  3.9520e-01,\n        -4.7918e-01,  4.6319e-01, -3.7803e-01, -1.6475e-01, -6.5172e-02,\n         1.0833e-02,  2.0054e-01, -4.9280e-01,  3.5691e-01, -4.1689e-01,\n        -1.9667e-01,  3.2764e-02, -4.7168e-01,  7.3401e-01,  2.2683e-01,\n        -3.5402e-01,  2.6862e-01, -1.5389e-01, -5.1946e-01,  1.0477e+00,\n         3.2336e-01,  3.9541e-01, -2.0550e-01,  6.1025e-01, -5.9309e-02,\n         5.1030e-02,  6.3766e-01, -5.7834e-01, -2.0959e-01,  4.0105e-01,\n         7.7299e-01,  3.7107e-01,  2.4820e-01, -1.1019e-01,  2.6506e-01,\n        -8.2655e-02,  5.0685e-01, -1.2413e-02,  5.2186e-02, -1.9812e-01,\n         4.3857e-01, -1.0541e+00,  6.4110e-02,  6.2923e-01,  1.2719e-01,\n         3.5624e-01,  3.7753e-01, -1.7526e-01, -7.9592e-01,  3.4607e-01,\n        -1.4680e-01,  3.2431e-01,  5.3395e-01, -3.9655e-01, -4.5769e-02,\n         5.9043e-01, -4.6512e-01, -1.2062e-01,  3.7451e-01,  5.5846e-01,\n         4.6007e-01,  4.3690e-01,  6.0703e-01, -4.7962e-01, -2.5520e-01,\n        -3.1133e-01,  3.1551e-01,  3.3007e-01, -7.6160e-01,  2.9087e-01,\n        -2.0825e-01,  3.1316e-02, -9.1956e-02, -1.3666e-01, -1.3075e-01,\n        -5.1308e-02, -2.6410e-01, -3.9684e-01, -7.9557e-01,  4.4784e-01,\n        -6.8179e-01, -3.9924e-02,  1.2943e-01,  1.1978e-01,  4.6466e-01,\n        -1.5849e-01, -4.0966e-01, -1.1659e+00, -4.8703e-02, -2.0737e-01,\n        -9.6749e-02,  3.8288e-02, -1.1328e+00, -2.4716e-01,  4.6649e-01,\n        -4.3583e-01,  3.6040e-01, -4.5357e-01, -7.9797e-01, -1.1116e-02,\n        -4.4934e-01, -4.1114e-01,  5.3477e-01, -2.5861e-01,  9.3562e-01,\n        -1.8467e-01, -1.1035e-02,  1.7861e-02, -4.5563e-01,  3.4668e-01,\n         5.7071e-01, -3.5441e-02, -5.9466e-01,  2.5329e-01,  1.6056e-01,\n        -4.1399e-01, -1.2159e-01,  2.5240e-01,  4.7992e-01, -4.6017e-01,\n        -6.3750e-01, -4.0356e-01,  3.2051e-01, -8.3937e-01, -5.1869e-01,\n         7.2831e-01, -1.3102e-01, -4.7698e-01,  1.7891e-02,  7.8569e-02,\n         1.4720e-01,  1.0455e+00, -1.8064e-01,  3.7907e-01,  2.7160e-01,\n         2.8605e-01,  1.7751e-01,  4.1133e-01, -6.9542e-02,  1.2111e-01,\n         2.4473e-01, -3.4648e-01,  1.7394e-01, -3.3096e-01, -7.4844e-02,\n         1.8809e-01,  6.1759e-01,  1.0722e-02, -3.0038e-01, -5.7770e-01,\n        -2.9070e-01,  5.0516e-01, -8.7224e-02,  4.8125e-01, -2.7774e-02,\n        -8.1567e-01,  3.6955e-01,  9.9189e-02, -5.7559e-01,  8.0452e-01,\n        -1.7307e-01, -1.5157e-01, -3.1731e-01,  4.5878e-01, -1.4188e-02,\n         1.6062e-02,  1.9443e-01,  2.5488e-01, -1.9780e-01, -1.1585e+00,\n        -1.3806e-01, -6.7740e-01,  2.5885e-01,  7.4660e-03, -8.0422e-01,\n        -1.4731e-01,  8.5292e-01,  3.6895e-01, -3.9624e-01,  5.2420e-02,\n        -1.0141e-01,  3.1769e-02,  7.3416e-02,  5.2096e-01, -2.3437e-01,\n        -1.3921e-01,  3.9960e-01, -1.5149e-01, -4.0123e-01,  1.9035e-01,\n        -8.0149e-02,  3.0363e-01,  2.3137e-01,  2.0626e-01,  6.8235e-01,\n         6.0934e-01,  3.2713e-02, -4.0085e-01,  3.7731e-01,  3.7795e-01,\n        -7.6256e-01,  8.1678e-02,  5.0888e-01,  2.8232e-01,  4.2411e-01,\n         4.1979e-02, -3.7087e-01, -4.8808e-01, -2.2856e-01, -6.2310e-01,\n        -4.7330e-01,  5.4284e-01,  4.1400e-01, -3.4563e-01, -4.0125e-01,\n        -1.2015e-01,  1.2011e-01,  8.1804e-02, -8.2086e-01,  2.5586e-01,\n         1.4065e-01, -1.9264e-01,  3.9503e-01,  1.5155e-01,  8.7229e-01,\n        -1.5012e-01, -1.8406e-01,  2.7079e-01, -2.8733e-01,  8.2178e-02,\n        -4.5170e-01,  8.4945e-02,  5.7853e-01, -1.1474e-02, -1.4334e-01,\n         2.4544e-01, -3.2436e-01,  3.8226e-01,  7.6230e-02, -1.6108e-01,\n        -5.0514e-01, -5.8710e-01, -8.9187e-02, -1.4504e-01, -4.8070e-01,\n        -4.7609e-01,  2.6465e-02, -3.5927e-02,  2.4270e-01,  5.3339e-01,\n         2.2341e-01,  2.7255e-01, -4.7289e-02, -5.6824e-02, -5.5669e-02,\n        -7.1610e-01,  6.2255e-01,  6.0581e-01, -3.7493e-01, -1.7270e-01,\n        -1.8968e-01,  3.8751e-01,  2.8288e-01, -3.5486e-01, -5.2783e-01,\n         4.4157e-01, -2.3585e-01,  4.0983e-01, -2.7410e-01, -1.8415e-01,\n         1.0299e-01, -6.4263e-01, -1.6856e-01, -2.0515e-01, -5.1138e-01,\n        -1.6969e-01,  2.3898e-01,  1.1088e-01, -7.3011e-01, -7.4019e-01,\n         8.5280e-01, -3.0887e-01,  2.7806e-01,  6.3358e-01,  2.4298e-01,\n        -8.3127e-01,  1.5557e-01, -1.8167e-01, -2.0390e-01, -8.8002e-01,\n         1.3945e-01, -4.3825e-01,  1.4284e-01,  3.5214e-01, -7.8164e-02,\n         4.4511e-01, -3.9712e-01, -8.6608e-02,  6.7517e-01, -4.7763e-01,\n         1.1096e-02, -1.5156e-01,  1.2914e-01,  1.2371e-02, -3.2584e-01,\n         1.5594e-01,  5.7254e-01,  3.7872e-01, -8.1474e-01, -2.1080e-01,\n        -3.4520e-01, -1.0060e-01,  2.4495e-01,  4.1991e-01, -5.8624e-01,\n        -1.1382e-01,  3.2645e-01, -2.6936e-01, -4.2491e-01,  5.9611e-01,\n         3.4805e-01, -2.2687e-01,  6.6588e-01,  1.0900e-01,  2.3245e-01,\n        -7.8047e-02,  2.3598e-01,  8.1663e-01, -1.6205e-01, -9.9376e-01,\n         1.2072e-01,  4.5438e-01, -6.4473e-01,  1.6196e-02,  2.5919e-01,\n        -6.0005e-01, -2.6748e-01,  1.6838e-01,  5.2012e-01, -2.6666e-01,\n         4.5988e-01, -2.1209e-01,  6.3576e-01, -5.8871e-01,  2.8822e-01,\n        -2.4429e-01, -2.0811e-01, -1.6850e-01,  2.2412e-01,  3.6256e-01,\n        -1.9818e-01, -4.4224e-01,  3.1867e-01, -4.3326e-01,  7.6862e-01,\n         5.0251e-02, -2.0775e-02,  3.2477e-01, -3.7310e-01, -3.1408e-01,\n         4.9455e-01,  1.5218e-01,  1.5028e-01,  7.1076e-01, -6.6049e-01,\n        -1.7456e-01, -2.2736e-01, -8.6076e-01,  5.2751e-01, -1.3755e-01,\n        -4.1525e-01,  5.3223e-01,  1.4796e-01, -3.5391e-01, -1.5632e-02,\n         1.7628e-01, -1.9931e-01, -1.2505e+00, -4.0620e-01,  1.4940e-01,\n         9.3075e-01, -1.8952e-02,  2.7448e-01,  4.8090e-01, -3.6959e-01,\n        -4.0159e-01,  2.6879e-01, -1.0107e+00, -2.4126e-01,  2.9783e-02,\n        -3.3977e-01,  1.6985e-01, -5.8945e-03, -2.3303e-01,  5.0100e-01,\n         3.7204e-01, -2.7286e-01,  5.4706e-02, -4.1185e-01, -4.9727e-02,\n        -2.3566e-02,  4.2372e-01, -3.8446e-01, -7.4197e-03, -1.6383e-01,\n        -4.4667e-01, -4.9240e-01, -3.1474e-03,  3.5511e-01,  5.6449e-02,\n        -1.3128e-01, -1.1579e-03,  3.9953e-01, -9.8791e-02, -2.4540e-01,\n        -4.4550e-01, -9.8789e-01,  1.5088e-01,  1.9301e-01,  5.0013e-03,\n        -1.7207e-02,  1.6995e-01,  1.0979e-01, -3.2965e-01,  2.2557e-01,\n         1.9045e-01,  3.2516e-01,  3.2305e-01,  1.4044e-01,  2.9876e-01,\n        -6.1203e-01, -2.6317e-01,  3.4011e-01,  8.7721e-01, -3.2912e-01,\n        -7.7916e-02, -7.1401e-01, -1.6742e-01,  5.5150e-01,  2.1886e-01,\n         7.4034e-02, -1.7932e-02,  2.5861e-01,  2.3785e-01, -1.0496e-01,\n         5.3066e-01,  1.4076e-01,  7.4899e-02])",
+        "dynamic_temperature": "tensor([0.9254])",
+        "final_fusion_scores": "tensor([ 2.7592e-01,  1.9552e-01,  2.3852e-01, -3.0816e-02,  2.1939e-01,\n         6.8498e-02,  2.0734e-01, -1.5236e-02,  2.1684e-01, -1.9442e-02,\n        -2.2844e-01, -1.3247e-01, -1.3439e-01, -2.4508e-01, -3.9135e-02,\n        -2.2257e-01,  1.6742e-01,  1.8302e-01,  1.7269e-01, -3.6887e-01,\n         2.4290e-01,  3.4229e-02, -3.0936e-03,  1.6608e-01, -4.2094e-01,\n         9.0487e-02, -9.8720e-02, -3.5336e-01,  2.4317e-02, -1.4321e-01,\n        -1.4963e-01, -1.4174e-01, -7.1046e-02,  7.5767e-02, -1.4003e-01,\n        -2.4065e-03,  3.1435e-02,  5.3485e-02, -3.1616e-02, -1.5470e-01,\n         1.2064e-01,  9.8584e-02,  2.3245e-01,  1.9200e-01, -2.0332e-02,\n        -1.0909e-01,  2.9672e-02,  8.2889e-02,  2.0725e-01, -6.7472e-02,\n        -8.3826e-02, -5.5003e-02, -9.2293e-02, -1.1096e-01, -3.6917e-03,\n        -6.8766e-02, -3.4084e-02,  1.2170e-02, -2.6430e-01, -1.4335e-01,\n         5.8109e-02, -2.6723e-01, -3.7091e-02, -3.2858e-02, -2.9795e-02,\n        -2.2507e-01,  1.6609e-02,  1.7079e-01, -1.9507e-01,  3.3890e-01,\n        -5.9991e-02, -2.2393e-01, -2.7086e-01, -1.3035e-02,  6.0075e-02,\n        -1.2463e-01, -1.9710e-01, -1.8693e-01,  5.9762e-02, -3.7615e-01,\n         1.4701e-01,  1.2003e-02,  7.9183e-02,  1.3245e-01,  1.4918e-01,\n         1.7401e-01,  1.3588e-01,  6.6461e-02,  1.9519e-01,  1.5866e-01,\n        -2.9405e-01, -1.0324e-01,  9.8921e-02, -3.1362e-02, -2.2663e-02,\n         2.0171e-01, -3.8778e-02,  1.5192e-02, -1.8542e-01,  2.8252e-01,\n         1.8392e-01,  3.0934e-01, -1.2801e-01,  2.5114e-01, -1.9322e-01,\n         1.6880e-01,  2.4772e-01, -4.3893e-02, -7.6276e-02, -1.1639e-01,\n         3.1717e-01, -1.2529e-01, -2.8164e-01, -5.2308e-02, -2.2176e-02,\n        -2.6165e-02, -1.3174e-01, -9.5338e-02,  2.4305e-01, -1.7931e-01,\n        -1.5038e-01, -1.0370e-01, -2.5880e-01, -8.7542e-02,  1.8154e-01,\n         1.1730e-01,  1.1828e-01,  1.7237e-01,  1.4052e-02,  1.3552e-01,\n        -1.6815e-01,  1.4214e-01, -2.2914e-02, -7.7689e-02,  4.5492e-03,\n         1.9581e-01,  1.2985e-02,  1.4686e-01,  1.3943e-01, -3.1779e-01,\n        -7.5045e-02,  1.4559e-01, -8.0891e-02,  2.5486e-01, -1.8375e-01,\n         1.5984e-01, -1.2703e-01, -2.6332e-01, -1.4395e-01,  1.7674e-01,\n        -9.1532e-02, -2.4562e-01, -3.0039e-01,  1.8775e-01,  2.1335e-01,\n        -2.3176e-01,  1.3070e-02,  1.1307e-01, -2.5765e-02,  2.1090e-01,\n         2.7014e-02, -3.6485e-03,  5.3377e-02, -2.3596e-02,  7.5510e-02,\n         2.5164e-02, -7.7532e-02,  1.0722e-01,  1.2728e-01,  1.2629e-01,\n         1.2224e-01,  7.1686e-03,  3.5601e-02,  1.1712e-01,  2.3395e-01,\n         1.2714e-01, -3.0050e-02, -5.0184e-02,  1.4775e-01,  1.0838e-01,\n         8.0543e-02,  2.8871e-02,  4.1853e-01,  2.4844e-01, -8.7749e-02,\n         6.7920e-02, -2.5059e-01,  2.5366e-01, -1.9731e-02,  3.5143e-01,\n        -2.0927e-01, -1.3464e-01,  2.4794e-02, -1.5285e-01,  4.6297e-01,\n         3.1372e-02, -2.9089e-01,  2.4116e-01,  6.3647e-02,  1.2856e-02,\n        -7.3256e-02, -5.8630e-02, -8.5554e-02,  1.1068e-01, -3.0156e-02,\n        -3.5688e-02, -3.4830e-02,  1.0760e-01,  7.5608e-02, -4.6180e-02,\n         6.5559e-03,  2.2496e-01,  2.4735e-01,  2.9886e-02,  1.4986e-01,\n        -2.4574e-01,  1.2351e-01,  1.3987e-01,  1.9496e-01,  3.6683e-01,\n        -2.1740e-01,  1.0034e-01,  2.4824e-01, -1.6111e-01, -1.1085e-02,\n         1.9211e-01, -2.1487e-01,  2.1202e-01, -1.0426e-01, -2.5122e-01,\n        -5.6941e-02, -1.2810e-01,  4.5973e-02, -3.6602e-02,  2.0428e-01,\n         4.9302e-02, -1.4716e-01,  5.1572e-03,  4.2868e-01,  2.5669e-01,\n         1.0204e-01,  1.0607e-01,  3.9299e-01,  5.8821e-02,  3.7913e-02,\n        -2.8416e-01, -9.5769e-02, -1.8008e-01,  4.1345e-02, -1.5732e-01,\n         1.5749e-02,  3.9186e-02, -1.8873e-01, -1.2170e-02,  7.0940e-05,\n         5.7303e-02, -1.0635e-01, -3.2933e-02,  2.3270e-01,  1.0760e-01,\n         1.9238e-01,  1.8296e-01,  2.0828e-02, -3.0620e-01, -1.6516e-01,\n        -2.7639e-02, -3.6707e-02,  3.7578e-03,  6.0133e-02, -1.9714e-01,\n        -2.9664e-01,  8.9629e-02, -9.3123e-02,  2.3927e-03,  3.5282e-02,\n        -1.7771e-02, -1.6017e-01, -2.4201e-01, -6.0362e-02, -2.4843e-01,\n         8.2466e-02,  4.5377e-02,  1.0059e-01,  3.1323e-01,  1.3855e-01,\n         1.7860e-01,  1.5156e-01, -1.1129e-01,  2.7075e-02,  3.3967e-03,\n         7.4136e-02, -1.5161e-01,  1.1568e-01, -1.0106e-02,  1.6863e-01,\n         1.3364e-01,  1.4002e-01,  3.6307e-01,  9.8675e-02,  2.0486e-01,\n        -1.8524e-01, -7.0926e-02,  1.8471e-01, -2.0954e-02,  2.6172e-02,\n         1.2765e-01,  1.7312e-01,  1.6425e-01,  3.6734e-01,  2.6911e-01,\n        -1.2500e-01, -1.3396e-01, -4.5697e-02, -2.3035e-02, -1.0115e-01,\n         2.6674e-02, -2.8135e-03,  2.8291e-01, -1.5094e-01,  1.6259e-01,\n        -1.9714e-01,  1.9057e-01, -1.5553e-01, -6.7779e-02, -2.6813e-02,\n         4.4568e-03,  8.2505e-02, -2.0275e-01,  1.4684e-01, -1.7151e-01,\n        -8.0911e-02,  1.3480e-02, -1.9406e-01,  3.0198e-01,  9.3324e-02,\n        -1.4565e-01,  1.1051e-01, -6.3314e-02, -2.1372e-01,  4.3104e-01,\n         1.3304e-01,  1.6268e-01, -8.4547e-02,  2.5107e-01, -2.4401e-02,\n         2.0994e-02,  2.6234e-01, -2.3794e-01, -8.6230e-02,  1.6500e-01,\n         3.1802e-01,  1.5266e-01,  1.0212e-01, -4.5335e-02,  1.0905e-01,\n        -3.4006e-02,  2.0853e-01, -5.1070e-03,  2.1470e-02, -8.1511e-02,\n         1.8044e-01, -4.3368e-01,  2.6376e-02,  2.5888e-01,  5.2329e-02,\n         1.4656e-01,  1.5532e-01, -7.2107e-02, -3.2745e-01,  1.4238e-01,\n        -6.0397e-02,  1.3343e-01,  2.1967e-01, -1.6315e-01, -1.8830e-02,\n         2.4291e-01, -1.9136e-01, -4.9624e-02,  1.5408e-01,  2.2976e-01,\n         1.8928e-01,  1.7975e-01,  2.4974e-01, -1.9732e-01, -1.0500e-01,\n        -1.2809e-01,  1.2981e-01,  1.3580e-01, -3.1333e-01,  1.1967e-01,\n        -8.5678e-02,  1.2884e-02, -3.7832e-02, -5.6223e-02, -5.3794e-02,\n        -2.1109e-02, -1.0866e-01, -1.6327e-01, -3.2731e-01,  1.8425e-01,\n        -2.8050e-01, -1.6425e-02,  5.3249e-02,  4.9281e-02,  1.9117e-01,\n        -6.5205e-02, -1.6854e-01, -4.7966e-01, -2.0037e-02, -8.5314e-02,\n        -3.9804e-02,  1.5752e-02, -4.6604e-01, -1.0169e-01,  1.9192e-01,\n        -1.7931e-01,  1.4828e-01, -1.8661e-01, -3.2830e-01, -4.5733e-03,\n        -1.8487e-01, -1.6915e-01,  2.2001e-01, -1.0640e-01,  3.8493e-01,\n        -7.5978e-02, -4.5398e-03,  7.3482e-03, -1.8745e-01,  1.4263e-01,\n         2.3480e-01, -1.4581e-02, -2.4465e-01,  1.0421e-01,  6.6057e-02,\n        -1.7032e-01, -5.0025e-02,  1.0384e-01,  1.9745e-01, -1.8932e-01,\n        -2.6228e-01, -1.6603e-01,  1.3186e-01, -3.4533e-01, -2.1340e-01,\n         2.9964e-01, -5.3905e-02, -1.9624e-01,  7.3607e-03,  3.2325e-02,\n         6.0561e-02,  4.3013e-01, -7.4317e-02,  1.5596e-01,  1.1174e-01,\n         1.1768e-01,  7.3032e-02,  1.6923e-01, -2.8611e-02,  4.9826e-02,\n         1.0069e-01, -1.4255e-01,  7.1563e-02, -1.3616e-01, -3.0792e-02,\n         7.7384e-02,  2.5409e-01,  4.4112e-03, -1.2358e-01, -2.3767e-01,\n        -1.1960e-01,  2.0783e-01, -3.5885e-02,  1.9799e-01, -1.1427e-02,\n        -3.3558e-01,  1.5204e-01,  4.0808e-02, -2.3681e-01,  3.3099e-01,\n        -7.1203e-02, -6.2357e-02, -1.3055e-01,  1.8875e-01, -5.8372e-03,\n         6.6081e-03,  7.9992e-02,  1.0486e-01, -8.1377e-02, -4.7665e-01,\n        -5.6799e-02, -2.7869e-01,  1.0649e-01,  3.0717e-03, -3.3087e-01,\n        -6.0607e-02,  3.5091e-01,  1.5179e-01, -1.6302e-01,  2.1567e-02,\n        -4.1722e-02,  1.3070e-02,  3.0205e-02,  2.1433e-01, -9.6423e-02,\n        -5.7271e-02,  1.6440e-01, -6.2327e-02, -1.6507e-01,  7.8314e-02,\n        -3.2975e-02,  1.2492e-01,  9.5190e-02,  8.4860e-02,  2.8073e-01,\n         2.5069e-01,  1.3459e-02, -1.6492e-01,  1.5523e-01,  1.5549e-01,\n        -3.1373e-01,  3.3604e-02,  2.0936e-01,  1.1615e-01,  1.7448e-01,\n         1.7271e-02, -1.5258e-01, -2.0080e-01, -9.4033e-02, -2.5635e-01,\n        -1.9473e-01,  2.2334e-01,  1.7033e-01, -1.4220e-01, -1.6508e-01,\n        -4.9432e-02,  4.9414e-02,  3.3655e-02, -3.3772e-01,  1.0527e-01,\n         5.7864e-02, -7.9253e-02,  1.6252e-01,  6.2352e-02,  3.5887e-01,\n        -6.1762e-02, -7.5724e-02,  1.1141e-01, -1.1821e-01,  3.3810e-02,\n        -1.8584e-01,  3.4948e-02,  2.3802e-01, -4.7204e-03, -5.8972e-02,\n         1.0098e-01, -1.3345e-01,  1.5727e-01,  3.1362e-02, -6.6269e-02,\n        -2.0782e-01, -2.4154e-01, -3.6693e-02, -5.9673e-02, -1.9777e-01,\n        -1.9587e-01,  1.0888e-02, -1.4781e-02,  9.9850e-02,  2.1945e-01,\n         9.1916e-02,  1.1213e-01, -1.9455e-02, -2.3378e-02, -2.2903e-02,\n        -2.9462e-01,  2.5613e-01,  2.4924e-01, -1.5425e-01, -7.1051e-02,\n        -7.8036e-02,  1.5943e-01,  1.1638e-01, -1.4600e-01, -2.1716e-01,\n         1.8167e-01, -9.7031e-02,  1.6861e-01, -1.1277e-01, -7.5762e-02,\n         4.2371e-02, -2.6439e-01, -6.9349e-02, -8.4402e-02, -2.1039e-01,\n        -6.9812e-02,  9.8322e-02,  4.5619e-02, -3.0038e-01, -3.0453e-01,\n         3.5086e-01, -1.2707e-01,  1.1440e-01,  2.6066e-01,  9.9967e-02,\n        -3.4200e-01,  6.4004e-02, -7.4744e-02, -8.3890e-02, -3.6205e-01,\n         5.7371e-02, -1.8030e-01,  5.8767e-02,  1.4488e-01, -3.2158e-02,\n         1.8313e-01, -1.6338e-01, -3.5632e-02,  2.7778e-01, -1.9651e-01,\n         4.5653e-03, -6.2356e-02,  5.3130e-02,  5.0898e-03, -1.3406e-01,\n         6.4157e-02,  2.3555e-01,  1.5581e-01, -3.3520e-01, -8.6728e-02,\n        -1.4202e-01, -4.1388e-02,  1.0078e-01,  1.7276e-01, -2.4119e-01,\n        -4.6829e-02,  1.3431e-01, -1.1082e-01, -1.7482e-01,  2.4525e-01,\n         1.4319e-01, -9.3339e-02,  2.7396e-01,  4.4845e-02,  9.5632e-02,\n        -3.2110e-02,  9.7084e-02,  3.3597e-01, -6.6669e-02, -4.0885e-01,\n         4.9667e-02,  1.8694e-01, -2.6525e-01,  6.6632e-03,  1.0663e-01,\n        -2.4687e-01, -1.1004e-01,  6.9273e-02,  2.1398e-01, -1.0971e-01,\n         1.8920e-01, -8.7255e-02,  2.6156e-01, -2.4220e-01,  1.1858e-01,\n        -1.0050e-01, -8.5619e-02, -6.9325e-02,  9.2206e-02,  1.4916e-01,\n        -8.1536e-02, -1.8194e-01,  1.3111e-01, -1.7825e-01,  3.1622e-01,\n         2.0674e-02, -8.5473e-03,  1.3361e-01, -1.5350e-01, -1.2922e-01,\n         2.0347e-01,  6.2611e-02,  6.1829e-02,  2.9242e-01, -2.7174e-01,\n        -7.1819e-02, -9.3538e-02, -3.5413e-01,  2.1703e-01, -5.6589e-02,\n        -1.7084e-01,  2.1897e-01,  6.0872e-02, -1.4561e-01, -6.4312e-03,\n         7.2525e-02, -8.2000e-02, -5.1447e-01, -1.6712e-01,  6.1467e-02,\n         3.8293e-01, -7.7971e-03,  1.1293e-01,  1.9785e-01, -1.5206e-01,\n        -1.6522e-01,  1.1059e-01, -4.1581e-01, -9.9257e-02,  1.2253e-02,\n        -1.3979e-01,  6.9878e-02, -2.4251e-03, -9.5873e-02,  2.0612e-01,\n         1.5306e-01, -1.1226e-01,  2.2507e-02, -1.6944e-01, -2.0458e-02,\n        -9.6954e-03,  1.7433e-01, -1.5817e-01, -3.0526e-03, -6.7403e-02,\n        -1.8377e-01, -2.0258e-01, -1.2949e-03,  1.4610e-01,  2.3224e-02,\n        -5.4009e-02, -4.7638e-04,  1.6437e-01, -4.0644e-02, -1.0096e-01,\n        -1.8328e-01, -4.0643e-01,  6.2076e-02,  7.9406e-02,  2.0576e-03,\n        -7.0791e-03,  6.9920e-02,  4.5171e-02, -1.3562e-01,  9.2803e-02,\n         7.8354e-02,  1.3378e-01,  1.3291e-01,  5.7778e-02,  1.2291e-01,\n        -2.5180e-01, -1.0827e-01,  1.3993e-01,  3.6090e-01, -1.3541e-01,\n        -3.2056e-02, -2.9376e-01, -6.8880e-02,  2.2690e-01,  9.0044e-02,\n         3.0459e-02, -7.3774e-03,  1.0640e-01,  9.7854e-02, -4.3181e-02,\n         2.1832e-01,  5.7910e-02,  3.0815e-02])",
+        "strategy_weights": "tensor([0.3807, 0.3122, 0.3071])",
+        "fusion_method": "enhanced_fusion"
+      },
+      "weighted_result": {
+        "confidence_scores": {
+          "botanical_db": 0.9632134199142457,
+          "geological_survey": 0.9458626866340638,
+          "geographic_db": 0.80481276512146,
+          "taxonomy_db": 0.8833280563354493,
+          "phenology_db": 0.8373157262802124
+        },
+        "weighted_successfully": true,
+        "output_shape": [
+          1,
+          1,
+          1,
+          768
+        ]
+      },
+      "semantic_result": "{'fusion_method': 'enhanced_neural_fusion', 'documents_processed': 5, 'sources_integrated': 5, 'final_ranking': [0.2759179174900055, 0.19551987946033478, 0.2385188341140747, -0.03081560879945755, 0.2193942666053772, 0.06849800050258636, 0.2073432356119156, -0.015235756523907185, 0.21684128046035767, -0.019442196935415268, -0.2284407764673233, -0.13246510922908783, -0.13438540697097778, -0.24507756531238556, -0.03913472965359688, -0.2225722074508667, 0.16741591691970825, 0.18301807343959808, 0.1726873368024826, -0.3688661754131317, 0.2429041564464569, 0.03422945737838745, -0.0030935853719711304, 0.16607622802257538, -0.4209400713443756, 0.09048664569854736, -0.09871985763311386, -0.3533605933189392, 0.024317091330885887, -0.143207848072052, -0.14962632954120636, -0.14173869788646698, -0.07104649394750595, 0.07576655596494675, -0.14002995193004608, -0.002406475832685828, 0.03143460676074028, 0.05348515510559082, -0.03161590173840523, -0.15469783544540405, 0.12063515186309814, 0.09858391433954239, 0.23245371878147125, 0.19200484454631805, -0.020332099869847298, -0.10908939689397812, 0.029671765863895416, 0.08288886398077011, 0.20725467801094055, -0.06747224926948547, -0.08382558077573776, -0.05500312149524689, -0.09229292720556259, -0.11096448451280594, -0.003691671881824732, -0.0687655583024025, -0.03408411890268326, 0.012169772759079933, -0.2642998695373535, -0.1433480829000473, 0.05810900405049324, -0.2672327756881714, -0.037090953439474106, -0.03285835683345795, -0.029794547706842422, -0.22506745159626007, 0.016609173268079758, 0.17078889906406403, -0.19507411122322083, 0.33889564871788025, -0.05999121814966202, -0.22393301129341125, -0.27085956931114197, -0.013034649193286896, 0.060074519366025925, -0.12463180720806122, -0.1971042901277542, -0.1869337558746338, 0.05976168438792229, -0.37614721059799194, 0.14700733125209808, 0.012002890929579735, 0.07918274402618408, 0.1324509233236313, 0.14917528629302979, 0.17400938272476196, 0.1358809471130371, 0.06646052747964859, 0.19518862664699554, 0.15866146981716156, -0.2940535545349121, -0.10323568433523178, 0.09892091155052185, -0.03136184811592102, -0.02266276255249977, 0.20171144604682922, -0.038777969777584076, 0.015191551297903061, -0.18541796505451202, 0.2825194001197815, 0.18392494320869446, 0.309343159198761, -0.12800687551498413, 0.25114113092422485, -0.19322198629379272, 0.16880236566066742, 0.24771958589553833, -0.043892670422792435, -0.07627610862255096, -0.11639238893985748, 0.3171665668487549, -0.12528765201568604, -0.2816448509693146, -0.05230755731463432, -0.022176304832100868, -0.026165494695305824, -0.1317395269870758, -0.09533803910017014, 0.24304920434951782, -0.17931100726127625, -0.15037986636161804, -0.1036975309252739, -0.25880154967308044, -0.0875423327088356, 0.1815429925918579, 0.1173039972782135, 0.11828425526618958, 0.17236892879009247, 0.014051707461476326, 0.13552241027355194, -0.16814611852169037, 0.14214305579662323, -0.02291388064622879, -0.07768873125314713, 0.004549219738692045, 0.19581326842308044, 0.012985059060156345, 0.14686274528503418, 0.13942815363407135, -0.3177909851074219, -0.07504540681838989, 0.14558818936347961, -0.08089059591293335, 0.2548602819442749, -0.1837523877620697, 0.1598428189754486, -0.12702687084674835, -0.2633156478404999, -0.14394642412662506, 0.17673780024051666, -0.09153212606906891, -0.24562330543994904, -0.3003912568092346, 0.18774588406085968, 0.21335114538669586, -0.23175771534442902, 0.013070178218185902, 0.11307394504547119, -0.025765202939510345, 0.21090225875377655, 0.027014009654521942, -0.003648471087217331, 0.0533774308860302, -0.023596294224262238, 0.07551035284996033, 0.025164231657981873, -0.07753242552280426, 0.10722237825393677, 0.12728378176689148, 0.12629245221614838, 0.12224177271127701, 0.00716857984662056, 0.03560085967183113, 0.11712049692869186, 0.2339499294757843, 0.12713752686977386, -0.030049826949834824, -0.05018351227045059, 0.1477534919977188, 0.10838064551353455, 0.08054331690073013, 0.028871122747659683, 0.4185296893119812, 0.24844002723693848, -0.08774862438440323, 0.06791993975639343, -0.2505864202976227, 0.25365564227104187, -0.01973060518503189, 0.35143405199050903, -0.20927275717258453, -0.1346382051706314, 0.02479425258934498, -0.15285320580005646, 0.4629661440849304, 0.0313723161816597, -0.29088687896728516, 0.24115797877311707, 0.06364662200212479, 0.012856049463152885, -0.07325588911771774, -0.05862955003976822, -0.08555430173873901, 0.1106845885515213, -0.030156083405017853, -0.0356876365840435, -0.03483032435178757, 0.107603058218956, 0.07560750842094421, -0.046180400997400284, 0.006555913481861353, 0.224955216050148, 0.2473468780517578, 0.02988571673631668, 0.14985807240009308, -0.24573923647403717, 0.12351307272911072, 0.1398712694644928, 0.19496235251426697, 0.3668301999568939, -0.21740387380123138, 0.10034361481666565, 0.24823586642742157, -0.16110998392105103, -0.011085153557360172, 0.1921137124300003, -0.21486791968345642, 0.21201933920383453, -0.10426034778356552, -0.25121554732322693, -0.056940797716379166, -0.12809807062149048, 0.04597347229719162, -0.03660201281309128, 0.20427583158016205, 0.04930232837796211, -0.14715978503227234, 0.005157202482223511, 0.42868128418922424, 0.256687194108963, 0.10203860700130463, 0.10606934875249863, 0.392991840839386, 0.058821000158786774, 0.037913039326667786, -0.2841600477695465, -0.09576932340860367, -0.1800762414932251, 0.0413452684879303, -0.15732191503047943, 0.0157492533326149, 0.03918588533997536, -0.18873287737369537, -0.012169972993433475, 7.09400701452978e-05, 0.05730324611067772, -0.10635019093751907, -0.032932769507169724, 0.2326979786157608, 0.10760252177715302, 0.19238266348838806, 0.18296369910240173, 0.020827574655413628, -0.30620211362838745, -0.16515852510929108, -0.027638744562864304, -0.03670661151409149, 0.0037577550392597914, 0.060133036226034164, -0.19714337587356567, -0.29663583636283875, 0.08962886780500412, -0.0931226834654808, 0.002392678754404187, 0.03528216853737831, -0.017770998179912567, -0.16016927361488342, -0.24201004207134247, -0.060361627489328384, -0.24842555820941925, 0.0824664831161499, 0.04537653923034668, 0.10058990865945816, 0.31322726607322693, 0.13855032622814178, 0.1785978078842163, 0.15156356990337372, -0.1112913191318512, 0.02707516774535179, 0.0033967308700084686, 0.07413649559020996, -0.15161049365997314, 0.11567769944667816, -0.010105815716087818, 0.1686331331729889, 0.1336449831724167, 0.1400180459022522, 0.3630722165107727, 0.09867475926876068, 0.20486003160476685, -0.18523719906806946, -0.07092635333538055, 0.18470649421215057, -0.020953575149178505, 0.02617204189300537, 0.12764951586723328, 0.1731196790933609, 0.1642458140850067, 0.3673352897167206, 0.2691074013710022, -0.12500175833702087, -0.1339556872844696, -0.04569737985730171, -0.02303534932434559, -0.10115031152963638, 0.026673834770917892, -0.002813497558236122, 0.2829055190086365, -0.15093864500522614, 0.162591353058815, -0.1971435546875, 0.19056586921215057, -0.1555287092924118, -0.06777933984994888, -0.026812907308340073, 0.00445682555437088, 0.08250531554222107, -0.20274721086025238, 0.1468392312526703, -0.17151430249214172, -0.08091140538454056, 0.013479637913405895, -0.1940583437681198, 0.30198201537132263, 0.09332351386547089, -0.1456490159034729, 0.11051300913095474, -0.0633140429854393, -0.2137150913476944, 0.43103650212287903, 0.13303537666797638, 0.16267864406108856, -0.08454667031764984, 0.25106650590896606, -0.024400589987635612, 0.0209943987429142, 0.26234349608421326, -0.23793835937976837, -0.08623036742210388, 0.16499696671962738, 0.3180212378501892, 0.1526625007390976, 0.10211534053087234, -0.04533516988158226, 0.10904978960752487, -0.034005600959062576, 0.20852500200271606, -0.005107029341161251, 0.021470224484801292, -0.08151108026504517, 0.18043549358844757, -0.4336848258972168, 0.026375753805041313, 0.2588755488395691, 0.05232908949255943, 0.14656426012516022, 0.15532170236110687, -0.07210659980773926, -0.3274548351764679, 0.14237970113754272, -0.060397014021873474, 0.133425772190094, 0.21967464685440063, -0.16314560174942017, -0.01883002184331417, 0.2429138869047165, -0.1913561075925827, -0.04962429776787758, 0.1540795862674713, 0.22975875437259674, 0.1892791986465454, 0.1797497570514679, 0.24974100291728973, -0.1973242610692978, -0.10499512404203415, -0.12808562815189362, 0.12980705499649048, 0.13579519093036652, -0.31333470344543457, 0.11966879665851593, -0.0856781154870987, 0.012883867137134075, -0.03783209249377251, -0.056223150342702866, -0.053793951869010925, -0.02110881544649601, -0.10865692794322968, -0.1632685363292694, -0.3273116946220398, 0.1842494010925293, -0.28050151467323303, -0.016425250098109245, 0.05324896425008774, 0.04928060248494148, 0.19116830825805664, -0.0652054026722908, -0.16854090988636017, -0.47966468334198, -0.020037053152918816, -0.08531399071216583, -0.03980432450771332, 0.015752306208014488, -0.46603924036026, -0.10168544203042984, 0.19192227721214294, -0.17930597066879272, 0.1482754945755005, -0.18660618364810944, -0.32829993963241577, -0.004573306534439325, -0.1848657876253128, -0.16914817690849304, 0.2200116664171219, -0.10639653354883194, 0.3849290609359741, -0.07597807049751282, -0.004539784509688616, 0.007348230574280024, -0.1874532699584961, 0.14262817800045013, 0.2347983568906784, -0.01458103395998478, -0.24465446174144745, 0.10420963168144226, 0.06605664640665054, -0.17032422125339508, -0.0500253364443779, 0.10384126007556915, 0.1974463313817978, -0.18932361900806427, -0.2622765004634857, -0.16603197157382965, 0.13186153769493103, -0.34533044695854187, -0.21339766681194305, 0.2996390163898468, -0.0539054237306118, -0.1962391585111618, 0.00736066373065114, 0.03232479840517044, 0.06056069955229759, 0.4301345944404602, -0.07431701570749283, 0.1559566855430603, 0.11174138635396957, 0.11768399178981781, 0.07303249090909958, 0.16922806203365326, -0.028610769659280777, 0.04982573166489601, 0.10068619251251221, -0.14254900813102722, 0.07156297564506531, -0.13616420328617096, -0.030792122706770897, 0.07738432288169861, 0.254085898399353, 0.004411208443343639, -0.12358248233795166, -0.23767440021038055, -0.1195974051952362, 0.20783120393753052, -0.03588549792766571, 0.19799481332302094, -0.01142654288560152, -0.3355783522129059, 0.15203838050365448, 0.04080791398882866, -0.23680783808231354, 0.3309914469718933, -0.07120277732610703, -0.06235671788454056, -0.13054504990577698, 0.18874774873256683, -0.005837231408804655, 0.006608060095459223, 0.0799921527504921, 0.10486020147800446, -0.0813765674829483, -0.47664541006088257, -0.05679934471845627, -0.27869367599487305, 0.10649428516626358, 0.0030716564506292343, -0.33086851239204407, -0.06060710921883583, 0.350905179977417, 0.15179118514060974, -0.1630195826292038, 0.021566590294241905, -0.04172223061323166, 0.013070089742541313, 0.030204635113477707, 0.2143305242061615, -0.09642297029495239, -0.0572713278234005, 0.16440248489379883, -0.06232687085866928, -0.16507276892662048, 0.07831355929374695, -0.03297454118728638, 0.12491888552904129, 0.09518957883119583, 0.08485952764749527, 0.28073129057884216, 0.2506933808326721, 0.013458598405122757, -0.16491581499576569, 0.15523305535316467, 0.15549473464488983, -0.31372958421707153, 0.033603690564632416, 0.20936259627342224, 0.1161520853638649, 0.1744847148656845, 0.017270788550376892, -0.15258166193962097, -0.20080342888832092, -0.09403268992900848, -0.2563532888889313, -0.19472523033618927, 0.2233351320028305, 0.17032839357852936, -0.14219847321510315, -0.16508296132087708, -0.049431752413511276, 0.04941419139504433, 0.033655356615781784, -0.3377167582511902, 0.10526599735021591, 0.05786408483982086, -0.07925346493721008, 0.16252386569976807, 0.06235224008560181, 0.35887452960014343, -0.061762332916259766, -0.07572366297245026, 0.11140596121549606, -0.11821136623620987, 0.03380955010652542, -0.18583807349205017, 0.034947771579027176, 0.23801647126674652, -0.004720413126051426, -0.05897221341729164, 0.10097897797822952, -0.13344769179821014, 0.15726692974567413, 0.03136215731501579, -0.06626944243907928, -0.20782451331615448, -0.24154332280158997, -0.03669301047921181, -0.059673063457012177, -0.1977659910917282, -0.19587253034114838, 0.010888285003602505, -0.014781074598431587, 0.09985025227069855, 0.2194461226463318, 0.09191553294658661, 0.11213359236717224, -0.019455377012491226, -0.02337823435664177, -0.022903040051460266, -0.2946164309978485, 0.2561267018318176, 0.24924004077911377, -0.15425430238246918, -0.07105083763599396, -0.0780358836054802, 0.1594286412000656, 0.11638171970844269, -0.14599570631980896, -0.21715842187404633, 0.1816703975200653, -0.09703075140714645, 0.1686103492975235, -0.11276886612176895, -0.07576163858175278, 0.042371004819869995, -0.26438960433006287, -0.06934910267591476, -0.08440163731575012, -0.21038934588432312, -0.06981220841407776, 0.09832228720188141, 0.045619361102581024, -0.30037832260131836, -0.3045279085636139, 0.3508567810058594, -0.1270742565393448, 0.11439668387174606, 0.2606641948223114, 0.09996677935123444, -0.34199684858322144, 0.0640043392777443, -0.07474406808614731, -0.08388985693454742, -0.3620542585849762, 0.057370755821466446, -0.18030205368995667, 0.05876672640442848, 0.14487700164318085, -0.032157812267541885, 0.18312691152095795, -0.16338126361370087, -0.035632070153951645, 0.2777769863605499, -0.196506068110466, 0.004565263632684946, -0.062355782836675644, 0.05312967300415039, 0.005089759360998869, -0.13405707478523254, 0.06415660679340363, 0.2355508953332901, 0.1558137685060501, -0.3351970613002777, -0.08672840148210526, -0.14201900362968445, -0.041387658566236496, 0.10077527910470963, 0.17275917530059814, -0.24118855595588684, -0.04682910814881325, 0.13430620729923248, -0.11081985384225845, -0.17481684684753418, 0.24524818360805511, 0.14319181442260742, -0.09333936125040054, 0.27395573258399963, 0.044845014810562134, 0.09563219547271729, -0.03210967779159546, 0.09708429127931595, 0.33597496151924133, -0.06666924059391022, -0.40884923934936523, 0.049667034298181534, 0.18693959712982178, -0.26525208353996277, 0.006663207896053791, 0.10663346946239471, -0.24687084555625916, -0.11004464328289032, 0.06927277147769928, 0.21398407220840454, -0.10971006751060486, 0.18920086324214935, -0.0872553139925003, 0.26156148314476013, -0.2422047108411789, 0.11858003586530685, -0.10050362348556519, -0.0856192484498024, -0.06932522356510162, 0.09220637381076813, 0.14916309714317322, -0.08153612911701202, -0.18194323778152466, 0.13110560178756714, -0.17824868857860565, 0.3162221908569336, 0.020674265921115875, -0.008547262288630009, 0.1336144208908081, -0.1534995585680008, -0.12921637296676636, 0.20346708595752716, 0.06261096894741058, 0.06182941049337387, 0.2924179136753082, -0.271735817193985, -0.07181861251592636, -0.09353794902563095, -0.3541303277015686, 0.21702800691127777, -0.05658857896924019, -0.17084230482578278, 0.21896642446517944, 0.06087162718176842, -0.14560566842556, -0.006431168410927057, 0.07252521812915802, -0.082000233232975, -0.5144706964492798, -0.16711625456809998, 0.0614672526717186, 0.3829258978366852, -0.007797074969857931, 0.11292517185211182, 0.1978510320186615, -0.15205654501914978, -0.16521906852722168, 0.11058615893125534, -0.41581085324287415, -0.09925748407840729, 0.012253165245056152, -0.13978706300258636, 0.06987835466861725, -0.0024250817950814962, -0.09587270766496658, 0.20611786842346191, 0.15306241810321808, -0.11226040869951248, 0.022507118061184883, -0.16944155097007751, -0.02045835554599762, -0.00969538651406765, 0.1743251383304596, -0.15817439556121826, -0.0030525780748575926, -0.067403145134449, -0.18376928567886353, -0.20258145034313202, -0.001294908463023603, 0.14609621465206146, 0.023224007338285446, -0.054008837789297104, -0.0004763833130709827, 0.1643715500831604, -0.04064437747001648, -0.10095997154712677, -0.1832847148180008, -0.4064326584339142, 0.06207609549164772, 0.07940593361854553, 0.0020576268434524536, -0.007079097907990217, 0.06991990655660629, 0.045171190053224564, -0.13562338054180145, 0.09280331432819366, 0.07835382968187332, 0.1337759792804718, 0.13290970027446747, 0.05777807533740997, 0.12291469424962997, -0.2517985701560974, -0.10827360302209854, 0.13992804288864136, 0.3608997166156769, -0.13540595769882202, -0.03205600008368492, -0.29375606775283813, -0.06887972354888916, 0.2268979400396347, 0.09004424512386322, 0.030458804219961166, -0.007377412170171738, 0.10639692097902298, 0.09785383939743042, -0.04318113625049591, 0.21832075715065002, 0.05790961533784866, 0.030814599245786667]}",
+      "sources_processed": 5
+    },
+    "optimizer": {
+      "status": "success",
+      "optimization_time": 0.002012014389038086,
+      "queries_processed": 3,
+      "optimization_results": {
+        "q1": {
+          "original_scores": {
+            "naive": 0.8,
+            "bm25": 0.7,
+            "local": 0.9,
+            "global": 0.6
+          },
+          "optimized_weights": [
+            0.29800000000000004,
+            0.322,
+            0.19,
+            0.19
+          ],
+          "optimization_info": {
+            "method": "ensemble",
+            "optimizer": "ensemble",
+            "bandit_weights": "[0.25 0.25 0.25 0.25]",
+            "rule_weights": "[0.37 0.43 0.1  0.1 ]",
+            "gradient_weights": "[0.25 0.25 0.25 0.25]",
+            "ensemble_weights": "[0.4 0.4 0.2]"
+          },
+          "improvement": true
+        },
+        "q2": {
+          "original_scores": {
+            "naive": 0.6,
+            "bm25": 0.65,
+            "local": 0.85,
+            "global": 0.9
+          },
+          "optimized_weights": [
+            0.13399999999999998,
+            0.534,
+            0.16600000000000004,
+            0.16600000000000004
+          ],
+          "optimization_info": {
+            "method": "ensemble",
+            "optimizer": "ensemble",
+            "bandit_weights": "[0. 1. 0. 0.]",
+            "rule_weights": "[0.21 0.21 0.29 0.29]",
+            "gradient_weights": "[0.25 0.25 0.25 0.25]",
+            "ensemble_weights": "[0.4 0.4 0.2]"
+          },
+          "improvement": true
+        },
+        "q3": {
+          "original_scores": {
+            "naive": 0.9,
+            "bm25": 0.8,
+            "local": 0.7,
+            "global": 0.5
+          },
+          "optimized_weights": [
+            0.634313725490196,
+            0.25784313725490193,
+            0.05392156862745097,
+            0.05392156862745097
+          ],
+          "optimization_info": {
+            "method": "ensemble",
+            "optimizer": "ensemble",
+            "bandit_weights": "[1. 0. 0. 0.]",
+            "rule_weights": "[0.46078431 0.51960784 0.00980392 0.00980392]",
+            "gradient_weights": "[0.25 0.25 0.25 0.25]",
+            "ensemble_weights": "[0.4 0.4 0.2]"
+          },
+          "improvement": true
+        }
+      },
+      "performance_analysis": {
+        "avg_response_time": 1.3666666666666665,
+        "avg_user_rating": 4.233333333333333,
+        "complexity_distribution": {
+          "zero_hop": 1,
+          "one_hop": 1,
+          "multi_hop": 1
+        }
+      },
+      "optimizer_type": "SimpleOptimizer"
+    },
+    "boundary_conditions": {
+      "status": "success",
+      "tests": {
+        "empty_query": {
+          "status": "handled",
+          "result": "您好！您似乎还没有提出具体的问题。如果您有任何疑问或需要帮助，请随时告诉我，我会尽力为您提供专业、准确和公正的回答。"
+        },
+        "long_query": {
+          "status": "handled",
+          "query_length": 42000,
+          "result_length": 359
+        },
+        "special_characters": {
+          "status": "handled",
+          "result": "I don't have information about Chinese, Arabic, Japanese, or Russian in the provided text. The text is written in English and discusses a journey to the Lizard in Cornwall, England. If you have any specific questions about the text or need information about these languages, please let me know!"
+        }
+      }
+    },
+    "concurrency": {
+      "status": "success",
+      "total_queries": 3,
+      "successful_queries": 3,
+      "failed_queries": 0,
+      "total_time": 0.508143424987793,
+      "avg_time_per_query": 0.16938114166259766,
+      "results": [
+        {
+          "status": "success",
+          "query": "What is Erica vagans?",
+          "result": "*Erica vagans* is a species of flowering plant in the heath family, Ericaceae. It is commonly known as the \"wandering heath\" or \"vagrant heath.\" This plant is native to the Mediterranean region, particularly found in areas with well-drained, acidic soils.\n\n### Key Characteristics:\n- **Habitat**: Grows in rocky, sandy, or gravelly soils, often in open woodlands or on hillsides.\n- **Flowers**: Produces small, bell-shaped flowers that are typically pink or purple in color.\n- **Leaves**: Narrow and leathery, adapted to dry conditions.\n- **Growth Form**: A low-growing shrub, usually reaching a height of 30–60 cm.\n\n### Uses:\n- *Erica vagans* is sometimes cultivated in gardens for its ornamental value, especially in regions with a similar climate to its native habitat.\n- It is also used in traditional medicine in some cultures, though its specific medicinal properties are not widely studied.\n\nIf you're referring to a different *Erica vagans* (e.g., in a different context, such as a name in literature, music, or another field), please provide more details so I can give a more accurate answer."
+        },
+        {
+          "status": "success",
+          "query": "Who married Princess Frederica?",
+          "result": "The text mentions that Princess Frederica of Hanover was expected to visit St. Michael's Mount with Baron Von Pawel-Rammingen, her father's secretary. It also states that he \"like a stout mediaeval knight, had loved, wooed, and married her.\" Based on this information, it can be inferred that Baron Von Pawel-Rammingen married Princess Frederica."
+        },
+        {
+          "status": "success",
+          "query": "Where does Cornish heath grow?",
+          "result": "The Cornish heath grows in a specific region, namely the serpentine district. It is noted that this plant will grow nowhere else except in a certain district of Portugal. The Cornish heath is characterized by its unique feature where the anthers are outside instead of inside the bell. It is found growing in masses and is associated with the geological line of magnesian earth, which forms the serpentine district. This plant is particularly admired for its beauty and is a notable feature of the landscape in Cornwall."
+        }
+      ]
+    },
+    "memory_usage": {
+      "status": "success",
+      "initial_memory_mb": 2363.47265625,
+      "final_memory_mb": 2343.265625,
+      "memory_increase_mb": -20.20703125,
+      "document_size_chars": 500000,
+      "processing_time": 4.749498128890991,
+      "memory_efficiency": Infinity
+    }
+  },
+  "advanced_test_config": {
+    "gnn_enabled": true,
+    "advanced_eval_enabled": true,
+    "advanced_fusion_enabled": true,
+    "optimizer_enabled": true,
+    "boundary_tests_enabled": true,
+    "concurrency_tests_enabled": true,
+    "memory_tests_enabled": true
+  },
+  "module_availability": {
+    "graph_neural_network": true,
+    "evaluation_advanced": true,
+    "fusion_advanced": true,
+    "optimizer": true,
+    "feedback": false,
+    "deduplication": false,
+    "reranking_detailed": false,
+    "answer_generation_detailed": false
+  }
+}

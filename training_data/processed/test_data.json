@@ -1,0 +1,3707 @@
+[
+  {
+    "query": "What was the steam engine an important component of?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What nationality was Leonardo da Vinci?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the U.S. Air Force Base, located in northeastern Maine, constructed?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Muni is a series of films that had a 3rd installment that was released worldwide on which date?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do tornadoes spin?",
+    "complexity": "zero_hop",
+    "explanation": "Basic meteorology"
+  },
+  {
+    "query": "Does the Sun have granulation?",
+    "complexity": "zero_hop",
+    "explanation": "Basic astronomy"
+  },
+  {
+    "query": "What people weren't allowed to settle in British colonies?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What kind of music do music groups Tomahawk and The Heavy play?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Are hurricanes categorized by the Saffir-Simpson scale?",
+    "complexity": "zero_hop",
+    "explanation": "Common meteorological measurement"
+  },
+  {
+    "query": "How much did the 2013 internationally co-produced romantic drama film Romeo & Juliet starring English Actor Damian Lewis gross ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What company owns the television channel that The Lying Game aired on?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the smallest country in the world?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "Erol Bekir played for the swiss youth sports club based in what capital city?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many club seats does the arena, in which the UFC on FX: Browne vs. Bigfoot took place in, contain?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many days are in November?",
+    "complexity": "zero_hop",
+    "explanation": "Calendar knowledge"
+  },
+  {
+    "query": "Where did Harold II die?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What did colonial authorities  reduce because of the Ballarat revolt?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Of what length are engine cycle events when the simplest exhaust compression is used?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What are the exceptions in the constitution  that require special considerations to amend?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The park that has sandstone formed 150 million years ago is represented by who?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What are two other films that were written by the person who wrote the 2011  British-French biographical drama film based on the life and career of Margaret Thatcher?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does radiation transfer energy?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physics"
+  },
+  {
+    "query": "What did the Netherlands not let America use during the embargo?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What roles does this English musician who released the 1986 \"Higher Love\" take on?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who had issued the Edict of Nantes?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who is a descendant of General Hermann von Francois?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is 'Romeo and Juliet' a tragedy?",
+    "complexity": "zero_hop",
+    "explanation": "Common literary knowledge"
+  },
+  {
+    "query": "What do Mamostong Kangri and Kangchenjunga have in common?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which has more miles, Northern State Parkway or Meadowbrook State Parkway?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Where, along with toys, are oscillating cylinder port faces typically used?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who directed both a 2016 Romanian-language drama selected to comete for the Palme d'Or and a 2016 french psychological thriller staring Kristen Stewart?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many wings does a bee have?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "What mountain range is in Nepal?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "Is the skin an organ?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "Who painted \"The Hay Wain\"?",
+    "complexity": "zero_hop",
+    "explanation": "Famous artwork attribution"
+  },
+  {
+    "query": "The French Romantic composer Hector Berlioz, who influenced the era of Romanticism and Austrian composers such as Alban Berg, was best known for which tone technique?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which movie has more director, Beyond Hatred or Night Mail?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is one of the 10 megaregions in the United States?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What continent was Mamadou Diarra born in?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "When was the Duchy of Normandy founded?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where are MedStar National Rehabilitation Hospital and Psychiatric Institute of Washington located?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does sound travel faster in solids than gases?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physics principle"
+  },
+  {
+    "query": "Where is southern Hollywood located?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which counterpart of the American network Nickelodeon aired Os Under-Undergrounds in Brazil?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "María Sol Branz sailed in the games of which Olympiad?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Beatrice Shilling invented \"Miss Shilling's orifice\", a small metal disc that restricted fuel flow helping prevent engine stall, what was the official name of it?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What chemical did Priestley use in his experiments on oxygen?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What does not often yield complexity classes that depend on the chosen machine model?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the human skeleton made of bones?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "The 1983 NBA All-Star Game was played at a stadium that opened in what year?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for cobalt?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "Which Malaysia Airlines Flight that disappeared, Flight 17 or Flight 370, was destined for Beijing?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What training center is connected by Virginia State Route 238 to a United States Navy base in York County, James City County, and Newport News?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Torrey Joël DeVitto stars in a 2015 medical drama created by who?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many events occur in a steam cycle?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Under normal conditions, what do two atoms of oxygen form?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is 225 divided by 15?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "Who was the vocalist of the English rock band formed in 1982 that influenced the UK indie rock band, Battle?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what year was the agreement to allow the Saarland settlement reached?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was made first, Saigon, U.S.A. and Voices of Bam?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "As of what year were 1700 horsepower engines available?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What did the California Times define twice?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The Hospital for Tropical Diseases specializes in the treatment of Malaria, which is spread by what type of insect?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who has produced more for other artists, Masatoshi Ono or Lars Frederiksen?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "When was the cabinet-level Energy Department created?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where does the fourth largest lake located in Switzerland?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What Revolutionary War midnight rider was a Huguenot descendant?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Does the Sun have chromosphere?",
+    "complexity": "zero_hop",
+    "explanation": "Basic astronomy"
+  },
+  {
+    "query": "What kind of statement is made in the effort of establishing the time and space requirements needed to enhance the ultimate number of problems solved?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What theoretical device is attributed to Alan Turing?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who wrote 'Pride and Prejudice'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous literary knowledge"
+  },
+  {
+    "query": "What type of electric current is needed for electrolysis?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What does Huisgenoten translate to in French?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What variable is not associated with all problems solved within logarithmic space?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Iran was which size oil exporter?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which plant is larger, Swainsona or Gibbaeum?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the gallbladder an organ?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "What was the type of film which was directed by  Akira Kurosawa and made five years after a  tragedy film an adaptation of the Shakespearean tragedy \"King Lear\"?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What public liberal arts and sciences university located in Kirksville, Missouri publishes a literary journal called GHLL?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many Victorians are Buddhist?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What Barbadian singer has recorded songs with guest vocalists Drake and Eminem?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many clergymen were there in the Dutch Republic before the influx of Huguenots?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the chemical symbol for xenon?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "How many sides does a square have?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "In what form is oxygen transported in smaller containers?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is not example of an NP-intermediate problem not known to exist in P or NP-complete?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are Markus Feehily and Nam Woo-hyun woth songwriters?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What percentage was the increase of agricultural products since 2004?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where are summer temperature ranges 70-50s?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was the result in Montpellier of the Edict of Ales in 1629?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is Dallas Love Field or Oakland International Airport closer to their respective downtowns?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "The reasons for the las two counties to be added are based on what?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "People of what nationality invented the HMS Dreadnought?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What variable is associated with all problems solved within logarithmic space?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which  American actress and former model played the main character in the television movie based on the 1985 biography Elvis and Me?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is steel heavier than wood of the same volume?",
+    "complexity": "zero_hop",
+    "explanation": "Common material properties"
+  },
+  {
+    "query": "The Chills and Thin White Rope are expamples of what type of band?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What country are all the counties in?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What kind of officer was the successor of William E. Gortney's positions at U.S. Northern Command and North American Aerospace Defense the first of?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Cities that anchor the regions are often the hub for what kind of activity?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which Discovery channel show is the American television presenter, game show host, and car-guy from Brunswick, Maine currently hosting?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is Mount Everest in Asia?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known geography"
+  },
+  {
+    "query": "What reference is there to Huguenot lacemakers in the 19th century?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did BSkyB announce it's intention to improve it's free-to-air digital channels?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the Platte River in North America?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "Are the bands  No Doubt and Eve 6 from the same state?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "According to the 2010 census what is the population of the town which, along with Brunswick, is where the Seacoast United Mariners are based ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What number Florida congressional district does the man who appointed  Anna Holliday \"Holly\" Benson to the position of Secretary of the Florida Department of Business and Professional Regulation currently represent?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who killed the socialite about whom the film \"Saving Grace\" is based?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Born 4 November 1985 in Karachi this cricketer was suspended by the PCB in 2017.",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What form of oxygen do marine animals acquire in greater amounts during cooler climatic conditions?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What type of liquor does Emotional branding and Jim Beam have in common?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "To ensure safety of future space missions Oxygen was used at _____ of the normal pressure.",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who painted 'The Last Supper'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous art knowledge"
+  },
+  {
+    "query": "What European event caused the Huguenots to abandon Charlesfort?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was older when they died, Louis Feuillade or Aleksander Ford?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the main ingredient in chocolate?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday culinary knowledge"
+  },
+  {
+    "query": "What kind of art did the Normans have a rich tradition of?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is 90 divided by 10?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "Which country rationed gasoline and heating gas?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is Victoria's highest monthly temperature?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is a ladder used for climbing?",
+    "complexity": "zero_hop",
+    "explanation": "Basic tool purpose"
+  },
+  {
+    "query": "What element has a symbol number of 8?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which experimental pop band has James Huggins III as a member and belongs to the Elephant 6 collective?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what year was Rene Goulaine de Laudonniere born?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In which year was  the co-author with Robert Greene of the book The 50th Law shot 9 times ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which movie starred Christina Ricci, The Lizzie McGuire Movie or That Darn Cat?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What street is the hotel located that Nugget Hold'em was first introduced at?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What MSL team is from Southern California?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "There was a 16th century Huguenot settlement near what modern day Florida city?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who has a codified constitution?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Does the Tropic of Cancer lie north of the Equator?",
+    "complexity": "zero_hop",
+    "explanation": "Geographic coordinate fact"
+  },
+  {
+    "query": "Do bats fly?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "What answer denotes that a solution has accepted an input string?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What speed did the National Highway Designation Act prevent you from going beyond?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the chemical symbol for tin?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "In computational complexity theory, what is the term given to describe the baseline abstract question needing to be solved?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Does a refrigerator keep food cold?",
+    "complexity": "zero_hop",
+    "explanation": "Appliance primary purpose"
+  },
+  {
+    "query": "What is 14 multiplied by 7 plus 3?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "Which region began to grow and assert itself in the 2000s?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the Chelsea forward on the cover of Dream League Soccer born?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which film won more honors, Terror or The Civil War?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "The passage of what act gave Victoria its own government?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the cycle condenser sometimes called?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are Cricket and Cosmogirl magazines both for teenagers?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What was Sky Travel later rebranded as?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What provides a solution to a list of integers provided as input that ned to be sorted?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which citizen was Mark Zuckerberg college roommate?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do mammals give live birth?",
+    "complexity": "zero_hop",
+    "explanation": "Basic zoology fact"
+  },
+  {
+    "query": "What are the three secondary expressions used to represent case complexity?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What year was the Northridge earthquake that caused $20 million in damage?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What name was given to the western half of the colony?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many vertices does an octahedron have?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "Who played Lar Gand in the \"Duet\" episode of The CW's television series \"The Flash\"?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who wrote 'Brave New World'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous literary knowledge"
+  },
+  {
+    "query": "Who composed \"The Midsummer Marriage\"?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known musical attribution"
+  },
+  {
+    "query": "Do humans have two eyes?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "In what year did the two part miniseries, written by Larry McMurtry, that featured the actor that played Fortune in the film \"Rudy\" air?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which member of the Birmingham Press Club re-examined the Lindbergh kidnapping case?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What complex measurements were defined by \"On the Computational Complexity of Algorithms\"?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many of the six total packages available to broadcasters was Setanta awarded?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What types of pumps are typically used in jet engines?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who has been both the head coach of the Phoenix Suns and the general manager of the Boston Celtics?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many nickels make twenty dollars?",
+    "complexity": "zero_hop",
+    "explanation": "Standard currency fact"
+  },
+  {
+    "query": "Is chalk a sedimentary rock?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geology"
+  },
+  {
+    "query": "What instrument is used to examine diagram performance?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the largest lake in Asia?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What percentage of farmland grows wheat?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is Kathmandu the capital of Nepal?",
+    "complexity": "zero_hop",
+    "explanation": "Basic country fact"
+  },
+  {
+    "query": "when was the Swedish actress  who starred in Prometheus born",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What year did the cousin of Publius Cornelius Scipio Nasica defeat Hannibal?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do volcanoes erupt lava?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geology"
+  },
+  {
+    "query": "Uri Rosenthal is a Dutch Politician belonging to which conservative-liberal party in the Netherlands?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What country was under the control of Norman barons?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Northeast of the downtown of which city is the transmitter for WQKL located?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who was defeated by the female American politician whose aid, Omar Aquino, was the youngest Latino member of the Illinois State Senate?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What was the original name of the actor who co-starred with Kevin Brophy in the 1977 made-for TV movie \"Lucan\"?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which pioneering composer of minimal music is included on a mix album compiled by The Cinematic Orchestra?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "When did the Huguenots secure the right to own land in the Baronies?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Bodily Harm was a film set in which Nevada county?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the population of the Greater Los Angeles Area?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What media gave a nickname commonly known as Neymar?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do blizzards involve snow?",
+    "complexity": "zero_hop",
+    "explanation": "Basic meteorology"
+  },
+  {
+    "query": "What color is a ripe lemon?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday common sense"
+  },
+  {
+    "query": "In what year did Rev. Elie Prioleau become the pastor of the first Huguenot church in Charleston, South Carolina?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which country is famous for the Leaning Tower?",
+    "complexity": "zero_hop",
+    "explanation": "Common cultural fact"
+  },
+  {
+    "query": "Rosey is the brother of the wrestler who played what other sport?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Between Solow Building and Bank of America Tower what is the geight of the taller building?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many nickels make two dollars?",
+    "complexity": "zero_hop",
+    "explanation": "Standard currency fact"
+  },
+  {
+    "query": "What was one of the Norman's major exports?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is tin a metal?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "when is the retired Italian boxer and actor who won the  semifinals in1960 Olympics born",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Are both Bear Stearns and Cowen Group failed businesses?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Based of what author and filmmaker who was born in 1957, the romantic comedy-drama Not Easily broken was written?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "To what is 50 kilopascals equal?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the sequel to the first-person shooter video game Heavy Gear released?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the name of the TV scrambling system BSkyB couldn't use?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the skin the body's largest organ?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary anatomy"
+  },
+  {
+    "query": "What Brazilian professional footballer was born October 18 1983 and was signed to French Ligue 1club Nice in the 2012-13 FC Bayern Munich season?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "When did Tancred lay siege to Antioch?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did the channel that superseded the free-to-air channel that was cancelled in 2002 switch to digital?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for astatine?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "Which company never expanded their platform?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the smallest country in Africa?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What Swiss footballer currently playing for Stoke City was signed by Bayern Munich before the 2012-13 season?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What channel lost advertising revenue due to their plans?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who is responsible for the so-called, speed-up theorem n 1974?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many legs does a octopus have?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "Does the Moon produce its own light?",
+    "complexity": "zero_hop",
+    "explanation": "Basic astronomy"
+  },
+  {
+    "query": "What Huguenot French family had the largest brandy distilling business in South Africa?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do humans have a digestive system?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "What does oxygen form bonds with all other types of?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What had Edward Heath told Lord Cromer about taking action in the middle east?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did BSkyB decide to stop giving away free digiboxes?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Between Michael Hutchence and Morten Harket, who had a longer career as a musician?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do elephants have tusks?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "What produces the high levels of oxygen on Earth?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many dimes are in one dollar?",
+    "complexity": "zero_hop",
+    "explanation": "Standard currency fact"
+  },
+  {
+    "query": "Heaven's Gate is a phrase made familiar from a William Shakespeare sonnet that is part of what sequence?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Was Steve Jobs associated with Apple?",
+    "complexity": "zero_hop",
+    "explanation": "Famous tech figure"
+  },
+  {
+    "query": "The Kittanning Path through its connection to mountainous Appalachian Plateau, was path taken by what group of people?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is diamond a form of carbon?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemical fact"
+  },
+  {
+    "query": "What was the price of oil in March of 1974?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many Huguenots chose to stay in France?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Hermiston-McCauley Mine and Red Lake Mine are located in what province?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is oxygen respiration therapy used to treat?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which Count did the Prince strike an arrangement with?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which Czech businessman is the Bata Chowk metro station, opened in Delhi by the current Indian Prime Minister, named after?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which of Pavel Helebrand production  is a romance novel by Jane Austen, first published in 1813?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What term refers to the concrete question to be solved?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which United States Senator was first a congressional member in the U.S. House of representatives?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many continents does Russia span?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geography"
+  },
+  {
+    "query": "Were Benjamin Spock and Manuel Puig contemporaries?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What are the two largest cities in the United States?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What shape is a basketball hoop?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday common sense"
+  },
+  {
+    "query": "How many eyes does a cyclops have in mythology?",
+    "complexity": "zero_hop",
+    "explanation": "Basic mythological knowledge"
+  },
+  {
+    "query": "What is the least critical resource measured in assessing the determination of a Turing machine's ability to solve any given set of problems?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Hereford Cathedral and York Minster are both what type of building?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "what is the nationality of Nicolette Larson who recorded the song titled That's How You Know When Love's Right?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the observation tower in Seattle, Washington an example of?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the capital of Egypt Cairo?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geographic fact"
+  },
+  {
+    "query": "What is 48 divided by 6 plus 7?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "What were Isaac's chains made out of?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Leanne Dobinson contended to play which role in the new Andrew Lloyd Webber-produced version of \"The Sound of Music\" film from 1965?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What components raise steam temperature above its saturated vapor point?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is another term for the the string of a problem question?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are Platycodon and Scaevola both herbaceous plants?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Year of the Savage included production duties by which record producer from Miami?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for iridium?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "What is home to Southern California?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the American musician and actor born who is best known for being in the band The Hudson Brothers which consists of Brett Hudson and Mark Hudson?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do seahorses have tails?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "What eastern suburb is St Matthew's Church located in?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is usually not stated using the big O notation?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is a deterministic Turing machine with an extra supply of random ribbons?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Peter Dolving and Deni Hines were both what type of artists?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Where was the manufacturer of the Altair rocket located?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "The Riverport Railroad operates this Army Depot Track, located on the eastern bank of which river?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is silver a better conductor than copper?",
+    "complexity": "zero_hop",
+    "explanation": "Basic material property"
+  },
+  {
+    "query": "Is a broom used for sweeping?",
+    "complexity": "zero_hop",
+    "explanation": "Common cleaning tool"
+  },
+  {
+    "query": "What is the name of this American politician and a member of the United States House of Representatives, who was killed in a crach on Korean Air Lines Flight 007?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the equator hot?",
+    "complexity": "zero_hop",
+    "explanation": "Common climate knowledge"
+  },
+  {
+    "query": "Is the brain part of the central nervous system?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary anatomy"
+  },
+  {
+    "query": "What 1979 song with music and lyrics written by Paul Williams and Kenneth Ascher was nominated for an Academy Award in 1979, losing to \"It Goes Like It Goes?\"",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what complexity class do complement problems of NP problems exist?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the cryogenic and chemical compound storage method?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The 1931 Michigan Wolverines football team finished the season in a three-way tie for first place in a conference that was formerly known as the Big Nine, and by what other name?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what studio was Versace on the Floor recorded?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is air a mixture of gases?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemical fact"
+  },
+  {
+    "query": "When was the book, Sur, published?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "To what film genre do Chicken Ranch and The Times of Harvey Milk belong?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who was the father of this king of England who had a dispute with Thomas Becket from 1163 to 1170?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many times did the quarterback, who features on the cover of the video game NFL Quarterback Club 97, lead his team to the playoffs ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What eponymous variation of arithmetic presents a decision problem not evidenced in P?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which host of The Ex-Wives Club was born in 1963?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Why does the O2 appear red?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where is the hostel located that was primarily built for Hindu students of Presidency College?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who did the Dutch fight in the Dutch Revolt?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is lead heavier than aluminum?",
+    "complexity": "zero_hop",
+    "explanation": "Basic material property"
+  },
+  {
+    "query": "What function is used by algorithms to define measurements like time and numbers?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What did Virgin Media concentrate on instead of offering linear channels?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was the ruling class ahead of the Normans?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the tallest animal on Earth?",
+    "complexity": "zero_hop",
+    "explanation": "Common zoology knowledge"
+  },
+  {
+    "query": "Who is the UK's smallest digital subscription television company?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the Amazon Rainforest the largest rainforest?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What earl is the grandfather of an actress who starred in The Bye Bye Man?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "IN addition to recirculating water, what do bunkers do?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the chemical symbol for actinium?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "What is paired oxygen?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many letters are in the word 'apple'?",
+    "complexity": "zero_hop",
+    "explanation": "Simple word count"
+  },
+  {
+    "query": "Does a mirror reflect light?",
+    "complexity": "zero_hop",
+    "explanation": "Basic optical property"
+  },
+  {
+    "query": "How did the crisis impact Arabs?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Did Second Battle of the Marne and Battle of Shiloh happen in the same war?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what country was a full-scale working railway steam locomotive first invented?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many brains does an octopus have?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "How many millimeters are in a centimeter?",
+    "complexity": "zero_hop",
+    "explanation": "Metric system conversion"
+  },
+  {
+    "query": "Between Frank De Winne, ESA astronaut, and Michael Foale, NASA astronaut, whom still holds the cumulative-time-in-space record for a UK citizen?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Southern California is second to which island in terms of famous serf breaks?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was the inventor of the atmospheric engine?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How do the yes/no answers of an incompatible problem of of APPEAR?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What year did the move Johnny Got His Gun staring Kathy Fields take place?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "The director of The Grand Duke's Finances held what position during World War I?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do birds lay eggs?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "What state in Australia is the center of dairy farming?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What kind of graph is an example of an input used in a decision problem?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was the name of the Norman castle?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the lowest ranking one of the counties could have in terms of most populous counties in the United States?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The NAB Marconi Radio Awards are named after an inventor.  In what year was the inventor born?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "The song \"Rhinestone Cowboy (Giddy Up Giddy Up)\" is a take on was released in what year?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many sides does a heptacosagon have?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "What is the process that asks a more specific question about all possible algorithms that could not be used to solve the same problem?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the shortened name of the annual yacht race that takes place?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was Dalton's erroneous formula for water?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Why did OPEC dollars depriciate?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What did Israel do to Japan's imported oil to force their involvement in the crisis?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which novel illustrated by Ricardo Cortes is described as a children's book for adults?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Where did most of the Huguenots decide to live?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the Eiffel Tower in Paris?",
+    "complexity": "zero_hop",
+    "explanation": "Famous landmark location"
+  },
+  {
+    "query": "What are the middle names of the candidate for whom Robby Mook was campaign manager in the 2016 US election ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does light pass through opaque objects?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physical fact"
+  },
+  {
+    "query": "Under what treaty can the European Commission take action against member states?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What percentage of American gas stations were out of fuel in 1973?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was Margaret's brother?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did they raise the price of oil to $5.11?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is ice colder than steam?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physics temperature concept"
+  },
+  {
+    "query": "Where is the best Italian in Victoria?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What river originally bounded the Duchy",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "At what stadium did Wigan Athletic Football Club's first major victory occur?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What color are bananas when ripe?",
+    "complexity": "zero_hop",
+    "explanation": "Common observation"
+  },
+  {
+    "query": "Who can enforce European Union law?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which direction does the sun rise?",
+    "complexity": "zero_hop",
+    "explanation": "Common observation"
+  },
+  {
+    "query": "Is the giant panda a bear?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "The Lightkeepers starred the actress who played the recurring role of whom on \"The Good Wife\"?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is 'Star Wars' a science fiction film?",
+    "complexity": "zero_hop",
+    "explanation": "Common genre classification"
+  },
+  {
+    "query": "In a nuclear power plant, what is the steam turbine connected to?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What continent is Bhutan part of?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "How many days are in September?",
+    "complexity": "zero_hop",
+    "explanation": "Calendar knowledge"
+  },
+  {
+    "query": "What has a bond length of 498 kJ·mol−1?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "On which subject did Amelia Sarah Levetus give a lecture at the University of Vienna in the late 19th century that concerns origins and history of cooperatives that began with the application of cooperative principles to business organization?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What scientific field's theory has received contributions from the steam engine?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the turbine entry temperature of a steam turbine, in degrees Celsius?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which countries became dependent on US's security assurance to threats?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the main ingredient in cheese?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday culinary knowledge"
+  },
+  {
+    "query": "What is the capital of Iceland?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "What second most populous city is north of Los Angeles?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The school which Portland Public Schools operates as expeditionary learning schools, a vocational school, and elementary, middle, and three high schools is located where",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is a tomato a fruit or a vegetable?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday botanical fact"
+  },
+  {
+    "query": "What event occurred 5.2 billion years ago?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The Circus Series is a series by the writer who has sold more than how many copies of her works?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What was the American Automobile Association created to do?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the capital of Jordan?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "Is the Douro River in Europe?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What is the problem attributed to defining if three finite graphs are isomorphic?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who composed \"Wozzeck\"?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known musical attribution"
+  },
+  {
+    "query": "Do humans have muscles?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "Who wrote of the Savery water pump in 1751's Philosophical Transactions?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What American Pie role is an actor in West 32nd famous for?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which Spanish national park is smaller, Garajonay National Park or Tablas de Daimiel National Park?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What important solvents contain oxygen?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Eden Hazard, the professional footballer, endorses what boot known for being lightweight?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Are both Broadcom Limited and The Cooper Companies Chinese companies?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which American ukulele virtuoso and composer who worked on a few Japanese films such as \"Hula Girls\" (2007) produced the album HandPicked?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which English town had the largest refugee church?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What are three examples of complexity classes associated with definitions established by probabilistic Turing machines?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was the final Prime Minister of East Germany?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are Jared Leto and Myles Kennedy both directors?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Are the University of Texas at Dallas and the İzmir Institute of Technology both located in America?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What can be viewed as an informal language where the language instances whose input is yes?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Of what mountain system are the Omeo Alps a part?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the main gas in Earth's atmosphere?",
+    "complexity": "zero_hop",
+    "explanation": "Basic atmospheric science"
+  },
+  {
+    "query": "What is Victoria's largest non-Christian religion?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the largest fish?",
+    "complexity": "zero_hop",
+    "explanation": "Common zoological fact"
+  },
+  {
+    "query": "Do butterflies have scales on their wings?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "What does the secretary need to lead in the Legislative Assembly?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do pelicans have pouches?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "What percentage of electricity was made by steam turbine in the 1990s?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What type of electric engines produced most power up to the early 20th century?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In what year did the House of Guise gain influence?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the chemical symbol for copper?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "What was replace with the Norse religion?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the 2010 census population of the county where the Lexington History Center is located?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who directed the slasher film that starred the american actress who voiced the role of Mrs. Davis in the \"Toy Story\" film series?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is chlorophyll responsible for plant's green color?",
+    "complexity": "zero_hop",
+    "explanation": "Basic botany"
+  },
+  {
+    "query": "What continent is Kenya located on?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "Are both Shirley Manson and Jimmy Barnes singers?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What device is used to test the magnetic attractions involved in liquid oxygen?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who usedthe campaign Ancient Macedonia developed by the king of the Ancient Greek kingdom of Macedon in 359 BC?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the capital of Latvia?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "Is Spanish derived from Latin?",
+    "complexity": "zero_hop",
+    "explanation": "Basic language origin"
+  },
+  {
+    "query": "What medicines to do hyperbaric chambers use?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which university do Hawaii Rainbow Wahine and Hawaii Rainbow Warriors represent?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who joined The Gods then later founded Emerson, Lake & Palmer?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What area in modern-day Canada received Huguenot immigrants?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do computers use binary code?",
+    "complexity": "zero_hop",
+    "explanation": "Basic computing fact"
+  },
+  {
+    "query": "How long did Western Europe control Cyprus?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How is lap provided by overlapping the stationary marketplace port?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the capacity of the indoor sports arena where the 2013–14 Portland Trail Blazers played?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do peacocks have colorful feathers?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "Both used to herd cattle, is the Perro de Presa Canario and the Lancashire Heeler of similar size?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do humans have two ears?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "In what year were the Dragonnades started?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Before the formation of which planet, did Sol lose oxygen 16?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do swans have long necks?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "Who composed \"Salome\"?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known musical attribution"
+  },
+  {
+    "query": "Who was in charge of the papal army in the War of Barbastro?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Did the Vikings originate from Scandinavia?",
+    "complexity": "zero_hop",
+    "explanation": "Historical group origin"
+  },
+  {
+    "query": "Which group was the singer, who released \"Following,\" was a part of in the 2000s (before 2009) that boosted her fame?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is a job type that David Schwimmer filled in the theater that Richard Eyre never filled?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What districts does downtown Santa Ana include?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What area does Jay Stein and Universal Studios Hollywood have in common?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How much land do farms crop rotate each year in Victoria?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do flamingos stand on one leg to conserve heat?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "Was Mark Twain the author of Huckleberry Finn?",
+    "complexity": "zero_hop",
+    "explanation": "Classic novel attribution"
+  },
+  {
+    "query": "The actress that portrayed Dominique Deveraux on \"Dynasty\" also stars with Rosalind Cash in a 1982 tv movie written by who?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What event on April 22, 1889 involved an estimated 50,000 people including Robert Galbreath, Jr. and his brother Herman?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Randall Wallace and Don Bluth are both directors and producers but what else were they both known for?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is 90 divided by 15 multiplied by 2?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "Are American International Group and Sherwin-Williams both building materials companies?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "\"All My Friends\" by LCD Soundsystem was released on their album that was recorded at DFA Studios and what farm?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Along with electric motors, what power sources overtook steam engines in the 20th century?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where did Jesse de Forest sale from to arrive in North America?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "D'Olier Street is named after whom?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What year did BSkyB and Virgin Media have a dispute over the carriage of Sky Channels on cable TV?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What industry was centered in Bedfordshire?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Best known for his role as So Yi-jung in \"Boys Over Flowers\", this actor starred with what actress in her acting debut?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is 0.5 equal to 1/2?",
+    "complexity": "zero_hop",
+    "explanation": "Simple fraction conversion"
+  },
+  {
+    "query": "Is Mount Kilimanjaro in Africa?",
+    "complexity": "zero_hop",
+    "explanation": "Famous landmark location"
+  },
+  {
+    "query": "Which country is famous for the Sydney Opera House?",
+    "complexity": "zero_hop",
+    "explanation": "Common cultural fact"
+  },
+  {
+    "query": "Jean De Rely's illustrated French-language scriptures were first published in what city?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the band formed whose debut album was Salvation Town ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many piston strokes occur in an exhaust cycle?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What kind of Schnitzel is used at Wienerwald?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "When did Richard II flee to Normandy?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Along with admission, exhaust and compression, what is an event in the engine cycle?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What caused UK to have an oil crisis in its own country?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was the price of oil after the raise?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What type of mansion is the palace where Catherine of Aragon lived after the annulment of her marriage to Henry VII?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does air have weight?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physics fact"
+  },
+  {
+    "query": "Which retired English track and field athlete who won a medal at the 2000 Sydney Olympics hosts the series Camp Orange?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does osmosis move water across membranes?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "Along with electric motors, what type of engines superseded piston steam engines?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are both Meyer Schapiro and John Berryman citizens of the same country?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Case complexities provide three likelihoods of what differing variable that remains the same size?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did Robert Crispin go up against the Turks?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Besides combustion, for what other action did Mayow show nitroaereus responsible?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is Shakespeare an English playwright?",
+    "complexity": "zero_hop",
+    "explanation": "Basic cultural knowledge"
+  },
+  {
+    "query": "What are the globally recognized anchor cities known for?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which team, led by Bob Stoops, did the 2016 Auburn Tigers lose to in the Sugar Bowl?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who painted 'Birth of Venus'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous art knowledge"
+  },
+  {
+    "query": "What is 5 multiplied by 3?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "How many keys does a piano have?",
+    "complexity": "zero_hop",
+    "explanation": "Common musical instrument fact"
+  },
+  {
+    "query": "Who composed 'Swan Lake'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous music knowledge"
+  },
+  {
+    "query": "In what state and country has Roy Shepherd worked as a piano teacher?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Johanna Konta participated in which tournament which was also the 116th men's edition and the 89th women's edition?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Was the Great Wall of China built for defense?",
+    "complexity": "zero_hop",
+    "explanation": "Common historical purpose"
+  },
+  {
+    "query": "Who wrote 'The Catcher in the Rye'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous literary knowledge"
+  },
+  {
+    "query": "Is the Mekong River in Southeast Asia?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What compact truck replacements were introduced by Toyota?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is 8 + 8 equal to 16?",
+    "complexity": "zero_hop",
+    "explanation": "Simple arithmetic"
+  },
+  {
+    "query": "What type of reaction produces oxygen in plane cabins?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When Japanese companies introduced compact trucks, what policy ended?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the process by which ice turns into water?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physical fact"
+  },
+  {
+    "query": "Other than San Bernardino, what is the name of the other city that maintains the districts including University Town?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do bees dance to communicate food locations?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "Is the Pacific larger than the Atlantic?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic comparison"
+  },
+  {
+    "query": "Who came into contact with Wales after the conquest of England?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Can humans breathe underwater without assistance?",
+    "complexity": "zero_hop",
+    "explanation": "Common physiology fact"
+  },
+  {
+    "query": "These books became a foundational text for what library?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Of what did da Vinci think a part  was consumed during combustion?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the Dutch Revolt?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What company did not agree to terminate high court proceedings with BSkyB?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "At 1984 Copa Libertadores Finals, at which stadium in Avellaneda, Buenos Aires Province was one of the ties was played?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Ludwig van Beethoven and Giuseppe Verdi had what trait in common?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Where was the location of the administration of Calcutta?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What does CSA stand for?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Were both Derek St. Holmes and Tomas Kalnoky songwriters as well as vocalists and guitarists?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the pharynx an organ?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "In what country did the Halifax ass shooting plot occur?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What year was Albert Barnes  alma mater chartered?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the name of the national anthem that Phyllis Joyce McClean Punnett wrote for the country of Saint Vincent and the Grenadines, a sovereign state in the Lesser Antilles island arc?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "To monitor what event would measuring radiance from vegetation provide information?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the Rhône River in Europe?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What Irish cities had Huguenot mayors in the 1600s and 1700s?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was known for writing crime fiction under a pseudonym, Julian Barnes or Edith Hamilton?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Hit-Boy produced the song \"Drop the World\", which was aprtly by which rapper and actor?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the ground state of the O molecule referred to as?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is a typical type of computational problem whose answer is either yer or no?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the Mississippi River in the United States?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic fact"
+  },
+  {
+    "query": "What type of pharmacological effect is most likely an explanation for the \"boost\" from oxygen?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "On what vehicles do full size working engines sometimes use oscillating cylinder rocks?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What city means 'elm Tree', Zhuji or Yushu, Jilin ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do reptiles lay eggs?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "Who painted the Sistine Chapel ceiling?",
+    "complexity": "zero_hop",
+    "explanation": "Famous artwork attribution"
+  },
+  {
+    "query": "The developer of both the Embraer E-Jet and Embraer E-Jet E2 series is located in which country?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what type of water does oxygen dissolve more slowly?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What singer's 2011 pop song, produced by Scottish DJ Calvin Harris, made it on the Mexico Airplay Chart and was a number-one song in the \"Billboard\" Hot 100?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for oxygen?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry knowledge"
+  },
+  {
+    "query": "When were the band that released the single Electrical Storm formed ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is continuing with energy levels far beyond the turn of the 20th century?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Did Mulan and Tuck Everlasting have the same director?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the North Pole in the Arctic?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geography"
+  },
+  {
+    "query": "What network of telecommunications cables commissioned in 2000 has a landing point in Auckland, New Zealand?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What years did the dollar price of oil rise by 2% per year?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where did the Normans and Byzantines sign the peace treaty?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What shape is a dartboard?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday common sense"
+  },
+  {
+    "query": "Where did Oursel lead the Franks?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What choice is typically left dependent in an effort to maintain a level of abstraction?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In which country do both the Mauna Loa and the Mauna Kea volcanoes reside?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Pyrotol was used as an explosive in what event by Andrew Kehoe on May 18, 1927?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "When did BSkyB fail launching it's HDTV service?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Does 'OMG' stand for 'Oh My God'?",
+    "complexity": "zero_hop",
+    "explanation": "Common acronym expansion"
+  },
+  {
+    "query": "Is iron magnetic?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physical fact"
+  },
+  {
+    "query": "What modern company has been notably working on a steam engine using modern materials?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What are the dominant areas of Los Angeles?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Roden Cutler House is owned by an electricity infrastructure company that is owned by the Government of New South Wales, Australia, and was formed in what year?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is iron a metal?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemical fact"
+  },
+  {
+    "query": "What is the scientific designation of oxygen?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Wynn Palace is owned and operated by the company founded in what year?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "From where would scientists like measure vegetation radiance?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do humans have blood vessels?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "What is the nationality of the character actor who appeared alongside Nigel Patrick, Margaret Whiting, Harry Andrews, and Derren Nesbit in the film The Informers?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What kind of economy does Victoria have?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was the earliest version of the classic fairytale whose animated short film won the best animated short film award at the 29th Genie Awards, first printed ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many angles does a hexadecagon have?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "Hans Van Arum coached for what football club based in Arnhem?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Both Kele Okereke and Faris Badwan played for bands, one was a vocalist. What did the other do?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Both George Entwistle and Mark Thompson worked for which company?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Seven Early Songs were composed by which Austrian composer of the Second Viennese School?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is an expression that can be used to illustrate the suspected inequality of complexity classes?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The Christmas carol, \"I Heard the Bells on Christmas Day\" is based on a poem by the American poet who was the first to translate what Italian work?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what year was the national park served by Valley of Fire Road/Highway designated as a National Natural Landmark?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do honeybees have five eyes?",
+    "complexity": "zero_hop",
+    "explanation": "Basic entomology fact"
+  },
+  {
+    "query": "What do nuclear power plants heat to create electricity?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many angles does a decagon have?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "Are Agon and København both board games?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is restrained with a lever in the top of a boiler?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is another term for the string of a problem instance?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Approximately how many miles east from the city and county town of Lincoln was the Greenfield Priory?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Was King Hu or Frank Beyer born first?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "U2 by U2 is an autobiography that was partially written by which bass guitarist?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many seconds are in a day?",
+    "complexity": "zero_hop",
+    "explanation": "Basic time knowledge"
+  },
+  {
+    "query": "What proclamation gave Huguenots special privileges in Brandenburg?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do humans have a nervous system?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "What was the name of the Florida Huguenot colony?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is often seen as a scientific abstraction modeling those computational tasks that admit an efficient algorithm?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is Mandarin the most spoken native language?",
+    "complexity": "zero_hop",
+    "explanation": "Basic linguistic statistic"
+  },
+  {
+    "query": "What is the central business district of downtown San Diego?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Did the campaign for Villarreal's 2014-2015 season begin in 2014 or 2013?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Were George Frideric Handel and Carl Maria von Weber of the same nationality?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In addition to the traveling salesman problem, what is another example of a function problem?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are Jeon Ji-yoon and James Dean Bradfield both rappers?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the name for a form of oxygen in which electrons are paired?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In what year was the actress who hosted \"The Ex-Wives Club\" with Shar Jackson and Angie Everhart born?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is Broadway in New York City?",
+    "complexity": "zero_hop",
+    "explanation": "Theater district location"
+  },
+  {
+    "query": "In which year did the first American to orbit the earth three times also win re-election to a third term in the Unites States senate?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the name of this low-cost airline and one of the largest airline in the country by number of domestic passengers carried that operates in Jabalpur Airport?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What color is a cloud on a sunny day?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday common sense"
+  },
+  {
+    "query": "What river upstream from Buchan originates on the slopes of Mount Kosciuszko?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What type of reaction is present in the emergency oxygen generator of an airplane?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who's chains were made out of copper?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the name for O3 most often used?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What percentage of electrical power in the United States is made by steam turbines?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What are some supplementary sources of American Union law?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When was Victoria first settled?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the weather type of Mallee and upper Wimmera?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the main function of the alveoli in the lungs?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biological fact"
+  },
+  {
+    "query": "What court is able to interpret European Union law?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What social construct did Huguenot refugees in Canterbury practice?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the name of the album that mentions \"the Wizard of a thousand kings\" and was recorded by an English rock band formed in London in 1969?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What does the pub landlady might be related to?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who composed \"The Barber of Seville\"?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known musical attribution"
+  },
+  {
+    "query": "What was the name of the movie starring Lee Min-ho that was directed by Yoo Ha?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for silicon?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "Was the Declaration of Independence signed in 1776?",
+    "complexity": "zero_hop",
+    "explanation": "Foundational document date"
+  },
+  {
+    "query": "Are Capturing the Friedmans and Welcome to Durham, USA both the same genre of film?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What color is a banana when ripe?",
+    "complexity": "zero_hop",
+    "explanation": "Everyday common sense"
+  },
+  {
+    "query": "Are Tristan und Isolde and Pomone both considered operas?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the capital of South Africa Pretoria?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geographic fact"
+  },
+  {
+    "query": "What is another term for shortening the admission event?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where does heat rejection occur in the Rankine cycle?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who wrote \"Les Misérables\"?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known authorship"
+  },
+  {
+    "query": "How many sides does a tetracontagon have?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "What satellite made it impossible for Sky Digital to launch an all new digital service?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was the incident over taxes at Ballarat called?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What action was taken against Japan on December 25th to make them change their policy?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many Huguenots were part of the group that founded France Antarctique in 1555?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did the Wahhabi seized the Grand Mosque in Mecca?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which  Royal Air Force Wing Commander that named Daniel Jubb  \"one of the world's leading rocket scientists\" is a British Royal Air Force fighter pilot and World Land Speed Record holder?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the qualitative answer to this particular problem instance?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Water higher in oxygen-16 experienced higher what?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did OPEC begin?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In which section of Disneyland is an illusion technique used which accounts for the appearance of \"Ghosts\" at the Haunted Mansion in a Walt Disney feature at Disneyland?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who did Edgar marry?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "A. Mark Ratner designed a game in 1980 for Fantasy Games Unlimited as well as what other game?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What answer denotes that an algorithm has accepted an input string?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Does snow fall from clouds?",
+    "complexity": "zero_hop",
+    "explanation": "Basic meteorology"
+  },
+  {
+    "query": "In what geographical portion of Wales is Abercynon located?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What occupation is shared by both Ingmar Bergman and Joseph M. Newman?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What type of school is this institute where Paul Moran got an alma mater in Adelaide?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What percentage of private school students go to Lutheran schools?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did Watt finish the development of his improvements to Newcomen's engine?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which has the larger surface area, Yushu City, Qinghai or Leiyang?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the capital of Mongolia?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "What county are Los Angeles, Orange, San Diego, San Bernardino, and Riverside located in?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What informal name is given to the day that the Silver Cross Mother lays a wreath at the National War Memorial?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What genre are the bands Rarity and Emarosa?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who was slow to readjust prices?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the stomach a digestive organ?",
+    "complexity": "zero_hop",
+    "explanation": "Basic anatomy"
+  },
+  {
+    "query": "What is the capital of Papua New Guinea?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "If two integers are multiplied and output a value, what is this expression set called?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who sets the judicial agenda in Victoria?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What three industries are centered in Hollywood?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "A Singular Woman is a biography of what American anthropologist who s",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who wrote 'One Hundred Years of Solitude'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous literary knowledge"
+  },
+  {
+    "query": "What's the nearest town to the Beauvoir estate, retirement home of Jefferson Davis and site of the Tomb of the Unknown Confederate Soldier?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does sound travel faster than light?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physics"
+  },
+  {
+    "query": "What is the name of the force that causes objects to fall?",
+    "complexity": "zero_hop",
+    "explanation": "Basic physical fact"
+  },
+  {
+    "query": "What was Rihanna's studio album after Talk That Talk?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who replaced Mark Hughes in the 2009-10 Manchester City F.C. Season?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which musical based on a book by Manuel Puig stars Brent Carver?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What international metropolitan region is in the Northeastern megalopolis?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who was the name of the singer who died July 29, 1974 and performed at The Cotton Club?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does photosynthesis produce oxygen?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "What element is found in all biomolecules?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What nuclear test series that followed the Operation Aqueduct series, preceded the tests that were the last tests before negotiations began for the Comprehensive test ban treaty?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What at railroad named for Ellis D. Atwood is located just south of bates pond?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Assuming that T represents a polynomial in T(n), what is the term given to the corresponding algorithm?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many Victorians are live near a moneatery?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How is lap provided by overlapping the admission side port?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who composed \"Tristan und Isolde\"?",
+    "complexity": "zero_hop",
+    "explanation": "Well-known musical attribution"
+  },
+  {
+    "query": "Who considered their land on the continent their most important holding?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many countries does the insurance company which sponsors the Foundation Music of the Americas concert series operate in?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What elements follow oxygen as the most abundant in the universe?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many days are in May?",
+    "complexity": "zero_hop",
+    "explanation": "Calendar knowledge"
+  },
+  {
+    "query": "Who challenged Ann McLane Kuster's House seat two years after she was first elected?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Which genus of plants are native to more continents, Tabernaemontana or Kirengeshoma?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is Buddhism a religion?",
+    "complexity": "zero_hop",
+    "explanation": "Common cultural knowledge"
+  },
+  {
+    "query": "What movie earned the actor who played twin brothers in Diamonds a nomination for the 1967 Academy Award for Best Supporting Actor?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who founded the entertainment network that broadcastThe B.S. of A. with Brian Sack\", ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Are The King – Jari Litmanen and The Panama Deception both documentary films?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is a computational solution where a single input is expected for every input?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "The Big Dream was made by this musician who has been described by \"The Guardian\" as \"the most important director of this era\" and was born in what year?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "How many nickels make one hundred dollars?",
+    "complexity": "zero_hop",
+    "explanation": "Standard currency fact"
+  },
+  {
+    "query": "What claim did BSkyB agree with?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What was the one linear SD channel Virgin Media carried from November 2006 to July 2009?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do earthquakes release energy?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geology"
+  },
+  {
+    "query": "What are free-to-air encrypted broadcasts known as?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What artist sang in both \"So Excited\" and \"My Neck My Back\"?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Edgay Evans is a Welsh opera singer famous for his rols as Hermann in what opera based on a short story by Alexander Pushkin?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What protestant religions made Northern European counties safe for Huguenot immigration?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What type of measure is communication complexity not an example of?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How does Victoria rank as to population density?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Was the first computer mouse made of wood?",
+    "complexity": "zero_hop",
+    "explanation": "Tech history fact"
+  },
+  {
+    "query": "Does the plant genus Araucaria have more extant species than the plant genus Cleyera?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What century did the Normans first gain their separate identity?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are Baghdad ER and Super Size Me documentaries with the same subject?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does yeast make bread rise?",
+    "complexity": "zero_hop",
+    "explanation": "Common baking knowledge"
+  },
+  {
+    "query": "What is a transformation of two problems into on three problems?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Where did the author of Heartless go to high school?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Do cats have whiskers?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "which  runner-up in the 2001 Formula One World Drivers was part of those who got the remaining point inSan Marino Grand Prix",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who wrote 'The Little Mermaid'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous literary knowledge"
+  },
+  {
+    "query": "What gas do humans exhale?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary physiology"
+  },
+  {
+    "query": "Southampton, St Louis has a border formerly known as the Will Rogers Highway, what is it's route number?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is 196 a perfect square?",
+    "complexity": "zero_hop",
+    "explanation": "Basic mathematics"
+  },
+  {
+    "query": "What made the oil crisis worse in the US?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many television and radio channels could the new digital service carry?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which band was formed first, The Creatures or Stone Temple Pilots?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what Biblical book are Hobah and the cities of Sodom and Gomorrah mentioned?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What was Mitchell Anderson's character's occasional job in \"The Karen Carpenter Story?\"",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Shiori Mikami is best-known for her role as Krista Lenz in this manga series written by who?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Bob Lubbes worked on a comic strip featuring a fictional clan of hillbillies set in what US village?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What complexity class is commonly characterized by unknown algorithms to enhance solvability?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is usual form of oxygen bound compounds?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is pasta made from wheat?",
+    "complexity": "zero_hop",
+    "explanation": "Common food ingredient"
+  },
+  {
+    "query": "What party formed in 2014?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "How many colors are in a standard rainbow?",
+    "complexity": "zero_hop",
+    "explanation": "Common observation"
+  },
+  {
+    "query": "What type of process was involved the the depletion of the Sun's oxygen 16?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In what geographical portion of England is Abercynon located?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which group owns the Australian operation of the American e-commerce company formerly known as CSN Stores?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the smallest planet in the solar system?",
+    "complexity": "zero_hop",
+    "explanation": "Basic astronomical fact"
+  },
+  {
+    "query": "Are Woodstock and Food, Inc. considered to be unpopular documentary films?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What are the two simple word responses to a decision problem?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "what does Anton Coppola brother contributed to?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What are the 5 California University campuses?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who won more Grand Slam doubles titles, Ken Flach or Roger Taylor?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Where did the headquarters relocate from?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is a circle a 2D shape?",
+    "complexity": "zero_hop",
+    "explanation": "Elementary geometry"
+  },
+  {
+    "query": "Where in Australia is Victoria located?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Are there 12 inches in a foot?",
+    "complexity": "zero_hop",
+    "explanation": "Basic length measurement"
+  },
+  {
+    "query": "Are pawns the most numerous chess pieces?",
+    "complexity": "zero_hop",
+    "explanation": "Basic game component"
+  },
+  {
+    "query": "What is the only district in the CBD to not have \"downtown\" in it's name?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What book of poems by T.S. Elliot was the basis for the musical cats?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Does the Sun have convective zone?",
+    "complexity": "zero_hop",
+    "explanation": "Basic astronomy"
+  },
+  {
+    "query": "Does the Sun provide daylight?",
+    "complexity": "zero_hop",
+    "explanation": "Basic astronomy"
+  },
+  {
+    "query": "What are other complexity measures not used in complexity theory?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What are located in Northern downtown San Diego?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In which English town did the most Huguenots live?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Lil Debbie and Riff Raff share a rap career and what same nationality?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for argon?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "Which actor in Heat was awarded a Theatre World Award in 1981?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "which website creation tool was discontinued from ilife software suite that was announced at the Macworld Conference & Expo on January 10, 2006",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Who painted 'Guernica'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous art knowledge"
+  },
+  {
+    "query": "The title of the of book \"Like the Roman: The Life of Enoch Powell\" is based on a line from a 1968 speech that criticised what bill?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "The Catcher Was a Spy is a book about a catcher who was born in which year ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What are the three primary expressions used to represent case complexity?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "In 1979, what was the average mpg for American cars?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What French City was New Rochelle named after?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the chemical symbol for thallium?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "What country initially received the largest number of Huguenot refugees?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "When did oxygen begin to move from the oceans to the atmosphere?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Which running back who broke Vaughn Bunbar's rushing record was drafted by the Falcons in 2015?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Other than Samuel Johnson who else is often compared to this English writer, drama and literary critic, painter, social commentator, and philosopher after whom the one of the main theatres opened in Maidstone, Kent in 1955 was named?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "\"The Promise\", \"Some Mother's Son\" and \"In the Name of the Father\" are all films about Northern Ireland by which director?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the chemical symbol for antimony?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "Who proclaimed the oil embargo?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Who wrote 'Little Women'?",
+    "complexity": "zero_hop",
+    "explanation": "Famous literary knowledge"
+  },
+  {
+    "query": "Which Italian professional racing driver won the 2006 Malaysian Grand Prix?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In addition to recirculating water, what do condensers do?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "From which countries did the Norse originate?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the African elephant the largest land animal?",
+    "complexity": "zero_hop",
+    "explanation": "Common zoological fact"
+  },
+  {
+    "query": "Is uranium a radioactive element?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry knowledge"
+  },
+  {
+    "query": "What is the capital of Croatia?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "How many hours are in a 3-day weekend?",
+    "complexity": "zero_hop",
+    "explanation": "Basic time knowledge"
+  },
+  {
+    "query": "Where did Huguenots and Walloons settle in England?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What type of vehicle did Chrysler change to in 1977?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Is the capital of Australia Canberra?",
+    "complexity": "zero_hop",
+    "explanation": "Basic geographic fact"
+  },
+  {
+    "query": "What happened 3.7-2 billion years ago?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the nature of romantic friendships that is opposite of human sexuality?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "In what HBO broadcast Crime Drama television series does Franklin Shea Whigham Jr play in?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the first name of the sister of the female star of Deadly Strangers ?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Was Michael Phelps an Olympic swimmer?",
+    "complexity": "zero_hop",
+    "explanation": "Famous athlete's sport"
+  },
+  {
+    "query": "\"Last Time for Everything\" is a song from an album released through who?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "Is the human eye sensitive to light?",
+    "complexity": "zero_hop",
+    "explanation": "Basic biology"
+  },
+  {
+    "query": "What is the chemical symbol for neptunium?",
+    "complexity": "zero_hop",
+    "explanation": "Basic chemistry"
+  },
+  {
+    "query": "What was the Anglo-Norman language's final form?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "What is the most critical resource in the analysis of computational problems associated with non-deterministic Turing machines?",
+    "complexity": "one_hop",
+    "explanation": "Single-step information retrieval is required"
+  },
+  {
+    "query": "Do Fielder Cook and Julien Temple have the same nationality?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  },
+  {
+    "query": "What is the capital of Switzerland?",
+    "complexity": "zero_hop",
+    "explanation": "Common geographic knowledge"
+  },
+  {
+    "query": "Does the English word 'robot' come from Czech?",
+    "complexity": "zero_hop",
+    "explanation": "Common etymology"
+  },
+  {
+    "query": "What English new wave and synth-pop band formed in 1978 released its thirteenth single in 1985?",
+    "complexity": "multi_hop",
+    "explanation": "Multi-step reasoning and comparative analysis are required"
+  }
+]

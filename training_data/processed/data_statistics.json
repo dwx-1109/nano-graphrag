@@ -1,0 +1,26 @@
+{
+  "total_samples": 7403,
+  "class_distribution": {
+    "one_hop": 3000,
+    "multi_hop": 2500,
+    "zero_hop": 1903
+  },
+  "train_samples": 5922,
+  "train_class_distribution": {
+    "one_hop": 2375,
+    "multi_hop": 2007,
+    "zero_hop": 1540
+  },
+  "val_samples": 740,
+  "val_class_distribution": {
+    "one_hop": 332,
+    "multi_hop": 246,
+    "zero_hop": 162
+  },
+  "test_samples": 741,
+  "test_class_distribution": {
+    "one_hop": 293,
+    "multi_hop": 247,
+    "zero_hop": 201
+  }
+}

@@ -568,10 +568,10 @@ class ComplexityClassifier:
 
 def get_global_classifier(model_path: str = None) -> ComplexityClassifier:
     """获取全局分类器实例"""
-    global _global_classifier
-    if not hasattr(get_global_classifier, '_global_classifier'):
-        get_global_classifier._global_classifier = ComplexityClassifier.load_default(model_path)
-    return get_global_classifier._global_classifier
+    if not hasattr(get_global_classifier, '_instance'):
+        get_global_classifier._instance = ComplexityClassifier.load_default(model_path)
+    return get_global_classifier._instance
+
 
 async def classify_query_complexity(query: str, model_path: str = None) -> str:
     """异步分类查询复杂度"""
